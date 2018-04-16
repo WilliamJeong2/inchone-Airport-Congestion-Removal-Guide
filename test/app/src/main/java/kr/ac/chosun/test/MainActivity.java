@@ -1,8 +1,11 @@
 package kr.ac.chosun.test;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.StrictMode;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import org.xmlpull.v1.XmlPullParser;
@@ -16,10 +19,21 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Button button = (Button) findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, SubActivity.class);
+                startActivity(intent);
+
+            }
+        });
 
         StrictMode.enableDefaults();
+        }
+    }
 
-        TextView status1 = (TextView)findViewById(R.id.result); //파싱된 결과확인!
+       /* TextView status1 = (TextView)findViewById(R.id.result); //파싱된 결과확인!
 
         boolean initem = false, inAtime = false, inT1sum1 = false, inT1sum2 = false, inT1sum3 = false;
         boolean inT1sum4 = false, inT1sum5 = false, inT1sum6 = false, inT1sum7 = false, inT1sum8=false, inT1sumset1 = false, inT1sumset2 = false;
@@ -194,8 +208,8 @@ public class MainActivity extends Activity {
         } catch(Exception e){
             status1.setText("에러가..났습니다...");
         }
-    }
-}
+
+*/
 
 
 
