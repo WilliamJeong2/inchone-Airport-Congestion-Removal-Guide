@@ -55,7 +55,7 @@ public class MainActivity extends Activity {
                         }
                         if(parser.getName().equals("t1sum1")){ //address 만나면 내용을 받을수 있게 하자
                             inT1sum1 = true;
-                        }090
+                        }
                         if(parser.getName().equals("t1sum2")){ //mapx 만나면 내용을 받을수 있게 하자
                             inT1sum2 = true;
                         }
@@ -180,11 +180,16 @@ public class MainActivity extends Activity {
                         break;
                     case XmlPullParser.END_TAG:
                         if(parser.getName().equals("item")){
-                            status1.setText(status1.getText()+" 시간대 : "+ atime + "\n T1입국장 동편(A,B) 현황: " + t1sum1 + "\n T1입국장 서편(E,F) 현황 : " + t1sum2
+                            status1.setText(status1.getText()+" 시간대 : "+ atime + "\n T1입국장 동편(A,B) 현황: " + t1sum1 
+                                    + "\n T1입국장 서편(E,F) 현황 : " + t1sum2
                                     + "\n T1입국심사(C) 현황 : " + t1sum3 +  "\n T1입국심사(D) 현황 : " + t1sum4 + "\n T1출국장1,2 현황 : " + t1sum5
                                     + "\n T1출국장3 현황 : " + t1sum6 + "\n T1출국장4 현황 : " + t1sum7 + "\n T1출국장5,6 현황 : " + t1sum8
-                                    + "\n T1입국장 합계 : " + t1sumset1 + "\n T1출국장 합계 : " + t1sumset2 + "\n T2입국장 1 현황 : " + t2sum1 + "\n T2입국장 2 현황 : " + t2sum2
-                                    + "\n T2출국당 1 현황 : " + t2sum3 + "\n T2 출국장 2 현황 : " + t2sum4 + "\n T2입국장 합계 : " +t2sumset1 + "\n T2출국장 합계 : " + t2sumset2 + "\n" );
+                                    + "\n T1입국장 합계 : " + t1sumset1 + "\n T1출국장 합계 : " + t1sumset2 + "\n T2입국장 1 현황 : " + t2sum1
+                                    + "\n T2입국장 2 현황 : " + t2sum2 + "\n T2출국당 1 현황 : " + t2sum3 + "\n T2 출국장 2 현황 : " + t2sum4 
+                                    + "\n T2입국장 합계 : " +t2sumset1 + "\n T2출국장 합계 : " + t2sumset2 + "\n" );
+                                   
+                                            
+          
                             initem = false;
                         }
                         break;
