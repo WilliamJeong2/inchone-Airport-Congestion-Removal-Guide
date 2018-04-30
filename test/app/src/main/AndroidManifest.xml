@@ -21,6 +21,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".congestion" />
+        <activity android:name=".parking" />
+        <activity android:name=".delay" />
+        <activity android:name=".takeoffinfo" />
+        <activity android:name=".landing" />
+        <activity android:name=".convenience" />
+
+
         <activity
             android:name=".MainActivity"
             android:label="test" >

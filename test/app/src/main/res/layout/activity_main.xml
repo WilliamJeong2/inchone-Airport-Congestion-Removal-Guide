@@ -1,70 +1,132 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    >
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/main_incheon_congestion">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/status1"
+        android:layout_width="40dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="75dp"
+        android:layout_marginTop="190dp"
+        />
+    <TextView
+        android:id="@+id/status2"
+        android:layout_width="40dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="170dp"/>
 
-        <TextView
-            android:id="@+id/result"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+    <TextView
+        android:id="@+id/status3"
+        android:layout_width="40dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="250dp"
+        android:layout_marginTop="170dp"/>
+    <TextView
+        android:id="@+id/status4"
+        android:layout_width="40dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="320dp"
+        android:layout_marginTop="190dp"/>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="370dp"
+        android:layout_marginLeft="30dp"
+        >
+
+
+        <ImageButton
+            android:id="@+id/flight_takeoff_button"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            android:padding="0dp"
+            android:src="@drawable/flight_takeoff_info"
+            android:text="이륙/착륙"
+
             />
 
-    </ScrollView>
-</LinearLayout>
+        <ImageButton
+            android:id="@+id/delay_button"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="120dp"
+            android:padding="0dp"
+            android:src="@drawable/delay_info" />
+
+
+    </FrameLayout>
 
 
 
-<!--<LinearLayout-->
-    <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
-    <!--xmlns:tools = "http://schemas.android.com/tools"-->
-    <!--android:id="@+id/activity_main"-->
-    <!--android:layout_width="fill_parent"-->
-    <!--android:layout_height="fill_parent"-->
-    <!--android:orientation="vertical"-->
-    <!--android:padding="10dp">-->
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="370dp"
+        android:layout_marginLeft="150dp"
+        >
+
+        <ImageButton
+            android:id="@+id/congestion_button"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            android:padding="0dp"
+            android:src="@drawable/congestion_info"
+            android:text="세부 혼잡도" />
+
+        <ImageButton
+            android:id="@+id/flight_land_button"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="120dp"
+            android:padding="0dp"
+            android:src="@drawable/flight_land_info" />
 
 
-    <!--<linearLayout-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="50dp"-->
-        <!--android:orientation="horizontal"-->
-        <!--android:weightSum="10">-->
+    </FrameLayout>
 
-        <!--<EditText-->
-            <!--android:id="@+id/edit"-->
-            <!--android:layout_width="250dp"-->
-            <!--android:layout_height="match_parent"-->
-            <!--android:hint="enter text to search"/>-->
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="370dp"
+        android:layout_marginLeft="270dp"
+        >
 
-        <!--<Button-->
-            <!--android:id="@+id/button"-->
-            <!--android:layout_width="100dp"-->
-            <!--android:layout_height="match_parent"-->
-            <!--android:text="search"-->
-            <!--android:textSize="12sp"-->
-            <!--android:onClick="mOnClick"/>-->
-    <!--</linearLayout>-->
+        <ImageButton
+            android:id="@+id/parking_button"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            android:padding="0dp"
+            android:src="@drawable/parking_info" />
 
-    <!--<ScrollView-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="match_parent">-->
-
-        <!--<TextView-->
-            <!--android:id="@+id/text"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="match_parent"-->
-            <!--android:textSize="13sp"-->
-            <!--android:textStyle="bold"/>-->
-
-    <!--</ScrollView>-->
+        <ImageButton
+            android:id="@+id/convienience_button"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="120dp"
+            android:padding="0dp"
+            android:src="@drawable/convienience_info" />
 
 
+    </FrameLayout>
 
-<!--</LinearLayout>-->
+
+</FrameLayout>
+
+
