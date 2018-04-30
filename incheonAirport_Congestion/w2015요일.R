@@ -2,6 +2,7 @@ install.packages("readxl")
 install.packages("ggplot2")
 
 library(readxl)
+
 w201501 <- read_excel("R_Data/airport 2015/w201501.xls")
 w201502 <- read_excel("R_Data/airport 2015/w201502.xls")
 w201503 <- read_excel("R_Data/airport 2015/w201503.xls")

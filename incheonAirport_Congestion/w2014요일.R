@@ -1,39 +1,24 @@
-install.packages("ggplot2")
-library(ggplot2)
+install.packages("readxl") 
+install.packages("ggplot2") 
+
 library(readxl)
 
-w201401 <- read_excel("C:/Users/user/Downloads/w201401.xls")
-w201402 <- read_excel("C:/Users/user/Downloads/w201402.xls")
-w201403<- read_excel("C:/Users/user/Downloads/w201403.xls")
-w201404 <- read_excel("C:/Users/user/Downloads/w201404.xls")
-w201405 <- read_excel("C:/Users/user/Downloads/w201405.xls")
-w201406 <- read_excel("C:/Users/user/Downloads/w201406.xls")
-w201407 <- read_excel("C:/Users/user/Downloads/w201407.xls")
-w201408 <- read_excel("C:/Users/user/Downloads/w201408.xls")
-w201409 <- read_excel("C:/Users/user/Downloads/w201409.xls")
-w201410 <- read_excel("C:/Users/user/Downloads/w201410.xls")
-w201411 <- read_excel("C:/Users/user/Downloads/w201411.xls")
-w201412 <- read_excel("C:/Users/user/Downloads/w201412.xls")
-
-
-w201401
-w201402
+w201401 <- read_excel("R_Data/airport 2014/w201401.xls")
+w201402 <- read_excel("R_Data/airport 2014/w201402.xls")
+w201403 <- read_excel("R_Data/airport 2014/w201403.xls")
+w201404 <- read_excel("R_Data/airport 2014/w201404.xls")
+w201405 <- read_excel("R_Data/airport 2014/w201405.xls")
+w201406 <- read_excel("R_Data/airport 2014/w201406.xls")
+w201407 <- read_excel("R_Data/airport 2014/w201407.xls")
+w201408 <- read_excel("R_Data/airport 2014/w201408.xls")
+w201409 <- read_excel("R_Data/airport 2014/w201409.xls")
+w201410 <- read_excel("R_Data/airport 2014/w201410.xls")
+w201411 <- read_excel("R_Data/airport 2014/w201411.xls")
+w201412 <- read_excel("R_Data/airport 2014/w201412.xls")
 
 library(ggplot2)
-w201401
-w201402
-w201403
-w201404
-w201405
-w201406
-w201407
-w201408
-w201409
-w201410
-w201411
-w201412
 
-ggplot(w201401, aes(x=요일, y=합계,group=1))+ggtitle("2014년 1월")+geom_line()+geom_line(aes(x=요일, y=출발), colour="red")+geom_line(aes(x=요일,y=도착),colour="blue")+geom_point()+geom_point(aes(x=요일,y=출발),colour="red")+geom_point(aes(x=요일,y=도착),colour="blue")
+ggplot(w201401, aes(x=요일, y=합계,group=1))+ggtitle("2014년 1월")+geom_line()+geom_line(aes(x=요일, y=출발), colour="red") +geom_line(aes(x=요일,y=도착),colour="blue")+geom_point()+geom_point(aes(x=요일,y=출발),colour="red")+geom_point(aes(x=요일,y=도착),colour="blue")
 ggplot(w201402, aes(x=요일, y=합계,group=1))+ggtitle("2014년 2월")+geom_line()+geom_line(aes(x=요일, y=출발), colour="red")+geom_line(aes(x=요일,y=도착),colour="blue")+geom_point()+geom_point(aes(x=요일,y=출발),colour="red")+geom_point(aes(x=요일,y=도착),colour="blue")
 ggplot(w201403, aes(x=요일, y=합계,group=1))+ggtitle("2014년 3월")+geom_line()+geom_line(aes(x=요일, y=출발), colour="red")+geom_line(aes(x=요일,y=도착),colour="blue")+geom_point()+geom_point(aes(x=요일,y=출발),colour="red")+geom_point(aes(x=요일,y=도착),colour="blue")
 ggplot(w201404, aes(x=요일, y=합계,group=1))+ggtitle("2014년 4월")+geom_line()+geom_line(aes(x=요일, y=출발), colour="red")+geom_line(aes(x=요일,y=도착),colour="blue")+geom_point()+geom_point(aes(x=요일,y=출발),colour="red")+geom_point(aes(x=요일,y=도착),colour="blue")
@@ -45,9 +30,3 @@ ggplot(w201409, aes(x=요일, y=합계,group=1))+ggtitle("2014년 9월")+geom_li
 ggplot(w201410, aes(x=요일, y=합계,group=1))+ggtitle("2014년 10월")+geom_line()+geom_line(aes(x=요일, y=출발), colour="red")+geom_line(aes(x=요일,y=도착),colour="blue")+geom_point()+geom_point(aes(x=요일,y=출발),colour="red")+geom_point(aes(x=요일,y=도착),colour="blue")
 ggplot(w201411, aes(x=요일, y=합계,group=1))+ggtitle("2014년 11월")+geom_line()+geom_line(aes(x=요일, y=출발), colour="red")+geom_line(aes(x=요일,y=도착),colour="blue")+geom_point()+geom_point(aes(x=요일,y=출발),colour="red")+geom_point(aes(x=요일,y=도착),colour="blue")
 ggplot(w201412, aes(x=요일, y=합계,group=1))+ggtitle("2014년 12월")+geom_line()+geom_line(aes(x=요일, y=출발), colour="red")+geom_line(aes(x=요일,y=도착),colour="blue")+geom_point()+geom_point(aes(x=요일,y=출발),colour="red")+geom_point(aes(x=요일,y=도착),colour="blue")
-
-
-
-
-
-
