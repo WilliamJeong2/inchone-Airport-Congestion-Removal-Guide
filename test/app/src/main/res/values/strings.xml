@@ -1,2 +1,34 @@
 <resources>
+
+
+    <string-array name="week_list">
+        <item>2014_01</item>
+        <item>2014_02</item>
+        <item>2014_03</item>
+        <item>2014_04</item>
+        <item>2014_05</item>
+        <item>2014_06</item>
+        <item>2014_07</item>
+        <item>2014_08</item>
+        <item>2014_09</item>
+        <item>2014_10</item>
+        <item>2014_11</item>
+        <item>2014_12</item>
+
+    </string-array>
+    <integer-array name="week_flag_list">
+        <item>@drawable/w2014_01</item>
+        <item>@drawable/w2014_02</item>
+        <item>@drawable/w2014_03</item>
+        <item>@drawable/w2014_04</item>
+        <item>@drawable/w2014_05</item>
+        <item>@drawable/w2014_06</item>
+        <item>@drawable/w2014_07</item>
+        <item>@drawable/w2014_08</item>
+        <item>@drawable/w2014_09</item>
+        <item>@drawable/w2014_10</item>
+        <item>@drawable/w2014_11</item>
+        <item>@drawable/w2014_12</item>
+
+    </integer-array>
 </resources>
