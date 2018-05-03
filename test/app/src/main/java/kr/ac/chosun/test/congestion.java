@@ -24,17 +24,18 @@ public class congestion extends MainActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.congestion); //해당 아이디에 자신이 만든 레이아웃의 이름을 쓴다
 
-        states = getResources().getStringArray(R.array.week_list);
-        imgs = getResources().obtainTypedArray(R.array.week_flag_list);
+        states = getResources().getStringArray(R.array.week_list); //String.xml에 저장된 week_list 열을 states에 저장
+        imgs = getResources().obtainTypedArray(R.array.week_flag_list); //String.xml에 저장된 ggplot이미지 배열을 imgs에 저장
 
-        image = (ImageView) findViewById(R.id.imageview1);
-        spinner = (Spinner) findViewById(R.id.spinner1);
+        image = (ImageView) findViewById(R.id.imageview1); //ggplot이미지를 표시할 이미지 뷰 연결
+        spinner = (Spinner) findViewById(R.id.spinner1);  // 스피너 연결
 
+        //스피너를 클릭하였을 경우 states 배열에 저장된 week_list를 표시
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, states);
         dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(dataAdapter);
 
-        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() { //스피너를 눌렀을 경우 발생되는 리스너
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 image.setImageResource(imgs.getResourceId(spinner.getSelectedItemPosition(),-1));
