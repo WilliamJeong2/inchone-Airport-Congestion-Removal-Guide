@@ -8,45 +8,47 @@ library(readxl)
 library(ggplot2)
 library(googleVis)
 
-setwd("C:/Users/chosun/Documents/inchone-Airport-Congestion-Removal-Guide/incheonAirport_Congestion/R_Data/") #파일 위치
-air_delay<-read_excel("air_delay.xls")
+setwd("C:/Users/Jeon/Documents/inchone-Airport-Congestion-Removal-Guide/incheonAirport_Congestion/R_Data/") #파일 위치
+air_delay<-read_excel("air_delay.xls") #데이터셋 불러오기
 
 colname<-'air_delay201'
-v<-colnames(air_delay)
+v<-colnames(air_delay) # 열을 표현해주기 위해 벡터 선언
 
+# 연도별로 벡터값 나눔
 v_2014<-c(v[2:13])
 v_2015<-c(v[14:25])
 v_2016<-c(v[26:37])
 v_2017<-c(v[38:49])
 v_2018<-c(v[50:52])
 
+# 각 연도,월 마다 입력으로 막대그래프를 표현 (yyyy,mm)
 search_delay<-function(yyyy,mm)
 {
   if(yyyy==2014){
-    지연횟수<-air_delay[,c(v_14[mm])]
-    ggplot(air_delay,aes(x=원인,y=지연횟수))+geom_bar(stat="identity")+ggtitle(paste(v_14[mm],"원인별 지연수"))
+    지연횟수<-air_delay[,c(v_2014[mm])]
+    ggplot(air_delay,aes(x=원인,y=지연횟수))+geom_bar(stat="identity")+ggtitle(paste(v_2014[mm],"원인별 지연수"))
   }
   else if(yyyy==2015){
-    지연횟수<-air_delay[,c(v_15[mm])]
-    ggplot(air_delay,aes(x=원인,y=지연횟수))+geom_bar(stat="identity")+ggtitle(paste(v_15[mm],"원인별 지연수"))
+    지연횟수<-air_delay[,c(v_2015[mm])]
+    ggplot(air_delay,aes(x=원인,y=지연횟수))+geom_bar(stat="identity")+ggtitle(paste(v_2015[mm],"원인별 지연수"))
   }
   else if(yyyy==2016){
-    지연횟수<-air_delay[,c(v_16[mm])]
-    ggplot(air_delay,aes(x=원인,y=지연횟수))+geom_bar(stat="identity")+ggtitle(paste(v_16[mm],"원인별 지연수"))
+    지연횟수<-air_delay[,c(v_2016[mm])]
+    ggplot(air_delay,aes(x=원인,y=지연횟수))+geom_bar(stat="identity")+ggtitle(paste(v_2016[mm],"원인별 지연수"))
   }
   else if(yyyy==2017){
-    지연횟수<-air_delay[,c(v_17[mm])]
-    ggplot(air_delay,aes(x=원인,y=지연횟수))+geom_bar(stat="identity")+ggtitle(paste(v_17[mm],"원인별 지연수"))
+    지연횟수<-air_delay[,c(v_2017[mm])]
+    ggplot(air_delay,aes(x=원인,y=지연횟수))+geom_bar(stat="identity")+ggtitle(paste(v_2017[mm],"원인별 지연수"))
   }
   else if(yyyy==2018){
-    지연횟수<-air_delay[,c(v_18[mm])]
-    ggplot(air_delay,aes(x=원인,y=지연횟수))+geom_bar(stat="identity",fill = "darkblue")+ggtitle(paste(v_18[mm],"원인별 지연수"))
+    지연횟수<-air_delay[,c(v_2018[mm])]
+    ggplot(air_delay,aes(x=원인,y=지연횟수))+geom_bar(stat="identity")+ggtitle(paste(v_2018[mm],"원인별 지연수"))
   }
   else
     cat("다시 입력하세요. 범위(2014,01~2018,03)")
 }
 search_delay(2018,2)
-setwd("C:/Users/chosun/Documents/inchone-Airport-Congestion-Removal-Guide/incheonAirport_Congestion/R_Data/airport/")
+setwd("C:/Users/Jeon/Documents/inchone-Airport-Congestion-Removal-Guide/incheonAirport_Congestion/R_Data/airport/")
 
 for(i in 1:3)  #2018년 월별 요일별 인원 파일 불러오기 위한 for 문
 {
@@ -96,7 +98,7 @@ w_2018sub <- function(x){
   }
   
   else{
-    cat("다시 입력 하세요.")
+    cat("다시 입력하세요. 범위(1 ~ 3)")
   }
 }
 
@@ -116,7 +118,7 @@ w_2018sub2 <- function(x){
   }
   
   else{
-    cat("다시 입력 하세요.")
+    cat("다시 입력하세요. 범위(1 ~ 3)")
   }
 }
 
@@ -171,7 +173,7 @@ w_2017sub <- function(x){
     ggplot(w2017012, aes(x=요일, y=합계,group=1)) +ggtitle("2017년 12월")+geom_line()+geom_line(aes(x=요일, y=출발), colour="red")+geom_line(aes(x=요일,y=도착),colour="blue")+geom_point()+geom_point(aes(x=요일,y=출발),colour="red")+geom_point(aes(x=요일,y=도착),colour="blue")
   }
   else{
-    cat("다시 입력 하세요.")
+    cat("다시 입력하세요. 범위(1 ~ 12)")
   }
 }
 
@@ -226,7 +228,7 @@ w_2017sub2 <- function(x){
     aggregate(요일~합계, w2017012, max)
   }
   else{
-    cat("다시 입력 하세요.")
+    cat("다시 입력하세요. 범위(1 ~ 12)")
   }
 }
 
@@ -281,7 +283,7 @@ w_2016sub <- function(x){
     ggplot(w2016012, aes(x=요일, y=합계,group=1)) +ggtitle("2016년 12월")+geom_line()+geom_line(aes(x=요일, y=출발), colour="red")+geom_line(aes(x=요일,y=도착),colour="blue")+geom_point()+geom_point(aes(x=요일,y=출발),colour="red")+geom_point(aes(x=요일,y=도착),colour="blue")
   }
   else{
-    cat("다시 입력 하세요.")
+    cat("다시 입력하세요. 범위(1 ~ 12)")
   }
 }
 
@@ -336,7 +338,7 @@ w_2016sub2 <- function(x){
     aggregate(요일~합계, w2016012, max)
   }
   else{
-    cat("다시 입력 하세요.")
+    cat("다시 입력하세요. 범위(1 ~ 12)")
   }
 }
 
@@ -391,7 +393,7 @@ w_2015sub <- function(x){
     ggplot(w2015012, aes(x=요일, y=합계,group=1)) +ggtitle("2015년 12월")+geom_line()+geom_line(aes(x=요일, y=출발), colour="red")+geom_line(aes(x=요일,y=도착),colour="blue")+geom_point()+geom_point(aes(x=요일,y=출발),colour="red")+geom_point(aes(x=요일,y=도착),colour="blue")
   }
   else{
-    cat("다시 입력 하세요.")
+    cat("다시 입력하세요. 범위(1 ~ 12)")
   }
 }
 
@@ -446,7 +448,7 @@ w_2015sub2 <- function(x){
     aggregate(요일~합계, w2015012, max)
   }
   else{
-    cat("다시 입력 하세요.")
+    cat("다시 입력하세요. 범위(1 ~ 12)")
   }
 }
 
@@ -501,7 +503,7 @@ w_2014sub <- function(x){
     ggplot(w2014012, aes(x=요일, y=합계,group=1)) +ggtitle("2014년 12월")+geom_line()+geom_line(aes(x=요일, y=출발), colour="red")+geom_line(aes(x=요일,y=도착),colour="blue")+geom_point()+geom_point(aes(x=요일,y=출발),colour="red")+geom_point(aes(x=요일,y=도착),colour="blue")
   }
   else{
-    cat("다시 입력 하세요.")
+    cat("다시 입력하세요. 범위(1 ~ 12)")
   }
 }
 
@@ -556,66 +558,67 @@ w_2014sub2 <- function(x){
     aggregate(요일~합계, w2014012, max)
   }
   else{
-    cat("다시 입력 하세요.")
+    cat("다시 입력하세요. 범위(1 ~ 12)")
   }
 }
 
-w_week <- function(index,x){
+#원하는 연도와 월로 승객수 출력
+w_week <- function(yyyy,mm){
   
-  if(index == 2018){
+  if(yyyy == 2018){
     
-    w_2018sub(x) 
-    
-  }
-  else if(index == 2017){
-    
-    w_2017sub(x)
+    w_2018sub(mm) 
     
   }
-  else if(index == 2016){
+  else if(yyyy == 2017){
     
-    w_2016sub(x)
-    
-  }
-  else if(index == 2015){
-    
-    w_2015sub(x)
+    w_2017sub(mm)
     
   }
-  else if(index == 2014){
+  else if(yyyy == 2016){
     
-    w_2014sub(x)
-    
-  }
-  else if(index == '2018년인원'){
-    
-    w_2018sub2(x)
+    w_2016sub(mm)
     
   }
-  else if(index == '2017년인원'){
+  else if(yyyy == 2015){
     
-    w_2017sub2(x)
-    
-  }
-  else if(index == '2016년인원'){
-    
-    w_2016sub2(x)
+    w_2015sub(mm)
     
   }
-  else if(index == '2015년인원'){
+  else if(yyyy == 2014){
     
-    w_2015sub2(x)
+    w_2014sub(mm)
     
   }
-  else if(index == '2014년인원'){
+  else if(yyyy == '2018년인원'){
     
-    w_2014sub2(x)
+    w_2018sub2(mm)
+    
+  }
+  else if(yyyy == '2017년인원'){
+    
+    w_2017sub2(mm)
+    
+  }
+  else if(yyyy == '2016년인원'){
+    
+    w_2016sub2(mm)
+    
+  }
+  else if(yyyy == '2015년인원'){
+    
+    w_2015sub2(mm)
+    
+  }
+  else if(yyyy == '2014년인원'){
+    
+    w_2014sub2(mm)
     
   }
   
   else {
     
-    cat("다시 입력하세요.")
+    cat("다시 입력하세요. 범위(2014 ~ 2018)")
     
   }
 }
