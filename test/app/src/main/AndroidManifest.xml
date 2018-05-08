@@ -13,6 +13,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <!--로딩화면을 구현하기 위해 initActivity라는 클래스 파일에 연결-->
         <activity
             android:name="kr.ac.chosun.test.initActivity"
             android:theme="@android:style/Theme.NoTitleBar" >

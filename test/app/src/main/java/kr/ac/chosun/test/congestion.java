@@ -22,7 +22,7 @@ public class congestion extends MainActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.congestion); //해당 아이디에 자신이 만든 레이아웃의 이름을 쓴다
+        setContentView(R.layout.congestion);
 
         states = getResources().getStringArray(R.array.week_list); //String.xml에 저장된 week_list 열을 states에 저장
         imgs = getResources().obtainTypedArray(R.array.week_flag_list); //String.xml에 저장된 ggplot이미지 배열을 imgs에 저장

@@ -34,6 +34,8 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //버튼->새로운 화면으로 이도하는 함수
         ImageButton congestion = (ImageButton) findViewById(R.id.congestion_button); //해당 버튼을 지정합니다.
         congestion.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -90,11 +92,13 @@ public class MainActivity extends Activity {
 
         StrictMode.enableDefaults();
 
-        TextView status1 = (TextView)findViewById(R.id.status1); //파싱된 결과확인!
+        //파싱된 결과확인을 위한 textview변수선언
+        TextView status1 = (TextView)findViewById(R.id.status1);
         TextView status2 = (TextView)findViewById(R.id.status2);
         TextView status3 = (TextView)findViewById(R.id.status3);
         TextView status4 = (TextView)findViewById(R.id.status4);
 
+        //필요한 item 변수명을 선언
         boolean initem = false, inAreadiv = false, inCgtdt = false, inCgthm =false, inGateinfo1 = false, inGateinfo2 = false, inGateinfo3 = false, inGateinfo4 = false;
 
         String areadiv = null, cgtdt = null, cgthm = null, gateinfo1= null, gateinfo2 = null, gateinfo3 = null, gateinfo4 = null;
@@ -104,7 +108,7 @@ public class MainActivity extends Activity {
 
             URL url = new URL("http://openapi.airport.kr/openapi/service/StatusOfDepartures/getDeparturesCongestion?ServiceKey=" +
                     "Nb%2BV2BcVQ%2BjSh4zZQkvreUtW0lbjoMq4kmUkR3Inc0OHZXmUTxvqXKaDhBoqvV0HGIx0%2BodRUS8K4Vyg7qiOwg%3D%3D"
-            ); //검색 URL부분
+            ); //openAPI 접근URL과 serviceKey를 이용하여 xml 데이터 접근
 
             XmlPullParserFactory parserCreator = XmlPullParserFactory.newInstance(); // 위에서 생성된 URL을 통하여 서버에 요청하면 결과가 XML Resource로 전달됨
             XmlPullParser parser = parserCreator.newPullParser(); //XML Resource 를 파싱할 parser를 parserCreator로 생성
@@ -119,57 +123,59 @@ public class MainActivity extends Activity {
 
                 switch(parserEvent){
                     case XmlPullParser.START_TAG: //parser가 시작 태그를 만나면 실행
-                        if(parser.getName().equals("areadiv")){ //title 만나면 내용을 받을수 있게 하자
-                            System.out.println("여기는 걸리나?");
+                        if(parser.getName().equals("areadiv")){ //areadiv 만나면 내용을 받을수 있게
                             inGateinfo1 = true;
                         }
-                        if(parser.getName().equals("cgtdt")){ //address 만나면 내용을 받을수 있게 하자
+                        if(parser.getName().equals("cgtdt")){ //dgtdt 만나면 내용을 받을수 있게
                             inCgtdt = true;
                         }
-                        if(parser.getName().equals("cgthm")){ //address 만나면 내용을 받을수 있게 하자
+                        if(parser.getName().equals("cgthm")){ //cgthm 만나면 내용을 받을수 있게
                             inCgthm = true;
                         }
-                        if(parser.getName().equals("gateinfo2")){ //address 만나면 내용을 받을수 있게 하자
+                        if(parser.getName().equals("gateinfo1")){ //gateinfo1 만나면 내용을 받을수 있게
+                            inGateinfo1 = true;
+                        }
+                        if(parser.getName().equals("gateinfo2")){ //gateinfo2 만나면 내용을 받을수 있게
                             inGateinfo2 = true;
                         }
-                        if(parser.getName().equals("gateinfo3")){ //mapx 만나면 내용을 받을수 있게 하자
+                        if(parser.getName().equals("gateinfo3")){ //gateinfo3 만나면 내용을 받을수 있게
                             inGateinfo3 = true;
                         }
-                        if(parser.getName().equals("gateinfo4")){ //mapy 만나면 내용을 받을수 있게 하자
+                        if(parser.getName().equals("gateinfo4")){ //gateinfo4 만나면 내용을 받을수 있게
                             inGateinfo4 = true;
                         }
                         if(parser.getName().equals("message")){ //message 태그를 만나면 에러 출력
                             status1.setText(status1.getText()+"에러");
-                            //여기에 에러코드에 따라 다른 메세지를 출력하도록 할 수 있다.
+                            //에러코드에 따라 다른 메세지를 출력
                         }
                         break;
 
                     case XmlPullParser.TEXT://parser가 내용에 접근했을때
-                        if(inAreadiv){ //isTitle이 true일 때 태그의 내용을 저장.
+                        if(inAreadiv){ //isAreadiv이 true일 때 태그의 내용을 저장.
                             areadiv = parser.getText();
                             inAreadiv = false;
                         }
-                        if(inCgtdt){ //isTitle이 true일 때 태그의 내용을 저장.
+                        if(inCgtdt){ //inCgtdt이 true일 때 태그의 내용을 저장.
                             cgtdt = parser.getText();
                             inCgtdt = false;
                         }
-                        if(inCgthm){ //isTitle이 true일 때 태그의 내용을 저장.
+                        if(inCgthm){ //inCgthm이 true일 때 태그의 내용을 저장.
                             cgthm = parser.getText();
                             inCgthm = false;
                         }
-                        if(inGateinfo1){ //isTitle이 true일 때 태그의 내용을 저장.
+                        if(inGateinfo1){ //inGateinfo1이 true일 때 태그의 내용을 저장.
                             gateinfo1 = parser.getText();
                             inGateinfo1 = false;
                         }
-                        if(inGateinfo2){ //isAddress이 true일 때 태그의 내용을 저장.
+                        if(inGateinfo2){ //inGateinfo2이 true일 때 태그의 내용을 저장.
                             gateinfo2 = parser.getText();
                             inGateinfo2 = false;
                         }
-                        if(inGateinfo3){ //isMapx이 true일 때 태그의 내용을 저장.
+                        if(inGateinfo3){ //inGateinfo3이 true일 때 태그의 내용을 저장.
                             gateinfo3 = parser.getText();
                             inGateinfo3 = false;
                         }
-                        if(inGateinfo4){ //isMapy이 true일 때 태그의 내용을 저장.
+                        if(inGateinfo4){ //inGateinfo4이 true일 때 태그의 내용을 저장.
                             gateinfo4 = parser.getText();
                             inGateinfo4 = false;
                         }
@@ -177,7 +183,8 @@ public class MainActivity extends Activity {
                     case XmlPullParser.END_TAG:
                         if(parser.getName().equals("item")){
 
-                            status1.setText(status1.getText()+ gateinfo1 + "명");
+                            //각 Gate에 몇 명이 있는지 text저장
+                            status1.setText(status1.getText()+gateinfo1 + "명");
                             status2.setText(status2.getText()+gateinfo2 + "명");
                             status3.setText(status3.getText()+gateinfo3 + "명");
                             status4.setText(status4.getText()+gateinfo4 + "명");
@@ -188,7 +195,7 @@ public class MainActivity extends Activity {
                 parserEvent = parser.next();
             }
         } catch(Exception e) {
-            status1.setText("에러가..났습니다...");
+            status1.setText("에러발생");
 
         }
     }
