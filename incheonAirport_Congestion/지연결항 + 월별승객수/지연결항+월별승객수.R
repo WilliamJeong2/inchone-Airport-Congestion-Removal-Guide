@@ -8,10 +8,9 @@ library(readxl)
 library(ggplot2)
 library(googleVis)
 
-setwd("C:/Users/Jeon/Documents/inchone-Airport-Congestion-Removal-Guide/incheonAirport_Congestion/R_Data/") #파일 위치
+setwd("C:/Users/chosun/Documents/inchone-Airport-Congestion-Removal-Guide/incheonAirport_Congestion/R_Data/") #파일 위치
 air_delay<-read_excel("air_delay.xls") #데이터셋 불러오기
 
-colname<-'air_delay201'
 v<-colnames(air_delay) # 열을 표현해주기 위해 벡터 선언
 
 # 연도별로 벡터값 나눔
@@ -48,7 +47,7 @@ search_delay<-function(yyyy,mm)
     cat("다시 입력하세요. 범위(2014,01~2018,03)")
 }
 search_delay(2018,2)
-setwd("C:/Users/Jeon/Documents/inchone-Airport-Congestion-Removal-Guide/incheonAirport_Congestion/R_Data/airport/")
+setwd("C:/Users/chosun/Documents/inchone-Airport-Congestion-Removal-Guide/incheonAirport_Congestion/R_Data/airport/")
 
 for(i in 1:3)  #2018년 월별 요일별 인원 파일 불러오기 위한 for 문
 {
@@ -80,9 +79,7 @@ for(i in 1:12)  #2014년 월별 요일별 인원 파일 불러오기 위한 for 
   assign(oname, read_excel(paste(oname,".xls",sep="")))
 }
 
-readline("언제 보여줄까? : ")
-
-a#2018 월별 그래프 
+#2018 월별 그래프 
 w_2018sub <- function(x){ 
   
   if(x==01){
@@ -622,4 +619,3 @@ w_week <- function(yyyy,mm){
     
   }
 }
-
