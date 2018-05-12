@@ -35,58 +35,58 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //버튼->새로운 화면으로 이도하는 함수
-        ImageButton congestion = (ImageButton) findViewById(R.id.congestion_button); //해당 버튼을 지정합니다.
+        //버튼->새로운 화면으로 이동하는 함수
+        ImageButton congestion = (ImageButton) findViewById(R.id.congestion_button); //혼잡도 버튼을 지정합니다.
         congestion.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) { //버튼이 눌렸을 때
+            public void onClick(View v) { //혼잡도 버튼이 눌렸을 때
                 Intent intent = new Intent(MainActivity.this, congestion.class);
-                startActivity(intent); //액티비티 이동
+                startActivity(intent); //혼잡도 화면으로 이동
             }
         });
 
-        ImageButton landing = (ImageButton) findViewById(R.id.flight_land_button); //해당 버튼을 지정합니다.
+        ImageButton landing = (ImageButton) findViewById(R.id.flight_land_button); //이륙정보 버튼을 지정합니다.
         landing.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) { //버튼이 눌렸을 때
+            public void onClick(View v) { //이륙정보 버튼이 눌렸을 때
                 Intent intent = new Intent(MainActivity.this, landing.class);
-                startActivity(intent); //액티비티 이동
+                startActivity(intent); //이륙정보 화면으로 이동
             }
         });
 
-        ImageButton delay = (ImageButton) findViewById(R.id.delay_button); //해당 버튼을 지정합니다.
+        ImageButton delay = (ImageButton) findViewById(R.id.delay_button); //지연/결항 버튼을 지정합니다.
         delay.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) { //버튼이 눌렸을 때
+            public void onClick(View v) { //지연/결항 버튼이 눌렸을 때
                 Intent intent = new Intent(MainActivity.this, delay.class);
-                startActivity(intent); //액티비티 이동
+                startActivity(intent); //지연/결항 화면으로 이동
             }
         });
 
-        ImageButton parking = (ImageButton) findViewById(R.id.parking_button); //해당 버튼을 지정합니다.
+        ImageButton parking = (ImageButton) findViewById(R.id.parking_button); //주차장 버튼을 지정합니다.
         parking.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) { //버튼이 눌렸을 때
+            public void onClick(View v) { //주차장 버튼이 눌렸을 때
                 Intent intent = new Intent(MainActivity.this, parking.class);
-                startActivity(intent); //액티비티 이동
+                startActivity(intent); //주차장화면으로 이동
             }
         });
 
-        ImageButton takeoff = (ImageButton) findViewById(R.id.flight_takeoff_button); //해당 버튼을 지정합니다.
+        ImageButton takeoff = (ImageButton) findViewById(R.id.flight_takeoff_button); //착륙 버튼을 지정합니다.
         takeoff.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) { //버튼이 눌렸을 때
+            public void onClick(View v) { //착륙 버튼이 눌렸을 때
                 Intent intent = new Intent(MainActivity.this, takeoffinfo.class);
-                startActivity(intent); //액티비티 이동
+                startActivity(intent); //착륙정보 화면으로 이동
             }
         });
 
-        ImageButton convenience = (ImageButton) findViewById(R.id.convienience_button); //해당 버튼을 지정합니다.
+        ImageButton convenience = (ImageButton) findViewById(R.id.convienience_button); //편의시설 버튼을 지정합니다.
         convenience.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) { //버튼이 눌렸을 때
+            public void onClick(View v) { //편의시설 버튼이 눌렸을 때
                 Intent intent = new Intent(MainActivity.this, convenience.class);
-                startActivity(intent); //액티비티 이동
+                startActivity(intent); //편의시설 화면으로 이동
             }
         });
 
