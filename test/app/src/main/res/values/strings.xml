@@ -1,21 +1,29 @@
 <resources>
 
 
-    <string-array name="week_list">
-        <item>2014_01</item>
-        <item>2014_02</item>
-        <item>2014_03</item>
-        <item>2014_04</item>
-        <item>2014_05</item>
-        <item>2014_06</item>
-        <item>2014_07</item>
-        <item>2014_08</item>
-        <item>2014_09</item>
-        <item>2014_10</item>
-        <item>2014_11</item>
-        <item>2014_12</item>
-
+    <string-array name="year_list">
+        <item>2014년</item>
+        <item>2015년</item>
+        <item>2016년</item>
+        <item>2017년</item>
+        <item>2018년</item>
     </string-array>
+
+    <string-array name="month_list">
+        <item>1월</item>
+        <item>2월</item>
+        <item>3월</item>
+        <item>4월</item>
+        <item>5월</item>
+        <item>6월</item>
+        <item>7월</item>
+        <item>8월</item>
+        <item>9월</item>
+        <item>10월</item>
+        <item>11월</item>
+        <item>12월</item>
+    </string-array>
+
     <integer-array name="week_flag_list">
         <item>@drawable/w2014_01</item>
         <item>@drawable/w2014_02</item>
