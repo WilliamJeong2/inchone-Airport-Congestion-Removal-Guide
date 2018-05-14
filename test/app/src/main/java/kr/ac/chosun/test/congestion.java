@@ -1,7 +1,5 @@
 package kr.ac.chosun.test;
 
-import android.content.res.TypedArray;
-import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -12,19 +10,11 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.ArrayList;
-
-
 public class congestion extends MainActivity {
 
-
     ArrayAdapter<CharSequence> adspin1, adspin2;
-    String choice_year = "";
-    String choice_month = "";
-
-
-
-
+    String choice_year = ""; //선택된 연도가 들어갈 string 변수 선언
+    String choice_month = ""; //선택된 월이 들어갈 string 변수 선언
 
     @Override
     protected void onCreate(Bundle savedInstaceState) {
@@ -43,17 +33,17 @@ public class congestion extends MainActivity {
         spin1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if(adspin1.getItem(position).equals("2014년")){
-                    choice_year = "2014년";
+                if(adspin1.getItem(position).equals("2014년")){ //년도 spinner에서 2014년을 선택하였을 경우
+                    choice_year = "2014년"; //choice_year에 선택된 문자열 저장
 
-                    adspin2 = ArrayAdapter.createFromResource(congestion.this, R.array.month_list,android.R.layout.simple_spinner_dropdown_item);
+                    adspin2 = ArrayAdapter.createFromResource(congestion.this, R.array.month_list,android.R.layout.simple_spinner_dropdown_item);  //adspin2에 month_list를 연결
                     adspin2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                     spin2.setAdapter(adspin2);
 
-                    spin2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    spin2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {  //spin2에 있는 month 아이템 선택 시 실행되는 리스너
                         @Override
                         public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                            choice_month = adspin2.getItem(position).toString();
+                            choice_month = adspin2.getItem(position).toString(); //선택된 문자열을 choice_month에 저장
                         }
 
                         @Override
@@ -63,17 +53,17 @@ public class congestion extends MainActivity {
                     });
 
                 }
-                else if(adspin1.getItem(position).equals("2015년")){
-                    choice_year = "2015년";
+                else if(adspin1.getItem(position).equals("2015년")){  //년도 spinner에서 2015년을 선택하였을 경우
+                    choice_year = "2015년";  //choice_year에 선택된 문자열 저장
 
-                    adspin2 = ArrayAdapter.createFromResource(congestion.this, R.array.month_list,android.R.layout.simple_spinner_dropdown_item);
+                    adspin2 = ArrayAdapter.createFromResource(congestion.this, R.array.month_list,android.R.layout.simple_spinner_dropdown_item);  //adspin2에 month_list를 연결
                     adspin2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                     spin2.setAdapter(adspin2);
 
-                    spin2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    spin2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {  //spin2에 있는 month 아이템 선택 시 실행되는 리스너
                         @Override
                         public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                            choice_month = adspin2.getItem(position).toString();
+                            choice_month = adspin2.getItem(position).toString();  //선택된 문자열을 choice_month에 저장
                         }
 
                         @Override
@@ -83,17 +73,17 @@ public class congestion extends MainActivity {
                     });
 
                 }
-                else if(adspin1.getItem(position).equals("2016년")){
-                    choice_year = "2016년";
+                else if(adspin1.getItem(position).equals("2016년")){  //년도 spinner에서 2016년을 선택하였을 경우
+                    choice_year = "2016년";  //choice_year에 선택된 문자열 저장
 
-                    adspin2 = ArrayAdapter.createFromResource(congestion.this, R.array.month_list,android.R.layout.simple_spinner_dropdown_item);
+                    adspin2 = ArrayAdapter.createFromResource(congestion.this, R.array.month_list,android.R.layout.simple_spinner_dropdown_item);  //adspin2에 month_list를 연결
                     adspin2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                     spin2.setAdapter(adspin2);
 
-                    spin2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    spin2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {  //spin2에 있는 month 아이템 선택 시 실행되는 리스너
                         @Override
                         public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                            choice_month = adspin2.getItem(position).toString();
+                            choice_month = adspin2.getItem(position).toString();  //선택된 문자열을 choice_month에 저장
                         }
 
                         @Override
@@ -103,17 +93,17 @@ public class congestion extends MainActivity {
                     });
 
                 }
-                else if(adspin1.getItem(position).equals("2017년")){
-                    choice_year = "2017년";
+                else if(adspin1.getItem(position).equals("2017년")){  //년도 spinner에서 2017년을 선택하였을 경우
+                    choice_year = "2017년";  //choice_year에 선택된 문자열 저장
 
-                    adspin2 = ArrayAdapter.createFromResource(congestion.this, R.array.month_list,android.R.layout.simple_spinner_dropdown_item);
+                    adspin2 = ArrayAdapter.createFromResource(congestion.this, R.array.month_list,android.R.layout.simple_spinner_dropdown_item);  //adspin2에 month_list를 연결
                     adspin2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                     spin2.setAdapter(adspin2);
 
-                    spin2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    spin2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {  //spin2에 있는 month 아이템 선택 시 실행되는 리스너
                         @Override
                         public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                            choice_month = adspin2.getItem(position).toString();
+                            choice_month = adspin2.getItem(position).toString();  //선택된 문자열을 choice_month에 저장
                         }
 
                         @Override
@@ -123,17 +113,17 @@ public class congestion extends MainActivity {
                     });
 
                 }
-                else if(adspin1.getItem(position).equals("2018년")){
-                    choice_year = "2018년";
+                else if(adspin1.getItem(position).equals("2018년")){  //년도 spinner에서 2018년을 선택하였을 경우
+                    choice_year = "2018년";  //choice_year에 선택된 문자열 저장
 
-                    adspin2 = ArrayAdapter.createFromResource(congestion.this, R.array.month_list,android.R.layout.simple_spinner_dropdown_item);
+                    adspin2 = ArrayAdapter.createFromResource(congestion.this, R.array.month_list,android.R.layout.simple_spinner_dropdown_item);  //adspin2에 month_list를 연결
                     adspin2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                     spin2.setAdapter(adspin2);
 
-                    spin2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    spin2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {  //spin2에 있는 month 아이템 선택 시 실행되는 리스너
                         @Override
                         public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                            choice_month = adspin2.getItem(position).toString();
+                            choice_month = adspin2.getItem(position).toString();  //선택된 문자열을 choice_month에 저장
                         }
 
                         @Override
@@ -160,11 +150,13 @@ public class congestion extends MainActivity {
             public void onClick(View view){
 
                 TextView y_m;
-                String error = "준비되지 않은 자료입니다.";
+                String error = "준비되지 않은 자료입니다."; //준비되지 않은 자료 선택 시 띄울 메세지
                 y_m = (TextView)findViewById(R.id.textview1);
 
 
-                y_m.setText(choice_year+choice_month);
+                y_m.setText(choice_year+choice_month); //선택된 년도와 월을 y_m에 저장
+
+                //아래는 선택된 년도와 월이 다음과 같을 경우 해당하는 기간의 요일별 혼잡도를 불러오는 함수
                 if((choice_year+choice_month).equals("2014년1월")){
                     imageview.setImageResource(R.drawable.w2014_01);
                     Toast.makeText(congestion.this, choice_year + choice_month, Toast.LENGTH_SHORT).show();
@@ -375,43 +367,42 @@ public class congestion extends MainActivity {
                 }
 
                 else if((choice_year+choice_month).equals("2018년4월")){
-                    Toast.makeText(congestion.this, error, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(congestion.this, error, Toast.LENGTH_SHORT).show(); //준비되지 않은 자료를 선택하여 error Toast 메세지 출력
                     //imageview.setImageResource(R.drawable.w2018_04);
                 }
                 else if((choice_year+choice_month).equals("2018년5월")){
-                    Toast.makeText(congestion.this, error, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(congestion.this, error, Toast.LENGTH_SHORT).show(); //준비되지 않은 자료를 선택하여 error Toast 메세지 출력
                     //imageview.setImageResource(R.drawable.w2018_05);
                 }
                 else if((choice_year+choice_month).equals("2018년6월")){
-                    Toast.makeText(congestion.this, error, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(congestion.this, error, Toast.LENGTH_SHORT).show(); //준비되지 않은 자료를 선택하여 error Toast 메세지 출력
                     //imageview.setImageResource(R.drawable.w2018_06);
                 }
                 else if((choice_year+choice_month).equals("2018년7월")){
-                    Toast.makeText(congestion.this, error, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(congestion.this, error, Toast.LENGTH_SHORT).show(); //준비되지 않은 자료를 선택하여 error Toast 메세지 출력
                     //imageview.setImageResource(R.drawable.w2018_07);
                 }
                 else if((choice_year+choice_month).equals("2018년8월")){
-                    Toast.makeText(congestion.this, error, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(congestion.this, error, Toast.LENGTH_SHORT).show(); //준비되지 않은 자료를 선택하여 error Toast 메세지 출력
                     //imageview.setImageResource(R.drawable.w2018_08);
                 }
                 else if((choice_year+choice_month).equals("2018년9월")){
-                    Toast.makeText(congestion.this, error, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(congestion.this, error, Toast.LENGTH_SHORT).show(); //준비되지 않은 자료를 선택하여 error Toast 메세지 출력
                     //imageview.setImageResource(R.drawable.w2018_09);
                 }
                 else if((choice_year+choice_month).equals("2018년10월")){
-                    Toast.makeText(congestion.this, error, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(congestion.this, error, Toast.LENGTH_SHORT).show(); //준비되지 않은 자료를 선택하여 error Toast 메세지 출력
                     //imageview.setImageResource(R.drawable.w2018_10);
                 }
                 else if((choice_year+choice_month).equals("2018년11월")){
-                    Toast.makeText(congestion.this, error, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(congestion.this, error, Toast.LENGTH_SHORT).show(); //준비되지 않은 자료를 선택하여 error Toast 메세지 출력
                     //imageview.setImageResource(R.drawable.w2018_11);
                 }
-                else if((choice_year+choice_month).equals("2018년12월")){
-                    Toast.makeText(congestion.this, error, Toast.LENGTH_SHORT).show();
+                else if((choice_year+choice_month).equals("2018년12월")) {
+                    Toast.makeText(congestion.this, error, Toast.LENGTH_SHORT).show(); //준비되지 않은 자료를 선택하여 error Toast 메세지 출력
                     //imageview.setImageResource(R.drawable.w2018_12);
                 }
-
-}
+            }
 
         });
     }
