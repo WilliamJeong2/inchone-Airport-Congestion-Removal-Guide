@@ -47,7 +47,7 @@ search_delay<-function(yyyy,mm)
     cat("다시 입력하세요. 범위(2014,01~2018,03)")
 }
 search_delay(2018,2)
-setwd("C:/Users/user/Documents/inchone-Airport-Congestion-Removal-Guide/incheonAirport_Congestion/R_Data")
+setwd("C:/Users/user/Documents/inchone-Airport-Congestion-Removal-Guide/incheonAirport_Congestion/R_Data/airport")
 
 for(i in 1:3)  #2018년 월별 요일별 인원 파일 불러오기 위한 for 문
 {
@@ -622,34 +622,34 @@ w_week <- function(yyyy,mm){
 setwd("C:/Users/user/Documents/inchone-Airport-Congestion-Removal-Guide/incheonAirport_Congestion/R_Data") #파일 위치
 passengers_by_time<-read_excel("passengers_by_time.xls") #데이터셋 불러오기
 
-t<-colnames(passengers_by_time)
+t<-colnames(passengers_by_time)#"passengers_by_time.xls"파일의 열의 이름들을 벡터로 만든다
 t_2014<-c(t[2:13])
 t_2015<-c(t[14:25])
 t_2016<-c(t[26:37])
 t_2017<-c(t[38:49])
-t_2018<-c(t[50:52])
+t_2018<-c(t[50:52]) #t_2014 ~ t2018 의 변수로 벡터의 값들을 각 년도별로 나눠서 벡터변수로 만들어줌
 
-passengers_time<-function(yyyy,mm)
+passengers_time<-function(yyyy,mm) #yyyy년도, mm월에 해당하는 시간대별 이용객수 시각화
 {
-  if(yyyy==2014){
-    승객수<-passengers_by_time[,c(t_2014[mm])]
-    ggplot(passengers_by_time,aes(x=시간대,y=승객수))+geom_bar(stat="identity")+ggtitle(paste(t_2014[mm],"시간대별 지연수"))
+  if(yyyy==2014){ 
+    승객수<-passengers_by_time[,c(t_2014[mm])] #yyyy년도중 mm에 해당하는 데이터를 승객수 변수에 저장하고 그래프 출력
+    ggplot(passengers_by_time,aes(x=시간대,y=승객수))+geom_bar(stat="identity")+ggtitle(paste(t_2014[mm],"시간대별 승객수"))
   }
   else if(yyyy==2015){
     승객수<-passengers_by_time[,c(t_2015[mm])]
-    ggplot(passengers_by_time,aes(x=시간대,y=승객수))+geom_bar(stat="identity")+ggtitle(paste(t_2015[mm],"시간대별 지연수"))
+    ggplot(passengers_by_time,aes(x=시간대,y=승객수))+geom_bar(stat="identity")+ggtitle(paste(t_2015[mm],"시간대별 승객수"))
   }
   else if(yyyy==2016){
     승객수<-passengers_by_time[,c(t_2016[mm])]
-    ggplot(passengers_by_time,aes(x=시간대,y=승객수))+geom_bar(stat="identity")+ggtitle(paste(t_2016[mm],"시간대별 지연수"))
+    ggplot(passengers_by_time,aes(x=시간대,y=승객수))+geom_bar(stat="identity")+ggtitle(paste(t_2016[mm],"시간대별 승객수"))
   }
   else if(yyyy==2017){
     승객수<-passengers_by_time[,c(t_2017[mm])]
-    ggplot(passengers_by_time,aes(x=시간대,y=승객수))+geom_bar(stat="identity")+ggtitle(paste(t_2017[mm],"시간대별 지연수"))
+    ggplot(passengers_by_time,aes(x=시간대,y=승객수))+geom_bar(stat="identity")+ggtitle(paste(t_2017[mm],"시간대별 승객수"))
   }
   else if(yyyy==2018){
     승객수<-passengers_by_time[,c(t_2018[mm])]
-    ggplot(passengers_by_time,aes(x=시간대,y=승객수))+geom_bar(stat="identity")+ggtitle(paste(t_2018[mm],"시간대별 지연수"))
+    ggplot(passengers_by_time,aes(x=시간대,y=승객수))+geom_bar(stat="identity")+ggtitle(paste(t_2018[mm],"시간대별 승객수"))
   }
   else
     cat("다시 입력하세요. 범위(2014,01~2018,03)")
