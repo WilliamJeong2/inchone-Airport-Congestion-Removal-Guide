@@ -9,12 +9,14 @@ import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+import uk.co.senab.photoview.PhotoViewAttacher;
 
 public class congestion extends MainActivity {
 
     ArrayAdapter<CharSequence> adspin1, adspin2;
     String choice_year = ""; //선택된 연도가 들어갈 string 변수 선언
     String choice_month = ""; //선택된 월이 들어갈 string 변수 선언
+    PhotoViewAttacher mAttacher;
 
     @Override
     protected void onCreate(Bundle savedInstaceState) {
@@ -24,6 +26,7 @@ public class congestion extends MainActivity {
         final Spinner spin2 = (Spinner)findViewById(R.id.spinner2);
         Button btn_refresh = (Button)findViewById(R.id.btn_refresh);
         final ImageView imageview = (ImageView)findViewById(R.id.imageview1);
+        mAttacher = new PhotoViewAttacher(imageview);
 
         adspin1 = ArrayAdapter.createFromResource(congestion.this, R.array.year_list,android.R.layout.simple_spinner_dropdown_item);
 
