@@ -49,8 +49,9 @@ public class MainActivity extends Activity {
         landing.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) { //이륙정보 버튼이 눌렸을 때
-                Intent intent = new Intent(MainActivity.this, landing.class);
-                startActivity(intent); //이륙정보 화면으로 이동
+                Uri land = Uri.parse("https://www.airport.kr/ap/ko/arr/arrPasSchList.do");
+                Intent landing = new Intent(Intent.ACTION_VIEW, land);
+                startActivity(landing); //이륙정보 화면으로 이동
             }
         });
 
@@ -72,12 +73,12 @@ public class MainActivity extends Activity {
             }
         });
 
-        ImageButton takeoff = (ImageButton) findViewById(R.id.flight_takeoff_button); //착륙 버튼을 지정합니다.
+        ImageButton takeoff = (ImageButton) findViewById(R.id.flight_takeoff_button);
         takeoff.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) { //착륙 버튼이 눌렸을 때
-                Intent intent = new Intent(MainActivity.this, takeoffinfo.class);
-                startActivity(intent); //착륙정보 화면으로 이동
+            public void onClick(View v) {
+                Uri takeoff = Uri.parse("https://www.airport.kr/ap/ko/dep/depPasSchList.do");
+                Intent gotakeoff = new Intent(Intent.ACTION_VIEW, takeoff);
+                startActivity(gotakeoff); //액티비티 이동
             }
         });
 
