@@ -76,23 +76,25 @@
         >
 
         <ImageButton
-            android:id="@+id/congestion_button"
+            android:id="@+id/flight_land_button"
             android:layout_width="106dp"
             android:layout_height="106dp"
             android:layout_marginLeft="0dp"
             android:layout_marginTop="0dp"
             android:padding="0dp"
-            android:src="@drawable/congestion_info"
-            android:text="세부 혼잡도" />
+            android:src="@drawable/flight_land_info" />
 
         <ImageButton
-            android:id="@+id/flight_land_button"
+            android:id="@+id/congestion_button"
             android:layout_width="106dp"
             android:layout_height="106dp"
             android:layout_marginLeft="0dp"
             android:layout_marginTop="120dp"
             android:padding="0dp"
-            android:src="@drawable/flight_land_info" />
+            android:src="@drawable/congestion_info"
+            android:text="세부 혼잡도" />
+
+
 
 
     </FrameLayout>

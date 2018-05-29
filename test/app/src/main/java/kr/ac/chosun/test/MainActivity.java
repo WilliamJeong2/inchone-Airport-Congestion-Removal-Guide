@@ -183,11 +183,24 @@ public class MainActivity extends Activity {
                     case XmlPullParser.END_TAG:
                         if(parser.getName().equals("item")){
 
+
                             //각 Gate에 몇 명이 있는지 text저장
-                            status1.setText(status1.getText()+gateinfo1 + "명");
-                            status2.setText(status2.getText()+gateinfo2 + "명");
-                            status3.setText(status3.getText()+gateinfo3 + "명");
-                            status4.setText(status4.getText()+gateinfo4 + "명");
+                            if (gateinfo1.equals("0")){
+                                status1.setText(("종료"));
+                            }
+                            else status1.setText(status1.getText()+gateinfo1 + "명");
+                            if(gateinfo2.equals("0")){
+                                status2.setText(("종료"));
+                            }
+                            else status2.setText(status2.getText()+gateinfo2 + "명");
+                            if(gateinfo3.equals("0")){
+                                status3.setText(("종료"));
+                            }
+                            else status3.setText(status3.getText()+gateinfo3 + "명");
+                            if(gateinfo4.equals("0")){
+                                status4.setText(("종료"));
+                            }
+                            else status4.setText(status4.getText()+gateinfo4 + "명");
 
                         }
                         break;

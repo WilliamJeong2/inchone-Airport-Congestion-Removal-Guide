@@ -29,7 +29,6 @@ public class congestion extends MainActivity {
         mAttacher = new PhotoViewAttacher(imageview);
 
         adspin1 = ArrayAdapter.createFromResource(congestion.this, R.array.year_list,android.R.layout.simple_spinner_dropdown_item);
-
         adspin1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         spin1.setAdapter(adspin1);
