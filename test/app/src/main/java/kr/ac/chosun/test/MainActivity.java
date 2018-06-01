@@ -99,6 +99,8 @@ public class MainActivity extends Activity {
         TextView status3 = (TextView)findViewById(R.id.status3);
         TextView status4 = (TextView)findViewById(R.id.status4);
 
+        TextView title = (TextView)findViewById(R.id.title);
+
         //필요한 item 변수명을 선언
         boolean initem = false, inAreadiv = false, inCgtdt = false, inCgthm =false, inGateinfo1 = false, inGateinfo2 = false, inGateinfo3 = false, inGateinfo4 = false;
 
