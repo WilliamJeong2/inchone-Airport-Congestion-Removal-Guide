@@ -82,7 +82,7 @@
         android:id="@+id/status2"
         android:layout_width="60dp"
         android:layout_height="35dp"
-        android:layout_marginLeft="130dp"
+        android:layout_marginLeft="215dp"
         android:layout_marginTop="140dp"
         android:textAlignment="center"
         android:textSize="20sp" />
@@ -91,7 +91,7 @@
         android:id="@+id/status3"
         android:layout_width="60dp"
         android:layout_height="35dp"
-        android:layout_marginLeft="215dp"
+        android:layout_marginLeft="130dp"
         android:layout_marginTop="140dp"
         android:textAlignment="center"
         android:textSize="20sp" />
