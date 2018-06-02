@@ -29,9 +29,7 @@
         android:layout_height="17dp"
         android:layout_marginLeft="340dp"
         android:layout_marginTop="240dp"
-
         android:padding="0dp"
-
         android:scaleType="centerInside"
         android:src="@drawable/add_info" />
 

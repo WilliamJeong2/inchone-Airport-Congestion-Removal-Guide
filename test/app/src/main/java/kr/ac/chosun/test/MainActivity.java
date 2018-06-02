@@ -1,6 +1,8 @@
 package kr.ac.chosun.test;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.net.UrlQuerySanitizer;
@@ -11,6 +13,8 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserFactory;
 
@@ -34,6 +38,15 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        ImageButton button = (ImageButton)findViewById(R.id.add_info); //패스트 트랙 안내메세지 버튼 생성
+        button.setOnClickListener(new View.OnClickListener() {  // 안내메세지 버튼 이벤트 추가
+            @Override
+            public void onClick(View view) {
+                show();
+            }
+        });
+
 
         //버튼->새로운 화면으로 이동하는 함수
         ImageButton congestion = (ImageButton) findViewById(R.id.congestion_button); //혼잡도 버튼을 지정합니다.
@@ -214,6 +227,19 @@ public class MainActivity extends Activity {
             status1.setText("에러발생");
 
         }
+    }
+
+    void show()
+    {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("패스트트랙(교통약자용)");
+        builder.setMessage("이용 시설 : 1번 6번 출국장\n이용 시간 : 오전 7시~오후 7시\n이용 대상 : 교통약자 및 출입국 우대자");
+        builder.setPositiveButton("확인",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                    }
+                });
+        builder.show();
     }
 }
 
