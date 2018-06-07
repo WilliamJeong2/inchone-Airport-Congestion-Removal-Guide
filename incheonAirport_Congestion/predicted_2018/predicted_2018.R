@@ -1,91 +1,91 @@
 
-###### 2001ë…„4ì›”~2017ë…„12ì›” ì¸ì²œê³µí•­ ì´ìš©ìž ìˆ˜ ë°ì´í„°ë¥¼ ë°›ì•„ 
-######ì‹ ê²½ë§ ëª¨ë¸ ì¤‘ì˜ í•˜ë‚˜ì¸ nnet íŒ¨í‚¤ì§€ í•¨ìˆ˜ë¥¼ ì‚¬ìš©í•˜ì—¬ 
-###### 2018ë…„ 1~12ì›” ì¸ì²œê³µí•­ ì´ìš©ìž ìˆ˜ ì˜ˆì¸¡ 
+###### 2001³â4¿ù~2017³â12¿ù ÀÎÃµ°øÇ× ÀÌ¿ëÀÚ ¼ö µ¥ÀÌÅÍ¸¦ ¹Þ¾Æ 
+######½Å°æ¸Á ¸ðµ¨ ÁßÀÇ ÇÏ³ªÀÎ nnet ÆÐÅ°Áö ÇÔ¼ö¸¦ »ç¿ëÇÏ¿© 
+###### 2018³â 1~12¿ù ÀÎÃµ°øÇ× ÀÌ¿ëÀÚ ¼ö ¿¹Ãø 
 
-install.packages("xlsx") #ì—‘ì…€ íŒŒì¼ ì½ì–´ ë“¤ì´ê¸° ìœ„í•œ íŒ¨í‚¤ì§€ ì„¤ì¹˜
-install.packages("nnet") #ì‹ ê²½ë§ ëª¨ë¸ ì¤‘ì˜ í•˜ë‚˜ì¸ nnet íŒ¨í‚¤ì§€ ì„¤ì¹˜
-dyn.load('/Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/jre/lib/server/libjvm.dylib') #ë§¥ì—ëŠ” 32bitìžë°”ê°€ ì—†ì–´ì„œ ë”°ë¡œ ì§€ì •
-library(xlsx) #rJavaì˜¤ë¥˜ ì‹œ 32ë¹„íŠ¸ javaë‹¤ìš´ë°›ê¸°
-library(nnet) #ì‹ ê²½ë§ ëª¨ë¸ ì¤‘ í•˜ë‚˜ì¸ nnet íŒ¨í‚¤ì§€ ì‚¬ìš©í•˜ê¸° ìœ„í•œ í™˜ê²½ ì„¤ì •
+install.packages("xlsx") #¿¢¼¿ ÆÄÀÏ ÀÐµéÀÌ±â À§ÇÑ ÆÐÅ°Áö ¼³Ä¡
+install.packages("nnet") #½Å°æ¸Á ¸ðµ¨ ÁßÀÇ ÇÏ³ªÀÎ nnet ÆÐÅ°Áö ¼³Ä¡
+dyn.load('/Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/jre/lib/server/libjvm.dylib') #¸Æ¿¡´Â 32bitÀÚ¹Ù°¡ ¾ø¾î¼­ µû·Î ÁöÁ¤
+library(xlsx) #rJava¿À·ù ½Ã 32ºñÆ® java´Ù¿î¹Þ±â
+library(nnet) #½Å°æ¸Á ¸ðµ¨ Áß ÇÏ³ªÀÎ nnet ÆÐÅ°Áö »ç¿ëÇÏ±â À§ÇÑ È¯°æ ¼³Á¤
 
 par(family="NanumGothic")
 
-data1<-read.xlsx2(file.choose(),1) #2002ë…„~2017ë…„ 1ì›” ë°ì´í„°
+data1<-read.xlsx2(file.choose(),1) #2002³â~2017³â 1¿ù µ¥ÀÌÅÍ
 
-data2<-read.xlsx2(file.choose(),1) #2002ë…„~2017ë…„ 2ì›” ë°ì´í„°
+data2<-read.xlsx2(file.choose(),1) #2002³â~2017³â 2¿ù µ¥ÀÌÅÍ
 
-data3<-read.xlsx2(file.choose(),1) #2002ë…„~2017ë…„ 3ì›” ë°ì´í„°
+data3<-read.xlsx2(file.choose(),1) #2002³â~2017³â 3¿ù µ¥ÀÌÅÍ
 
-data4<-read.xlsx2(file.choose(),1) #2001ë…„~2017ë…„ 4ì›” ë°ì´í„°
+data4<-read.xlsx2(file.choose(),1) #2001³â~2017³â 4¿ù µ¥ÀÌÅÍ
 
-data5<-read.xlsx2(file.choose(),1) #2001ë…„~2017ë…„ 5ì›” ë°ì´í„°
+data5<-read.xlsx2(file.choose(),1) #2001³â~2017³â 5¿ù µ¥ÀÌÅÍ
 
-data6<-read.xlsx2(file.choose(),1) #2001ë…„~2017ë…„ 6ì›” ë°ì´í„°
+data6<-read.xlsx2(file.choose(),1) #2001³â~2017³â 6¿ù µ¥ÀÌÅÍ
 
-data7<-read.xlsx2(file.choose(),1) #2001ë…„~2017ë…„ 7ì›” ë°ì´í„°
+data7<-read.xlsx2(file.choose(),1) #2001³â~2017³â 7¿ù µ¥ÀÌÅÍ
 
-data8<-read.xlsx2(file.choose(),1) #2001ë…„~2017ë…„ 8ì›” ë°ì´í„°
+data8<-read.xlsx2(file.choose(),1) #2001³â~2017³â 8¿ù µ¥ÀÌÅÍ
 
-data9<-read.xlsx2(file.choose(),1) #2001ë…„~2017ë…„ 9ì›” ë°ì´í„°
+data9<-read.xlsx2(file.choose(),1) #2001³â~2017³â 9¿ù µ¥ÀÌÅÍ
 
-data10<-read.xlsx2(file.choose(),1) #2001ë…„~2017ë…„ 10ì›” ë°ì´í„°
+data10<-read.xlsx2(file.choose(),1) #2001³â~2017³â 10¿ù µ¥ÀÌÅÍ
 
-data11<-read.xlsx2(file.choose(),1) #2001ë…„~2017ë…„ 11ì›” ë°ì´í„°
+data11<-read.xlsx2(file.choose(),1) #2001³â~2017³â 11¿ù µ¥ÀÌÅÍ
 
-data12<-read.xlsx2(file.choose(),1) #2001ë…„~2017ë…„ 12ì›” ë°ì´í„°
+data12<-read.xlsx2(file.choose(),1) #2001³â~2017³â 12¿ù µ¥ÀÌÅÍ
 
-data1$í•©ê³„<-gsub(",","",data1$í•©ê³„) #ì¸ì›ìˆ˜ì˜ 3ìžë¦¬ ë‹¨ìœ„ë¡œ ìžˆëŠ” ,ë¥¼ ì‚­ì œ
-data1$í•©ê³„<-as.numeric(data1$í•©ê³„) #ì¸ì›ìˆ˜ë¥¼ numericë¡œ
-df1<-data.frame(ì¼ìž=data1$ìš”ì¼,ì¸ì›ìˆ˜=data1$í•©ê³„) # ìš”ì¼->ì¼ìžë¡œ, í•©ê³„->ì¸ì›ìˆ˜ë¡œ ì»¬ëŸ¼ ì´ë¦„ ë³€ê²½
+data1$ÇÕ°è<-gsub(",","",data1$ÇÕ°è) #ÀÎ¿ø¼öÀÇ 3ÀÚ¸® ´ÜÀ§·Î ÀÖ´Â ,¸¦ »èÁ¦
+data1$ÇÕ°è<-as.numeric(data1$ÇÕ°è) #ÀÎ¿ø¼ö¸¦ numeric·Î
+df1<-data.frame(ÀÏÀÚ=data1$¿äÀÏ,ÀÎ¿ø¼ö=data1$ÇÕ°è) # ¿äÀÏ->ÀÏÀÚ·Î, ÇÕ°è->ÀÎ¿ø¼ö·Î ÄÃ·³ ÀÌ¸§ º¯°æ
 
-data2$í•©ê³„<-gsub(",","",data2$í•©ê³„) #ì¸ì›ìˆ˜ì˜ 3ìžë¦¬ ë‹¨ìœ„ë¡œ ìžˆëŠ” ,ë¥¼ ì‚­ì œ
-data2$í•©ê³„<-as.numeric(data2$í•©ê³„) #ì¸ì›ìˆ˜ë¥¼ numericë¡œ
-df2<-data.frame(ì¼ìž=data2$ìš”ì¼,ì¸ì›ìˆ˜=data2$í•©ê³„) # ìš”ì¼->ì¼ìžë¡œ, í•©ê³„->ì¸ì›ìˆ˜ë¡œ ì»¬ëŸ¼ ì´ë¦„ ë³€ê²½
+data2$ÇÕ°è<-gsub(",","",data2$ÇÕ°è) #ÀÎ¿ø¼öÀÇ 3ÀÚ¸® ´ÜÀ§·Î ÀÖ´Â ,¸¦ »èÁ¦
+data2$ÇÕ°è<-as.numeric(data2$ÇÕ°è) #ÀÎ¿ø¼ö¸¦ numeric·Î
+df2<-data.frame(ÀÏÀÚ=data2$¿äÀÏ,ÀÎ¿ø¼ö=data2$ÇÕ°è) # ¿äÀÏ->ÀÏÀÚ·Î, ÇÕ°è->ÀÎ¿ø¼ö·Î ÄÃ·³ ÀÌ¸§ º¯°æ
 
-data3$í•©ê³„<-gsub(",","",data3$í•©ê³„) #ì¸ì›ìˆ˜ì˜ 3ìžë¦¬ ë‹¨ìœ„ë¡œ ìžˆëŠ” ,ë¥¼ ì‚­ì œ
-data3$í•©ê³„<-as.numeric(data3$í•©ê³„) #ì¸ì›ìˆ˜ë¥¼ numericë¡œ
-df3<-data.frame(ì¼ìž=data3$ìš”ì¼,ì¸ì›ìˆ˜=data3$í•©ê³„) # ìš”ì¼->ì¼ìžë¡œ, í•©ê³„->ì¸ì›ìˆ˜ë¡œ ì»¬ëŸ¼ ì´ë¦„ ë³€ê²½
+data3$ÇÕ°è<-gsub(",","",data3$ÇÕ°è) #ÀÎ¿ø¼öÀÇ 3ÀÚ¸® ´ÜÀ§·Î ÀÖ´Â ,¸¦ »èÁ¦
+data3$ÇÕ°è<-as.numeric(data3$ÇÕ°è) #ÀÎ¿ø¼ö¸¦ numeric·Î
+df3<-data.frame(ÀÏÀÚ=data3$¿äÀÏ,ÀÎ¿ø¼ö=data3$ÇÕ°è) # ¿äÀÏ->ÀÏÀÚ·Î, ÇÕ°è->ÀÎ¿ø¼ö·Î ÄÃ·³ ÀÌ¸§ º¯°æ
 
-data4$í•©ê³„<-gsub(",","",data4$í•©ê³„) #ì¸ì›ìˆ˜ì˜ 3ìžë¦¬ ë‹¨ìœ„ë¡œ ìžˆëŠ” ,ë¥¼ ì‚­ì œ
-data4$í•©ê³„<-as.numeric(data4$í•©ê³„) #ì¸ì›ìˆ˜ë¥¼ numericë¡œ
-df4<-data.frame(ì¼ìž=data4$ìš”ì¼,ì¸ì›ìˆ˜=data4$í•©ê³„) # ìš”ì¼->ì¼ìžë¡œ, í•©ê³„->ì¸ì›ìˆ˜ë¡œ ì»¬ëŸ¼ ì´ë¦„ ë³€ê²½
+data4$ÇÕ°è<-gsub(",","",data4$ÇÕ°è) #ÀÎ¿ø¼öÀÇ 3ÀÚ¸® ´ÜÀ§·Î ÀÖ´Â ,¸¦ »èÁ¦
+data4$ÇÕ°è<-as.numeric(data4$ÇÕ°è) #ÀÎ¿ø¼ö¸¦ numeric·Î
+df4<-data.frame(ÀÏÀÚ=data4$¿äÀÏ,ÀÎ¿ø¼ö=data4$ÇÕ°è) # ¿äÀÏ->ÀÏÀÚ·Î, ÇÕ°è->ÀÎ¿ø¼ö·Î ÄÃ·³ ÀÌ¸§ º¯°æ
 
-data5$í•©ê³„<-gsub(",","",data5$í•©ê³„) #ì¸ì›ìˆ˜ì˜ 3ìžë¦¬ ë‹¨ìœ„ë¡œ ìžˆëŠ” ,ë¥¼ ì‚­ì œ
-data5$í•©ê³„<-as.numeric(data5$í•©ê³„) #ì¸ì›ìˆ˜ë¥¼ numericë¡œ
-df5<-data.frame(ì¼ìž=data5$ìš”ì¼,ì¸ì›ìˆ˜=data5$í•©ê³„) # ìš”ì¼->ì¼ìžë¡œ, í•©ê³„->ì¸ì›ìˆ˜ë¡œ ì»¬ëŸ¼ ì´ë¦„ ë³€ê²½
+data5$ÇÕ°è<-gsub(",","",data5$ÇÕ°è) #ÀÎ¿ø¼öÀÇ 3ÀÚ¸® ´ÜÀ§·Î ÀÖ´Â ,¸¦ »èÁ¦
+data5$ÇÕ°è<-as.numeric(data5$ÇÕ°è) #ÀÎ¿ø¼ö¸¦ numeric·Î
+df5<-data.frame(ÀÏÀÚ=data5$¿äÀÏ,ÀÎ¿ø¼ö=data5$ÇÕ°è) # ¿äÀÏ->ÀÏÀÚ·Î, ÇÕ°è->ÀÎ¿ø¼ö·Î ÄÃ·³ ÀÌ¸§ º¯°æ
 
-data6$í•©ê³„<-gsub(",","",data6$í•©ê³„) #ì¸ì›ìˆ˜ì˜ 3ìžë¦¬ ë‹¨ìœ„ë¡œ ìžˆëŠ” ,ë¥¼ ì‚­ì œ
-data6$í•©ê³„<-as.numeric(data6$í•©ê³„) #ì¸ì›ìˆ˜ë¥¼ numericë¡œ
-df6<-data.frame(ì¼ìž=data6$ìš”ì¼,ì¸ì›ìˆ˜=data6$í•©ê³„) # ìš”ì¼->ì¼ìžë¡œ, í•©ê³„->ì¸ì›ìˆ˜ë¡œ ì»¬ëŸ¼ ì´ë¦„ ë³€ê²½
+data6$ÇÕ°è<-gsub(",","",data6$ÇÕ°è) #ÀÎ¿ø¼öÀÇ 3ÀÚ¸® ´ÜÀ§·Î ÀÖ´Â ,¸¦ »èÁ¦
+data6$ÇÕ°è<-as.numeric(data6$ÇÕ°è) #ÀÎ¿ø¼ö¸¦ numeric·Î
+df6<-data.frame(ÀÏÀÚ=data6$¿äÀÏ,ÀÎ¿ø¼ö=data6$ÇÕ°è) # ¿äÀÏ->ÀÏÀÚ·Î, ÇÕ°è->ÀÎ¿ø¼ö·Î ÄÃ·³ ÀÌ¸§ º¯°æ
 
-data7$í•©ê³„<-gsub(",","",data7$í•©ê³„) #ì¸ì›ìˆ˜ì˜ 3ìžë¦¬ ë‹¨ìœ„ë¡œ ìžˆëŠ” ,ë¥¼ ì‚­ì œ
-data7$í•©ê³„<-as.numeric(data7$í•©ê³„) #ì¸ì›ìˆ˜ë¥¼ numericë¡œ
-df7<-data.frame(ì¼ìž=data7$ìš”ì¼,ì¸ì›ìˆ˜=data7$í•©ê³„) # ìš”ì¼->ì¼ìžë¡œ, í•©ê³„->ì¸ì›ìˆ˜ë¡œ ì»¬ëŸ¼ ì´ë¦„ ë³€ê²½
+data7$ÇÕ°è<-gsub(",","",data7$ÇÕ°è) #ÀÎ¿ø¼öÀÇ 3ÀÚ¸® ´ÜÀ§·Î ÀÖ´Â ,¸¦ »èÁ¦
+data7$ÇÕ°è<-as.numeric(data7$ÇÕ°è) #ÀÎ¿ø¼ö¸¦ numeric·Î
+df6<-data.frame(ÀÏÀÚ=data7$¿äÀÏ,ÀÎ¿ø¼ö=data7$ÇÕ°è) # ¿äÀÏ->ÀÏÀÚ·Î, ÇÕ°è->ÀÎ¿ø¼ö·Î ÄÃ·³ ÀÌ¸§ º¯°æ
 
-data8$í•©ê³„<-gsub(",","",data8$í•©ê³„) #ì¸ì›ìˆ˜ì˜ 3ìžë¦¬ ë‹¨ìœ„ë¡œ ìžˆëŠ” ,ë¥¼ ì‚­ì œ
-data8$í•©ê³„<-as.numeric(data8$í•©ê³„) #ì¸ì›ìˆ˜ë¥¼ numericë¡œ
-df8<-data.frame(ì¼ìž=data8$ìš”ì¼,ì¸ì›ìˆ˜=data8$í•©ê³„) # ìš”ì¼->ì¼ìžë¡œ, í•©ê³„->ì¸ì›ìˆ˜ë¡œ ì»¬ëŸ¼ ì´ë¦„ ë³€ê²½
+data8$ÇÕ°è<-gsub(",","",data8$ÇÕ°è) #ÀÎ¿ø¼öÀÇ 3ÀÚ¸® ´ÜÀ§·Î ÀÖ´Â ,¸¦ »èÁ¦
+data8$ÇÕ°è<-as.numeric(data8$ÇÕ°è) #ÀÎ¿ø¼ö¸¦ numeric·Î
+df8<-data.frame(ÀÏÀÚ=data8$¿äÀÏ,ÀÎ¿ø¼ö=data8$ÇÕ°è) # ¿äÀÏ->ÀÏÀÚ·Î, ÇÕ°è->ÀÎ¿ø¼ö·Î ÄÃ·³ ÀÌ¸§ º¯°æ
 
-data9$í•©ê³„<-gsub(",","",data9$í•©ê³„) #ì¸ì›ìˆ˜ì˜ 3ìžë¦¬ ë‹¨ìœ„ë¡œ ìžˆëŠ” ,ë¥¼ ì‚­ì œ
-data9$í•©ê³„<-as.numeric(data9$í•©ê³„) #ì¸ì›ìˆ˜ë¥¼ numericë¡œ
-df9<-data.frame(ì¼ìž=data9$ìš”ì¼,ì¸ì›ìˆ˜=data9$í•©ê³„) # ìš”ì¼->ì¼ìžë¡œ, í•©ê³„->ì¸ì›ìˆ˜ë¡œ ì»¬ëŸ¼ ì´ë¦„ ë³€ê²½
+data9$ÇÕ°è<-gsub(",","",data9$ÇÕ°è) #ÀÎ¿ø¼öÀÇ 3ÀÚ¸® ´ÜÀ§·Î ÀÖ´Â ,¸¦ »èÁ¦
+data9$ÇÕ°è<-as.numeric(data9$ÇÕ°è) #ÀÎ¿ø¼ö¸¦ numeric·Î
+df9<-data.frame(ÀÏÀÚ=data9$¿äÀÏ,ÀÎ¿ø¼ö=data9$ÇÕ°è) # ¿äÀÏ->ÀÏÀÚ·Î, ÇÕ°è->ÀÎ¿ø¼ö·Î ÄÃ·³ ÀÌ¸§ º¯°æ
 
-data10$í•©ê³„<-gsub(",","",data10$í•©ê³„) #ì¸ì›ìˆ˜ì˜ 3ìžë¦¬ ë‹¨ìœ„ë¡œ ìžˆëŠ” ,ë¥¼ ì‚­ì œ
-data10$í•©ê³„<-as.numeric(data10$í•©ê³„) #ì¸ì›ìˆ˜ë¥¼ numericë¡œ
-df10<-data.frame(ì¼ìž=data10$ìš”ì¼,ì¸ì›ìˆ˜=data10$í•©ê³„) # ìš”ì¼->ì¼ìžë¡œ, í•©ê³„->ì¸ì›ìˆ˜ë¡œ ì»¬ëŸ¼ ì´ë¦„ ë³€ê²½
+data10$ÇÕ°è<-gsub(",","",data10$ÇÕ°è) #ÀÎ¿ø¼öÀÇ 3ÀÚ¸® ´ÜÀ§·Î ÀÖ´Â ,¸¦ »èÁ¦
+data10$ÇÕ°è<-as.numeric(data10$ÇÕ°è) #ÀÎ¿ø¼ö¸¦ numeric·Î
+df10<-data.frame(ÀÏÀÚ=data10$¿äÀÏ,ÀÎ¿ø¼ö=data10$ÇÕ°è) # ¿äÀÏ->ÀÏÀÚ·Î, ÇÕ°è->ÀÎ¿ø¼ö·Î ÄÃ·³ ÀÌ¸§ º¯°æ
 
-data11$í•©ê³„<-gsub(",","",data11$í•©ê³„) #ì¸ì›ìˆ˜ì˜ 3ìžë¦¬ ë‹¨ìœ„ë¡œ ìžˆëŠ” ,ë¥¼ ì‚­ì œ
-data11$í•©ê³„<-as.numeric(data11$í•©ê³„) #ì¸ì›ìˆ˜ë¥¼ numericë¡œ
-df11<-data.frame(ì¼ìž=data11$ìš”ì¼,ì¸ì›ìˆ˜=data11$í•©ê³„) # ìš”ì¼->ì¼ìžë¡œ, í•©ê³„->ì¸ì›ìˆ˜ë¡œ ì»¬ëŸ¼ ì´ë¦„ ë³€ê²½
+data11$ÇÕ°è<-gsub(",","",data11$ÇÕ°è) #ÀÎ¿ø¼öÀÇ 3ÀÚ¸® ´ÜÀ§·Î ÀÖ´Â ,¸¦ »èÁ¦
+data11$ÇÕ°è<-as.numeric(data11$ÇÕ°è) #ÀÎ¿ø¼ö¸¦ numeric·Î
+df11<-data.frame(ÀÏÀÚ=data11$¿äÀÏ,ÀÎ¿ø¼ö=data11$ÇÕ°è) # ¿äÀÏ->ÀÏÀÚ·Î, ÇÕ°è->ÀÎ¿ø¼ö·Î ÄÃ·³ ÀÌ¸§ º¯°æ
 
-data12$í•©ê³„<-gsub(",","",data12$í•©ê³„) #ì¸ì›ìˆ˜ì˜ 3ìžë¦¬ ë‹¨ìœ„ë¡œ ìžˆëŠ” ,ë¥¼ ì‚­ì œ
-data12$í•©ê³„<-as.numeric(data12$í•©ê³„) #ì¸ì›ìˆ˜ë¥¼ numericë¡œ
-df12<-data.frame(ì¼ìž=data12$ìš”ì¼,ì¸ì›ìˆ˜=data12$í•©ê³„) # ìš”ì¼->ì¼ìžë¡œ, í•©ê³„->ì¸ì›ìˆ˜ë¡œ ì»¬ëŸ¼ ì´ë¦„ ë³€ê²½
+data12$ÇÕ°è<-gsub(",","",data12$ÇÕ°è) #ÀÎ¿ø¼öÀÇ 3ÀÚ¸® ´ÜÀ§·Î ÀÖ´Â ,¸¦ »èÁ¦
+data12$ÇÕ°è<-as.numeric(data12$ÇÕ°è) #ÀÎ¿ø¼ö¸¦ numeric·Î
+df12<-data.frame(ÀÏÀÚ=data12$¿äÀÏ,ÀÎ¿ø¼ö=data12$ÇÕ°è) # ¿äÀÏ->ÀÏÀÚ·Î, ÇÕ°è->ÀÎ¿ø¼ö·Î ÄÃ·³ ÀÌ¸§ º¯°æ
 
 
-#ë”¥ ëŸ¬ë‹ì„ ìœ„í•œ getDataSet í•¨ìˆ˜ 
-getDataSet<-function(item,from,to,size){ #ë°°ì—´ì„ í•œ ì¹¸ì”© ì´ë™í•˜ë©° ì •í•´ì§„ êµ¬ê°„ì„ íƒìƒ‰í•˜ëŠ” ì•Œê³ ë¦¬ì¦˜
+#µö ·¯´×À» À§ÇÑ getDataSet ÇÔ¼ö 
+getDataSet<-function(item,from,to,size){ #¹è¿­À» ÇÑ Ä­¾¿ ÀÌµ¿ÇÏ¸ç Á¤ÇØÁø ±¸°£À» Å½»öÇÏ´Â ¾Ë°í¸®Áò
   dataframe<-NULL
   to<-to-size+1
   for(i in from:to) {
@@ -97,44 +97,44 @@ getDataSet<-function(item,from,to,size){ #ë°°ì—´ì„ í•œ ì¹¸ì”© ì´ë™í•˜ë©° ì •í
   return(dataframe)
 }
 
-#ë”¥ ëŸ¬ë‹ì„ ìœ„í•œ INPUT_NODES, HIDDEN_NODES, OUTPUT_NODES ê°’ ì„¤ì •
+#µö ·¯´×À» À§ÇÑ INPUT_NODES, HIDDEN_NODES, OUTPUT_NODES °ª ¼³Á¤
 
-INPUT_NODES<-2 # ë°ì´í„°ê°€ ìž…ë ¥ ë˜ëŠ” ê³³
-HIDDEN_NODES<-INPUT_NODES*2 # ì‹¤ì§ˆì ì¸ ë°ì´í„°ê°€ ì²˜ë¦¬ë˜ëŠ” ê³³
-OUTPUT_NODES<-1 # ì˜ˆì¸¡ê°’ì´ ì¶œë ¥
-ITERATION<-500 #500ë²ˆ ë°˜ë³µ
+INPUT_NODES<-2 # µ¥ÀÌÅÍ°¡ ÀÔ·Â µÇ´Â °÷
+HIDDEN_NODES<-INPUT_NODES*2 # ½ÇÁúÀûÀÎ µ¥ÀÌÅÍ°¡ Ã³¸®µÇ´Â °÷
+OUTPUT_NODES<-1 # ¿¹Ãø°ªÀÌ Ãâ·Â
+ITERATION<-500 #500¹ø ¹Ýº¹
 
-#### 2018ë…„ 1~12ì›” ì¸ì²œê³µí•­ ì´ìš©ìžìˆ˜ ì˜ˆì¸¡ ê°’####
+#### 2018³â 1~12¿ù ÀÎÃµ°øÇ× ÀÌ¿ëÀÚ¼ö ¿¹Ãø °ª####
 
-#ì¸ëŸ¬ë‹ ê°’ ëŒ€ìž…
-in_learning1<-getDataSet(df1$ì¸ì›ìˆ˜,1,15,INPUT_NODES) #1ì›” ê°’ë“¤ ìž…ë ¥ 
-in_learning2<-getDataSet(df2$ì¸ì›ìˆ˜,1,15,INPUT_NODES) #2ì›” ê°’ë“¤ ìž…ë ¥
-in_learning3<-getDataSet(df3$ì¸ì›ìˆ˜,1,15,INPUT_NODES) #3ì›” ê°’ë“¤ ìž…ë ¥
-in_learning4<-getDataSet(df4$ì¸ì›ìˆ˜,1,16,INPUT_NODES) #4ì›” ê°’ë“¤ ìž…ë ¥
-in_learning5<-getDataSet(df5$ì¸ì›ìˆ˜,1,16,INPUT_NODES) #5ì›” ê°’ë“¤ ìž…ë ¥
-in_learning6<-getDataSet(df6$ì¸ì›ìˆ˜,1,16,INPUT_NODES) #6ì›” ê°’ë“¤ ìž…ë ¥
-in_learning7<-getDataSet(df7$ì¸ì›ìˆ˜,1,16,INPUT_NODES) #7ì›” ê°’ë“¤ ìž…ë ¥
-in_learning8<-getDataSet(df8$ì¸ì›ìˆ˜,1,16,INPUT_NODES) #8ì›” ê°’ë“¤ ìž…ë ¥
-in_learning9<-getDataSet(df9$ì¸ì›ìˆ˜,1,16,INPUT_NODES) #9ì›” ê°’ë“¤ ìž…ë ¥
-in_learning10<-getDataSet(df10$ì¸ì›ìˆ˜,1,16,INPUT_NODES) #10ì›” ê°’ë“¤ ìž…ë ¥
-in_learning11<-getDataSet(df11$ì¸ì›ìˆ˜,1,16,INPUT_NODES) #11ì›” ê°’ë“¤ ìž…ë ¥
-in_learning12<-getDataSet(df12$ì¸ì›ìˆ˜,1,16,INPUT_NODES) #12ì›” ê°’ë“¤ ìž…ë ¥
+#ÀÎ·¯´× °ª ´ëÀÔ
+in_learning1<-getDataSet(df1$ÀÎ¿ø¼ö,1,15,INPUT_NODES) #1¿ù °ªµé ÀÔ·Â 
+in_learning2<-getDataSet(df2$ÀÎ¿ø¼ö,1,15,INPUT_NODES) #2¿ù °ªµé ÀÔ·Â
+in_learning3<-getDataSet(df3$ÀÎ¿ø¼ö,1,15,INPUT_NODES) #3¿ù °ªµé ÀÔ·Â
+in_learning4<-getDataSet(df4$ÀÎ¿ø¼ö,1,16,INPUT_NODES) #4¿ù °ªµé ÀÔ·Â
+in_learning5<-getDataSet(df5$ÀÎ¿ø¼ö,1,16,INPUT_NODES) #5¿ù °ªµé ÀÔ·Â
+in_learning6<-getDataSet(df6$ÀÎ¿ø¼ö,1,16,INPUT_NODES) #6¿ù °ªµé ÀÔ·Â
+in_learning7<-getDataSet(df7$ÀÎ¿ø¼ö,1,16,INPUT_NODES) #7¿ù °ªµé ÀÔ·Â
+in_learning8<-getDataSet(df8$ÀÎ¿ø¼ö,1,16,INPUT_NODES) #8¿ù °ªµé ÀÔ·Â
+in_learning9<-getDataSet(df9$ÀÎ¿ø¼ö,1,16,INPUT_NODES) #9¿ù °ªµé ÀÔ·Â
+in_learning10<-getDataSet(df10$ÀÎ¿ø¼ö,1,16,INPUT_NODES) #10¿ù °ªµé ÀÔ·Â
+in_learning11<-getDataSet(df11$ÀÎ¿ø¼ö,1,16,INPUT_NODES) #11¿ù °ªµé ÀÔ·Â
+in_learning12<-getDataSet(df12$ÀÎ¿ø¼ö,1,16,INPUT_NODES) #12¿ù °ªµé ÀÔ·Â
 
-#ì•„ì›ƒëŸ¬ë‹ ê°’ ëŒ€ìž…
-out_learning1<-getDataSet(df1$ì¸ì›ìˆ˜,3,16,OUTPUT_NODES) #1ì›” ê°’ë“¤ ì¶œë ¥
-out_learning2<-getDataSet(df2$ì¸ì›ìˆ˜,3,16,OUTPUT_NODES) #2ì›” ê°’ë“¤ ì¶œë ¥
-out_learning3<-getDataSet(df3$ì¸ì›ìˆ˜,3,16,OUTPUT_NODES) #3ì›” ê°’ë“¤ ì¶œë ¥
-out_learning4<-getDataSet(df4$ì¸ì›ìˆ˜,3,17,OUTPUT_NODES) #4ì›” ê°’ë“¤ ì¶œë ¥
-out_learning5<-getDataSet(df5$ì¸ì›ìˆ˜,3,17,OUTPUT_NODES) #5ì›” ê°’ë“¤ ì¶œë ¥
-out_learning6<-getDataSet(df6$ì¸ì›ìˆ˜,3,17,OUTPUT_NODES) #6ì›” ê°’ë“¤ ì¶œë ¥
-out_learning7<-getDataSet(df7$ì¸ì›ìˆ˜,3,17,OUTPUT_NODES) #7ì›” ê°’ë“¤ ì¶œë ¥
-out_learning8<-getDataSet(df8$ì¸ì›ìˆ˜,3,17,OUTPUT_NODES) #8ì›” ê°’ë“¤ ì¶œë ¥
-out_learning9<-getDataSet(df9$ì¸ì›ìˆ˜,3,17,OUTPUT_NODES) #9ì›” ê°’ë“¤ ì¶œë ¥
-out_learning10<-getDataSet(df10$ì¸ì›ìˆ˜,3,17,OUTPUT_NODES) #10ì›” ê°’ë“¤ ì¶œë ¥
-out_learning11<-getDataSet(df11$ì¸ì›ìˆ˜,3,17,OUTPUT_NODES) #11ì›” ê°’ë“¤ ì¶œë ¥
-out_learning12<-getDataSet(df12$ì¸ì›ìˆ˜,3,17,OUTPUT_NODES) #12ì›” ê°’ë“¤ ì¶œë ¥
+#¾Æ¿ô·¯´× °ª ´ëÀÔ
+out_learning1<-getDataSet(df1$ÀÎ¿ø¼ö,3,16,OUTPUT_NODES) #1¿ù °ªµé Ãâ·Â
+out_learning2<-getDataSet(df2$ÀÎ¿ø¼ö,3,16,OUTPUT_NODES) #2¿ù °ªµé Ãâ·Â
+out_learning3<-getDataSet(df3$ÀÎ¿ø¼ö,3,16,OUTPUT_NODES) #3¿ù °ªµé Ãâ·Â
+out_learning4<-getDataSet(df4$ÀÎ¿ø¼ö,3,17,OUTPUT_NODES) #4¿ù °ªµé Ãâ·Â
+out_learning5<-getDataSet(df5$ÀÎ¿ø¼ö,3,17,OUTPUT_NODES) #5¿ù °ªµé Ãâ·Â
+out_learning6<-getDataSet(df6$ÀÎ¿ø¼ö,3,17,OUTPUT_NODES) #6¿ù °ªµé Ãâ·Â
+out_learning7<-getDataSet(df7$ÀÎ¿ø¼ö,3,17,OUTPUT_NODES) #7¿ù °ªµé Ãâ·Â
+out_learning8<-getDataSet(df8$ÀÎ¿ø¼ö,3,17,OUTPUT_NODES) #8¿ù °ªµé Ãâ·Â
+out_learning9<-getDataSet(df9$ÀÎ¿ø¼ö,3,17,OUTPUT_NODES) #9¿ù °ªµé Ãâ·Â
+out_learning10<-getDataSet(df10$ÀÎ¿ø¼ö,3,17,OUTPUT_NODES) #10¿ù °ªµé Ãâ·Â
+out_learning11<-getDataSet(df11$ÀÎ¿ø¼ö,3,17,OUTPUT_NODES) #11¿ù °ªµé Ãâ·Â
+out_learning12<-getDataSet(df12$ÀÎ¿ø¼ö,3,17,OUTPUT_NODES) #12¿ù °ªµé Ãâ·Â
 
-#ì‹ ê²½ë§ ëª¨ë¸ ì¤‘ í•˜ë‚˜ì¸ nnet íŒ¨í‚¤ì§€ í•¨ìˆ˜ë¥¼ ì´ìš©í•˜ì—¬ 1ì›”~12ì›” ì´ìš©ìž ìˆ˜ ì˜ˆì¸¡ê°’ ëª¨ë¸ë§ ì„¤ì •
+#½Å°æ¸Á ¸ðµ¨ Áß ÇÏ³ªÀÎ nnet ÆÐÅ°Áö ÇÔ¼ö¸¦ ÀÌ¿ëÇÏ¿© 1¿ù~12¿ù ÀÌ¿ëÀÚ ¼ö ¿¹Ãø°ª ¸ðµ¨¸µ ¼³Á¤
 model1<-nnet(in_learning1,out_learning1,size=HIDDEN_NODES,linout = TRUE,rang = 0.1,skip=TRUE,maxit = ITERATION)
 model2<-nnet(in_learning2,out_learning2,size=HIDDEN_NODES,linout = TRUE,rang = 0.1,skip=TRUE,maxit = ITERATION)
 model3<-nnet(in_learning3,out_learning3,size=HIDDEN_NODES,linout = TRUE,rang = 0.1,skip=TRUE,maxit = ITERATION)
@@ -148,21 +148,21 @@ model10<-nnet(in_learning10,out_learning10,size=HIDDEN_NODES,linout = TRUE,rang 
 model11<-nnet(in_learning11,out_learning11,size=HIDDEN_NODES,linout = TRUE,rang = 0.1,skip=TRUE,maxit = ITERATION)
 model12<-nnet(in_learning12,out_learning12,size=HIDDEN_NODES,linout = TRUE,rang = 0.1,skip=TRUE,maxit = ITERATION)
 
-#in_forecasting ì— 1~12ì›” ì˜ˆì¸¡ê°’ ëŒ€ìž…
-in_forecasting1<-getDataSet(df1$ì¸ì›ìˆ˜,15,16,INPUT_NODES)
-in_forecasting2<-getDataSet(df2$ì¸ì›ìˆ˜,15,16,INPUT_NODES)
-in_forecasting3<-getDataSet(df3$ì¸ì›ìˆ˜,15,16,INPUT_NODES)
-in_forecasting4<-getDataSet(df4$ì¸ì›ìˆ˜,16,17,INPUT_NODES)
-in_forecasting5<-getDataSet(df5$ì¸ì›ìˆ˜,16,17,INPUT_NODES)
-in_forecasting6<-getDataSet(df6$ì¸ì›ìˆ˜,16,17,INPUT_NODES)
-in_forecasting7<-getDataSet(df7$ì¸ì›ìˆ˜,16,17,INPUT_NODES)
-in_forecasting8<-getDataSet(df8$ì¸ì›ìˆ˜,16,17,INPUT_NODES)
-in_forecasting9<-getDataSet(df9$ì¸ì›ìˆ˜,16,17,INPUT_NODES)
-in_forecasting10<-getDataSet(df10$ì¸ì›ìˆ˜,16,17,INPUT_NODES)
-in_forecasting11<-getDataSet(df11$ì¸ì›ìˆ˜,16,17,INPUT_NODES)
-in_forecasting12<-getDataSet(df12$ì¸ì›ìˆ˜,16,17,INPUT_NODES)
+#in_forecasting ¿¡ 1~12¿ù ¿¹Ãø°ª ´ëÀÔ
+in_forecasting1<-getDataSet(df1$ÀÎ¿ø¼ö,15,16,INPUT_NODES)
+in_forecasting2<-getDataSet(df2$ÀÎ¿ø¼ö,15,16,INPUT_NODES)
+in_forecasting3<-getDataSet(df3$ÀÎ¿ø¼ö,15,16,INPUT_NODES)
+in_forecasting4<-getDataSet(df4$ÀÎ¿ø¼ö,16,17,INPUT_NODES)
+in_forecasting5<-getDataSet(df5$ÀÎ¿ø¼ö,16,17,INPUT_NODES)
+in_forecasting6<-getDataSet(df6$ÀÎ¿ø¼ö,16,17,INPUT_NODES)
+in_forecasting7<-getDataSet(df7$ÀÎ¿ø¼ö,16,17,INPUT_NODES)
+in_forecasting8<-getDataSet(df8$ÀÎ¿ø¼ö,16,17,INPUT_NODES)
+in_forecasting9<-getDataSet(df9$ÀÎ¿ø¼ö,16,17,INPUT_NODES)
+in_forecasting10<-getDataSet(df10$ÀÎ¿ø¼ö,16,17,INPUT_NODES)
+in_forecasting11<-getDataSet(df11$ÀÎ¿ø¼ö,16,17,INPUT_NODES)
+in_forecasting12<-getDataSet(df12$ÀÎ¿ø¼ö,16,17,INPUT_NODES)
 
-#1~12ì›” ì´ìš©ìž ìˆ˜ ì˜ˆì¸¡ê°’ ì¶œë ¥
+#1~12¿ù ÀÌ¿ëÀÚ ¼ö ¿¹Ãø°ª Ãâ·Â
 predicted_values1<-predict(model1,in_forecasting1,type="raw")
 predicted_values2<-predict(model2,in_forecasting2,type="raw")
 predicted_values3<-predict(model3,in_forecasting3,type="raw")
@@ -188,31 +188,31 @@ predicted_values10
 predicted_values11
 predicted_values12
 
-#2018ë…„ 1~12ì›” ì˜ˆì¸¡ ê°’ë“¤ì„ predicted_2018ì— ëŒ€ìž…í•˜ì—¬ í…Œì´ë¸” ìƒì„±
+#2018³â 1~12¿ù ¿¹Ãø °ªµéÀ» predicted_2018¿¡ ´ëÀÔÇÏ¿© Å×ÀÌºí »ý¼º
 predicted_2018<-c(predicted_values1, predicted_values2, predicted_values3, predicted_values4, predicted_values5, predicted_values6, predicted_values7, predicted_values8, predicted_values9, predicted_values10, predicted_values11, predicted_values12)
 
-#1ì›”~12ì›” ë²”ìœ„ ì„¤ì • ê°’ í…Œì´ë¸” ìƒì„±
+#1¿ù~12¿ù ¹üÀ§ ¼³Á¤ °ª Å×ÀÌºí »ý¼º
 month_2018<-1:12
 
-#Year2018ì— 2018ë…„ 1~12ì›” ê¹Œì§€ì˜ ì´ìš©ìž ìˆ˜ ë²”ìœ„ì™€ ì˜ˆì¸¡ê°’ ê°€ì§€ëŠ” í…Œì´ë¸” ìƒì„±
+#Year2018¿¡ 2018³â 1~12¿ù ±îÁöÀÇ ÀÌ¿ëÀÚ ¼ö ¹üÀ§¿Í ¿¹Ãø°ª °¡Áö´Â Å×ÀÌºí »ý¼º
 Year2018<-data.frame(predicted_2018,month_2018)
 
-#Year2018 í…Œì´ë¸” ì¶œë ¥
+#Year2018 Å×ÀÌºí Ãâ·Â
 View(Year2018)
 
-#ì˜ˆì¸¡ê°’ì„ ê¸°ì¤€ìœ¼ë¡œ ì˜ˆì¸¡ê°’ì´ ë‚®ì€ ìˆœ ë¶€í„° ë†’ì€ ìˆœìœ¼ë¡œ 1~12ì›” ì¶œë ¥(ì˜¤ë¦„ì°¨ìˆœ)
+#¿¹Ãø°ªÀ» ±âÁØÀ¸·Î ¿¹Ãø°ªÀÌ ³·Àº ¼ø ºÎÅÍ ³ôÀº ¼øÀ¸·Î 1~12¿ù Ãâ·Â(¿À¸§Â÷¼ø)
 aggregate(month_2018~predicted_2018, Year2018, max)
 
-#2018ë…„ 1ì›”~12ì›” ì˜ˆì¸¡ê°’ ì ,ì„  ê·¸ëž˜í”„ ì¶œë ¥
-plot(predicted_2018, xlab = "2018ë…„", ylab = "ì¸ì›ìˆ˜", ylim=c(500000,4000000),type = "o", col = "blue", axes=FALSE)
+#2018³â 1¿ù~12¿ù ¿¹Ãø°ª Á¡,¼± ±×·¡ÇÁ Ãâ·Â
+plot(predicted_2018, xlab = "2018³â", ylab = "ÀÎ¿ø¼ö", ylim=c(500000,4000000),type = "o", col = "blue", axes=FALSE)
 
-#xì¶•ì— 1ì›”~12ì›” ë²”ìœ„ ì¶œë ¥
+#xÃà¿¡ 1¿ù~12¿ù ¹üÀ§ Ãâ·Â
 axis(1,at=1:12, lab=c("1","2","3","4","5","6","7","8","9","10","11","12"))
 
-#yì¶•ì— ìµœëŒ€ê°’ ìµœì†Ÿê°’ ì„¤ì •
+#yÃà¿¡ ÃÖ´ë°ª ÃÖ¼Ú°ª ¼³Á¤
 axis(2,ylim=c(500000,4000000))
 
-#1ì›”~12ì›” í° ë¹¨ê°„ ì ìœ¼ë¡œ ìž˜ ë³´ì´ê²Œ í‘œì‹œ
+#1¿ù~12¿ù Å« »¡°£ Á¡À¸·Î Àß º¸ÀÌ°Ô Ç¥½Ã
 lines(1:1,predicted_values1,type="o",lwd = "10", col="red")
 lines(2:2,predicted_values2,type="o",lwd = "10", col="red")
 lines(3:3,predicted_values3,type="o",lwd = "10", col="red")
@@ -225,141 +225,381 @@ lines(9:9,predicted_values9,type="o",lwd = "10", col="red")
 lines(10:10,predicted_values10,type="o",lwd = "10", col="red")
 lines(11:11,predicted_values11,type="o",lwd = "10", col="red")
 lines(12:12,predicted_values12,type="o",lwd = "10", col="red")
-grid() #í‘œì˜ ë²”ìœ„ ìž˜ ë³´ì´ë„ë¡ ì„¤ì •
+grid() #Ç¥ÀÇ ¹üÀ§ Àß º¸ÀÌµµ·Ï ¼³Á¤
 
-###############ì„¸ë¶€ ì ìœ¼ë¡œ 2018ë…„ 1ì›”~12ì›” ê° ë‹¬ì˜ ìš”ì¼ ë³„ ì´ìš©ìž ìˆ˜ ì˜ˆì¸¡ #############
-ì¸¡
-# 2018ë…„ 1ì›” ì›”ìš”ì¼~ì¼ìš”ì¼ ì‚¬ìš©ìž ìˆ˜ ì˜ˆì¸¡
-data1$ì›”ìš”ì¼<-gsub(",","",data1$ì›”ìš”ì¼) #ì›”ìš”ì¼ì˜ 3ìžë¦¬ ë‹¨ìœ„ë¡œ ìžˆëŠ” ,ë¥¼ ì‚­ì œ
-data1$ì›”ìš”ì¼<-as.numeric(data1$ì›”ìš”ì¼) #í™”ìš”ì¼ë¥¼ numericë¡œ
-df_mon1<-data.frame(ì¼ìž=data1$ìš”ì¼,ì›”ìš”ì¼=data1$ì›”ìš”ì¼) # ìš”ì¼->ì¼ìžë¡œ, ì›”ìš”ì¼->ì›”ìš”ì¼ë¡œ ì»¬ëŸ¼ ì´ë¦„ ë³€ê²½
+###############¼¼ºÎ ÀûÀ¸·Î 2018³â 1¿ù~12¿ù °¢ ´ÞÀÇ ¿äÀÏ º° ÀÌ¿ëÀÚ ¼ö ¿¹Ãø #############
+Ãø
+# 2018³â 1¿ù ¿ù¿äÀÏ~ÀÏ¿äÀÏ »ç¿ëÀÚ ¼ö ¿¹Ãø
+data1$¿ù¿äÀÏ<-gsub(",","",data1$¿ù¿äÀÏ) #¿ù¿äÀÏÀÇ 3ÀÚ¸® ´ÜÀ§·Î ÀÖ´Â ,¸¦ »èÁ¦
+data1$¿ù¿äÀÏ<-as.numeric(data1$¿ù¿äÀÏ) #È­¿äÀÏ¸¦ numeric·Î
+df_mon1<-data.frame(ÀÏÀÚ=data1$¿äÀÏ,¿ù¿äÀÏ=data1$¿ù¿äÀÏ) # ¿äÀÏ->ÀÏÀÚ·Î, ¿ù¿äÀÏ->¿ù¿äÀÏ·Î ÄÃ·³ ÀÌ¸§ º¯°æ
 
-data1$í™”ìš”ì¼<-gsub(",","",data1$í™”ìš”ì¼) #ì›”ìš”ì¼ì˜ 3ìžë¦¬ ë‹¨ìœ„ë¡œ ìžˆëŠ” ,ë¥¼ ì‚­ì œ
-data1$í™”ìš”ì¼<-as.numeric(data1$í™”ìš”ì¼) #í™”ìš”ì¼ë¥¼ numericë¡œ
-df_tue1<-data.frame(ì¼ìž=data1$ìš”ì¼,í™”ìš”ì¼=data1$í™”ìš”ì¼) # ìš”ì¼->ì¼ìžë¡œ, ì›”ìš”ì¼->ì›”ìš”ì¼ë¡œ ì»¬ëŸ¼ ì´ë¦„ ë³€ê²½
+data1$È­¿äÀÏ<-gsub(",","",data1$È­¿äÀÏ) #¿ù¿äÀÏÀÇ 3ÀÚ¸® ´ÜÀ§·Î ÀÖ´Â ,¸¦ »èÁ¦
+data1$È­¿äÀÏ<-as.numeric(data1$È­¿äÀÏ) #È­¿äÀÏ¸¦ numeric·Î
+df_tue1<-data.frame(ÀÏÀÚ=data1$¿äÀÏ,È­¿äÀÏ=data1$È­¿äÀÏ) # ¿äÀÏ->ÀÏÀÚ·Î, ¿ù¿äÀÏ->¿ù¿äÀÏ·Î ÄÃ·³ ÀÌ¸§ º¯°æ
 
-data1$ìˆ˜ìš”ì¼<-gsub(",","",data1$ìˆ˜ìš”ì¼) #ì›”ìš”ì¼ì˜ 3ìžë¦¬ ë‹¨ìœ„ë¡œ ìžˆëŠ” ,ë¥¼ ì‚­ì œ
-data1$ìˆ˜ìš”ì¼<-as.numeric(data1$ìˆ˜ìš”ì¼) #í™”ìš”ì¼ë¥¼ numericë¡œ
-df_wed1<-data.frame(ì¼ìž=data1$ìš”ì¼,ìˆ˜ìš”ì¼=data1$ìˆ˜ìš”ì¼) # ìš”ì¼->ì¼ìžë¡œ, ì›”ìš”ì¼->ì›”ìš”ì¼ë¡œ ì»¬ëŸ¼ ì´ë¦„ ë³€ê²½
+data1$¼ö¿äÀÏ<-gsub(",","",data1$¼ö¿äÀÏ) #¿ù¿äÀÏÀÇ 3ÀÚ¸® ´ÜÀ§·Î ÀÖ´Â ,¸¦ »èÁ¦
+data1$¼ö¿äÀÏ<-as.numeric(data1$¼ö¿äÀÏ) #È­¿äÀÏ¸¦ numeric·Î
+df_wed1<-data.frame(ÀÏÀÚ=data1$¿äÀÏ,¼ö¿äÀÏ=data1$¼ö¿äÀÏ) # ¿äÀÏ->ÀÏÀÚ·Î, ¿ù¿äÀÏ->¿ù¿äÀÏ·Î ÄÃ·³ ÀÌ¸§ º¯°æ
 
-data1$ëª©ìš”ì¼<-gsub(",","",data1$ëª©ìš”ì¼) #ì›”ìš”ì¼ì˜ 3ìžë¦¬ ë‹¨ìœ„ë¡œ ìžˆëŠ” ,ë¥¼ ì‚­ì œ
-data1$ëª©ìš”ì¼<-as.numeric(data1$ëª©ìš”ì¼) #í™”ìš”ì¼ë¥¼ numericë¡œ
-df_thu1<-data.frame(ì¼ìž=data1$ìš”ì¼,ëª©ìš”ì¼=data1$ëª©ìš”ì¼) # ìš”ì¼->ì¼ìžë¡œ, ì›”ìš”ì¼->ì›”ìš”ì¼ë¡œ ì»¬ëŸ¼ ì´ë¦„ ë³€ê²½
+data1$¸ñ¿äÀÏ<-gsub(",","",data1$¸ñ¿äÀÏ) #¿ù¿äÀÏÀÇ 3ÀÚ¸® ´ÜÀ§·Î ÀÖ´Â ,¸¦ »èÁ¦
+data1$¸ñ¿äÀÏ<-as.numeric(data1$¸ñ¿äÀÏ) #È­¿äÀÏ¸¦ numeric·Î
+df_thu1<-data.frame(ÀÏÀÚ=data1$¿äÀÏ,¸ñ¿äÀÏ=data1$¸ñ¿äÀÏ) # ¿äÀÏ->ÀÏÀÚ·Î, ¿ù¿äÀÏ->¿ù¿äÀÏ·Î ÄÃ·³ ÀÌ¸§ º¯°æ
 
-data1$ê¸ˆìš”ì¼<-gsub(",","",data1$ê¸ˆìš”ì¼) #ì›”ìš”ì¼ì˜ 3ìžë¦¬ ë‹¨ìœ„ë¡œ ìžˆëŠ” ,ë¥¼ ì‚­ì œ
-data1$ê¸ˆìš”ì¼<-as.numeric(data1$ê¸ˆìš”ì¼) #í™”ìš”ì¼ë¥¼ numericë¡œ
-df_fri1<-data.frame(ì¼ìž=data1$ìš”ì¼,ê¸ˆìš”ì¼=data1$ê¸ˆìš”ì¼) # ìš”ì¼->ì¼ìžë¡œ, ì›”ìš”ì¼->ì›”ìš”ì¼ë¡œ ì»¬ëŸ¼ ì´ë¦„ ë³€ê²½
+data1$±Ý¿äÀÏ<-gsub(",","",data1$±Ý¿äÀÏ) #¿ù¿äÀÏÀÇ 3ÀÚ¸® ´ÜÀ§·Î ÀÖ´Â ,¸¦ »èÁ¦
+data1$±Ý¿äÀÏ<-as.numeric(data1$±Ý¿äÀÏ) #È­¿äÀÏ¸¦ numeric·Î
+df_fri1<-data.frame(ÀÏÀÚ=data1$¿äÀÏ,±Ý¿äÀÏ=data1$±Ý¿äÀÏ) # ¿äÀÏ->ÀÏÀÚ·Î, ¿ù¿äÀÏ->¿ù¿äÀÏ·Î ÄÃ·³ ÀÌ¸§ º¯°æ
 
-data1$í† ìš”ì¼<-gsub(",","",data1$í† ìš”ì¼) #ì›”ìš”ì¼ì˜ 3ìžë¦¬ ë‹¨ìœ„ë¡œ ìžˆëŠ” ,ë¥¼ ì‚­ì œ
-data1$í† ìš”ì¼<-as.numeric(data1$í† ìš”ì¼) #í™”ìš”ì¼ë¥¼ numericë¡œ
-df_sat1<-data.frame(ì¼ìž=data1$ìš”ì¼,í† ìš”ì¼=data1$í† ìš”ì¼) # ìš”ì¼->ì¼ìžë¡œ, ì›”ìš”ì¼->ì›”ìš”ì¼ë¡œ ì»¬ëŸ¼ ì´ë¦„ ë³€ê²½
+data1$Åä¿äÀÏ<-gsub(",","",data1$Åä¿äÀÏ) #¿ù¿äÀÏÀÇ 3ÀÚ¸® ´ÜÀ§·Î ÀÖ´Â ,¸¦ »èÁ¦
+data1$Åä¿äÀÏ<-as.numeric(data1$Åä¿äÀÏ) #È­¿äÀÏ¸¦ numeric·Î
+df_sat1<-data.frame(ÀÏÀÚ=data1$¿äÀÏ,Åä¿äÀÏ=data1$Åä¿äÀÏ) # ¿äÀÏ->ÀÏÀÚ·Î, ¿ù¿äÀÏ->¿ù¿äÀÏ·Î ÄÃ·³ ÀÌ¸§ º¯°æ
 
-data1$ì¼ìš”ì¼<-gsub(",","",data1$ì¼ìš”ì¼) #ì›”ìš”ì¼ì˜ 3ìžë¦¬ ë‹¨ìœ„ë¡œ ìžˆëŠ” ,ë¥¼ ì‚­ì œ
-data1$ì¼ìš”ì¼<-as.numeric(data1$ì¼ìš”ì¼) #í™”ìš”ì¼ë¥¼ numericë¡œ
-df_sun1<-data.frame(ì¼ìž=data1$ìš”ì¼,ì¼ìš”ì¼=data1$ì¼ìš”ì¼) # ìš”ì¼->ì¼ìžë¡œ, ì›”ìš”ì¼->ì›”ìš”ì¼ë¡œ ì»¬ëŸ¼ ì´ë¦„ ë³€ê²½
+data1$ÀÏ¿äÀÏ<-gsub(",","",data1$ÀÏ¿äÀÏ) #¿ù¿äÀÏÀÇ 3ÀÚ¸® ´ÜÀ§·Î ÀÖ´Â ,¸¦ »èÁ¦
+data1$ÀÏ¿äÀÏ<-as.numeric(data1$ÀÏ¿äÀÏ) #È­¿äÀÏ¸¦ numeric·Î
+df_sun1<-data.frame(ÀÏÀÚ=data1$¿äÀÏ,ÀÏ¿äÀÏ=data1$ÀÏ¿äÀÏ) # ¿äÀÏ->ÀÏÀÚ·Î, ¿ù¿äÀÏ->¿ù¿äÀÏ·Î ÄÃ·³ ÀÌ¸§ º¯°æ
 
-# 2018ë…„ 2ì›” ì›”ìš”ì¼~ì¼ìš”ì¼ ì‚¬ìš©ìž ìˆ˜ ì˜ˆì¸¡
-data2$í•©ê³„<-gsub(",","",data2$í•©ê³„) #ì¸ì›ìˆ˜ì˜ 3ìžë¦¬ ë‹¨ìœ„ë¡œ ìžˆëŠ” ,ë¥¼ ì‚­ì œ
-data2$í•©ê³„<-as.numeric(data2$í•©ê³„) #ì¸ì›ìˆ˜ë¥¼ numericë¡œ
-df2<-data.frame(ì¼ìž=data2$ìš”ì¼,ì¸ì›ìˆ˜=data2$í•©ê³„) # ìš”ì¼->ì¼ìžë¡œ, í•©ê³„->ì¸ì›ìˆ˜ë¡œ ì»¬ëŸ¼ ì´ë¦„ ë³€ê²½
-
-
-# 2018ë…„ 3ì›” ì›”ìš”ì¼~ì¼ìš”ì¼ ì‚¬ìš©ìž ìˆ˜ ì˜ˆì¸¡
-data3$í•©ê³„<-gsub(",","",data3$í•©ê³„) #ì¸ì›ìˆ˜ì˜ 3ìžë¦¬ ë‹¨ìœ„ë¡œ ìžˆëŠ” ,ë¥¼ ì‚­ì œ
-data3$í•©ê³„<-as.numeric(data3$í•©ê³„) #ì¸ì›ìˆ˜ë¥¼ numericë¡œ
-df3<-data.frame(ì¼ìž=data3$ìš”ì¼,ì¸ì›ìˆ˜=data3$í•©ê³„) # ìš”ì¼->ì¼ìžë¡œ, í•©ê³„->ì¸ì›ìˆ˜ë¡œ ì»¬ëŸ¼ ì´ë¦„ ë³€ê²½
-
-# 2018ë…„ 4ì›” ì›”ìš”ì¼~ì¼ìš”ì¼ ì‚¬ìš©ìž ìˆ˜ ì˜ˆì¸¡
-data4$í•©ê³„<-gsub(",","",data4$í•©ê³„) #ì¸ì›ìˆ˜ì˜ 3ìžë¦¬ ë‹¨ìœ„ë¡œ ìžˆëŠ” ,ë¥¼ ì‚­ì œ
-data4$í•©ê³„<-as.numeric(data4$í•©ê³„) #ì¸ì›ìˆ˜ë¥¼ numericë¡œ
-df4<-data.frame(ì¼ìž=data4$ìš”ì¼,ì¸ì›ìˆ˜=data4$í•©ê³„) # ìš”ì¼->ì¼ìžë¡œ, í•©ê³„->ì¸ì›ìˆ˜ë¡œ ì»¬ëŸ¼ ì´ë¦„ ë³€ê²½
-
-# 2018ë…„ 5ì›” ì›”ìš”ì¼~ì¼ìš”ì¼ ì‚¬ìš©ìž ìˆ˜ ì˜ˆì¸¡
-data5$í•©ê³„<-gsub(",","",data5$í•©ê³„) #ì¸ì›ìˆ˜ì˜ 3ìžë¦¬ ë‹¨ìœ„ë¡œ ìžˆëŠ” ,ë¥¼ ì‚­ì œ
-data5$í•©ê³„<-as.numeric(data5$í•©ê³„) #ì¸ì›ìˆ˜ë¥¼ numericë¡œ
-df5<-data.frame(ì¼ìž=data5$ìš”ì¼,ì¸ì›ìˆ˜=data5$í•©ê³„) # ìš”ì¼->ì¼ìžë¡œ, í•©ê³„->ì¸ì›ìˆ˜ë¡œ ì»¬ëŸ¼ ì´ë¦„ ë³€ê²½
+# 2018³â 2¿ù ¿ù¿äÀÏ~ÀÏ¿äÀÏ »ç¿ëÀÚ ¼ö ¿¹Ãø
+data2$ÇÕ°è<-gsub(",","",data2$ÇÕ°è) #ÀÎ¿ø¼öÀÇ 3ÀÚ¸® ´ÜÀ§·Î ÀÖ´Â ,¸¦ »èÁ¦
+data2$ÇÕ°è<-as.numeric(data2$ÇÕ°è) #ÀÎ¿ø¼ö¸¦ numeric·Î
+df2<-data.frame(ÀÏÀÚ=data2$¿äÀÏ,ÀÎ¿ø¼ö=data2$ÇÕ°è) # ¿äÀÏ->ÀÏÀÚ·Î, ÇÕ°è->ÀÎ¿ø¼ö·Î ÄÃ·³ ÀÌ¸§ º¯°æ
 
 
-# 2018ë…„ 6ì›” ì›”ìš”ì¼~ì¼ìš”ì¼ ì‚¬ìš©ìž ìˆ˜ ì˜ˆì¸¡
-data6$í•©ê³„<-gsub(",","",data6$í•©ê³„) #ì¸ì›ìˆ˜ì˜ 3ìžë¦¬ ë‹¨ìœ„ë¡œ ìžˆëŠ” ,ë¥¼ ì‚­ì œ
-data6$í•©ê³„<-as.numeric(data6$í•©ê³„) #ì¸ì›ìˆ˜ë¥¼ numericë¡œ
-df6<-data.frame(ì¼ìž=data6$ìš”ì¼,ì¸ì›ìˆ˜=data6$í•©ê³„) # ìš”ì¼->ì¼ìžë¡œ, í•©ê³„->ì¸ì›ìˆ˜ë¡œ ì»¬ëŸ¼ ì´ë¦„ ë³€ê²½
+# 2018³â 3¿ù ¿ù¿äÀÏ~ÀÏ¿äÀÏ »ç¿ëÀÚ ¼ö ¿¹Ãø
+data3$ÇÕ°è<-gsub(",","",data3$ÇÕ°è) #ÀÎ¿ø¼öÀÇ 3ÀÚ¸® ´ÜÀ§·Î ÀÖ´Â ,¸¦ »èÁ¦
+data3$ÇÕ°è<-as.numeric(data3$ÇÕ°è) #ÀÎ¿ø¼ö¸¦ numeric·Î
+df3<-data.frame(ÀÏÀÚ=data3$¿äÀÏ,ÀÎ¿ø¼ö=data3$ÇÕ°è) # ¿äÀÏ->ÀÏÀÚ·Î, ÇÕ°è->ÀÎ¿ø¼ö·Î ÄÃ·³ ÀÌ¸§ º¯°æ
 
-# 2018ë…„ 7ì›” ì›”ìš”ì¼~ì¼ìš”ì¼ ì‚¬ìš©ìž ìˆ˜ ì˜ˆì¸¡
-data7$í•©ê³„<-gsub(",","",data7$í•©ê³„) #ì¸ì›ìˆ˜ì˜ 3ìžë¦¬ ë‹¨ìœ„ë¡œ ìžˆëŠ” ,ë¥¼ ì‚­ì œ
-data7$í•©ê³„<-as.numeric(data7$í•©ê³„) #ì¸ì›ìˆ˜ë¥¼ numericë¡œ
-df7<-data.frame(ì¼ìž=data7$ìš”ì¼,ì¸ì›ìˆ˜=data7$í•©ê³„) # ìš”ì¼->ì¼ìžë¡œ, í•©ê³„->ì¸ì›ìˆ˜ë¡œ ì»¬ëŸ¼ ì´ë¦„ ë³€ê²½
+# 2018³â 4¿ù ¿ù¿äÀÏ~ÀÏ¿äÀÏ »ç¿ëÀÚ ¼ö ¿¹Ãø
+data4$ÇÕ°è<-gsub(",","",data4$ÇÕ°è) #ÀÎ¿ø¼öÀÇ 3ÀÚ¸® ´ÜÀ§·Î ÀÖ´Â ,¸¦ »èÁ¦
+data4$ÇÕ°è<-as.numeric(data4$ÇÕ°è) #ÀÎ¿ø¼ö¸¦ numeric·Î
+df4<-data.frame(ÀÏÀÚ=data4$¿äÀÏ,ÀÎ¿ø¼ö=data4$ÇÕ°è) # ¿äÀÏ->ÀÏÀÚ·Î, ÇÕ°è->ÀÎ¿ø¼ö·Î ÄÃ·³ ÀÌ¸§ º¯°æ
 
-# 2018ë…„ 8ì›” ì›”ìš”ì¼~ì¼ìš”ì¼ ì‚¬ìš©ìž ìˆ˜ ì˜ˆì¸¡
-data8$í•©ê³„<-gsub(",","",data8$í•©ê³„) #ì¸ì›ìˆ˜ì˜ 3ìžë¦¬ ë‹¨ìœ„ë¡œ ìžˆëŠ” ,ë¥¼ ì‚­ì œ
-data8$í•©ê³„<-as.numeric(data8$í•©ê³„) #ì¸ì›ìˆ˜ë¥¼ numericë¡œ
-df8<-data.frame(ì¼ìž=data8$ìš”ì¼,ì¸ì›ìˆ˜=data8$í•©ê³„) # ìš”ì¼->ì¼ìžë¡œ, í•©ê³„->ì¸ì›ìˆ˜ë¡œ ì»¬ëŸ¼ ì´ë¦„ ë³€ê²½
-
-# 2018ë…„ 9ì›” ì›”ìš”ì¼~ì¼ìš”ì¼ ì‚¬ìš©ìž ìˆ˜ ì˜ˆì¸¡
-data9$í•©ê³„<-gsub(",","",data9$í•©ê³„) #ì¸ì›ìˆ˜ì˜ 3ìžë¦¬ ë‹¨ìœ„ë¡œ ìžˆëŠ” ,ë¥¼ ì‚­ì œ
-data9$í•©ê³„<-as.numeric(data9$í•©ê³„) #ì¸ì›ìˆ˜ë¥¼ numericë¡œ
-df9<-data.frame(ì¼ìž=data9$ìš”ì¼,ì¸ì›ìˆ˜=data9$í•©ê³„) # ìš”ì¼->ì¼ìžë¡œ, í•©ê³„->ì¸ì›ìˆ˜ë¡œ ì»¬ëŸ¼ ì´ë¦„ ë³€ê²½
-
-# 2018ë…„ 10ì›” ì›”ìš”ì¼~ì¼ìš”ì¼ ì‚¬ìš©ìž ìˆ˜ ì˜ˆì¸¡
-data10$í•©ê³„<-gsub(",","",data10$í•©ê³„) #ì¸ì›ìˆ˜ì˜ 3ìžë¦¬ ë‹¨ìœ„ë¡œ ìžˆëŠ” ,ë¥¼ ì‚­ì œ
-data10$í•©ê³„<-as.numeric(data10$í•©ê³„) #ì¸ì›ìˆ˜ë¥¼ numericë¡œ
-df10<-data.frame(ì¼ìž=data10$ìš”ì¼,ì¸ì›ìˆ˜=data10$í•©ê³„) # ìš”ì¼->ì¼ìžë¡œ, í•©ê³„->ì¸ì›ìˆ˜ë¡œ ì»¬ëŸ¼ ì´ë¦„ ë³€ê²½
-
-# 2018ë…„ 11ì›” ì›”ìš”ì¼~ì¼ìš”ì¼ ì‚¬ìš©ìž ìˆ˜ ì˜ˆì¸¡
-data11$í•©ê³„<-gsub(",","",data11$í•©ê³„) #ì¸ì›ìˆ˜ì˜ 3ìžë¦¬ ë‹¨ìœ„ë¡œ ìžˆëŠ” ,ë¥¼ ì‚­ì œ
-data11$í•©ê³„<-as.numeric(data11$í•©ê³„) #ì¸ì›ìˆ˜ë¥¼ numericë¡œ
-df11<-data.frame(ì¼ìž=data11$ìš”ì¼,ì¸ì›ìˆ˜=data11$í•©ê³„) # ìš”ì¼->ì¼ìžë¡œ, í•©ê³„->ì¸ì›ìˆ˜ë¡œ ì»¬ëŸ¼ ì´ë¦„ ë³€ê²½
-
-# 2018ë…„ 12ì›” ì›”ìš”ì¼~ì¼ìš”ì¼ ì‚¬ìš©ìž ìˆ˜ ì˜ˆì¸ 
-data12$í•©ê³„<-gsub(",","",data12$í•©ê³„) #ì¸ì›ìˆ˜ì˜ 3ìžë¦¬ ë‹¨ìœ„ë¡œ ìžˆëŠ” ,ë¥¼ ì‚­ì œ
-data12$í•©ê³„<-as.numeric(data12$í•©ê³„) #ì¸ì›ìˆ˜ë¥¼ numericë¡œ
-df12<-data.frame(ì¼ìž=data12$ìš”ì¼,ì¸ì›ìˆ˜=data12$í•©ê³„) # ìš”ì¼->ì¼ìžë¡œ, í•©ê³„->ì¸ì›ìˆ˜ë¡œ ì»¬ëŸ¼ ì´ë¦„ ë³€ê²½
+# 2018³â 5¿ù ¿ù¿äÀÏ~ÀÏ¿äÀÏ »ç¿ëÀÚ ¼ö ¿¹Ãø
+data5$ÇÕ°è<-gsub(",","",data5$ÇÕ°è) #ÀÎ¿ø¼öÀÇ 3ÀÚ¸® ´ÜÀ§·Î ÀÖ´Â ,¸¦ »èÁ¦
+data5$ÇÕ°è<-as.numeric(data5$ÇÕ°è) #ÀÎ¿ø¼ö¸¦ numeric·Î
+df5<-data.frame(ÀÏÀÚ=data5$¿äÀÏ,ÀÎ¿ø¼ö=data5$ÇÕ°è) # ¿äÀÏ->ÀÏÀÚ·Î, ÇÕ°è->ÀÎ¿ø¼ö·Î ÄÃ·³ ÀÌ¸§ º¯°æ
 
 
-#ì¸ëŸ¬ë‹ ê°’ ëŒ€ìž…
-#2018ë…„ 1ì›” ì›”ìš”ì¼~ì¼ìš”ì¼ 
-in_learning_mon1<-getDataSet(df_mon1$ì›”ìš”ì¼,1,15,INPUT_NODES) #1ì›” ê°’ë“¤ ìž…ë ¥
-in_learning_tue1<-getDataSet(df_tue1$í™”ìš”ì¼,1,15,INPUT_NODES) #1ì›” ê°’ë“¤ ìž…ë ¥
-in_learning_wed1<-getDataSet(df_wed1$ìˆ˜ìš”ì¼,1,15,INPUT_NODES) #1ì›” ê°’ë“¤ ìž…ë ¥
-in_learning_thu1<-getDataSet(df_thu1$ëª©ìš”ì¼,1,15,INPUT_NODES) #1ì›” ê°’ë“¤ ìž…ë ¥
-in_learning_fri1<-getDataSet(df_fri1$ê¸ˆìš”ì¼,1,15,INPUT_NODES) #1ì›” ê°’ë“¤ ìž…ë ¥
-in_learning_sat1<-getDataSet(df_sat1$í† ìš”ì¼,1,15,INPUT_NODES) #1ì›” ê°’ë“¤ ìž…ë ¥
-in_learning_sun1<-getDataSet(df_sun1$ì¼ìš”ì¼,1,15,INPUT_NODES) #1ì›” ê°’ë“¤ ìž…ë ¥
-in_learning2<-getDataSet(df2$ì¸ì›ìˆ˜,1,15,INPUT_NODES) #2ì›” ê°’ë“¤ ìž…ë ¥
-in_learning3<-getDataSet(df3$ì¸ì›ìˆ˜,1,15,INPUT_NODES) #3ì›” ê°’ë“¤ ìž…ë ¥
-in_learning4<-getDataSet(df4$ì¸ì›ìˆ˜,1,16,INPUT_NODES) #4ì›” ê°’ë“¤ ìž…ë ¥
-in_learning5<-getDataSet(df5$ì¸ì›ìˆ˜,1,16,INPUT_NODES) #5ì›” ê°’ë“¤ ìž…ë ¥
-in_learning6<-getDataSet(df6$ì¸ì›ìˆ˜,1,16,INPUT_NODES) #6ì›” ê°’ë“¤ ìž…ë ¥
-in_learning7<-getDataSet(df7$ì¸ì›ìˆ˜,1,16,INPUT_NODES) #7ì›” ê°’ë“¤ ìž…ë ¥
-in_learning8<-getDataSet(df8$ì¸ì›ìˆ˜,1,16,INPUT_NODES) #8ì›” ê°’ë“¤ ìž…ë ¥
-in_learning9<-getDataSet(df9$ì¸ì›ìˆ˜,1,16,INPUT_NODES) #9ì›” ê°’ë“¤ ìž…ë ¥
-in_learning10<-getDataSet(df10$ì¸ì›ìˆ˜,1,16,INPUT_NODES) #10ì›” ê°’ë“¤ ìž…ë ¥
-in_learning11<-getDataSet(df11$ì¸ì›ìˆ˜,1,16,INPUT_NODES) #11ì›” ê°’ë“¤ ìž…ë ¥
-in_learning12<-getDataSet(df12$ì¸ì›ìˆ˜,1,16,INPUT_NODES) #12ì›” ê°’ë“¤ ìž…ë ¥
+# 2018³â 6¿ù ¿ù¿äÀÏ~ÀÏ¿äÀÏ »ç¿ëÀÚ ¼ö ¿¹Ãø
+data6$ÇÕ°è<-gsub(",","",data6$ÇÕ°è) #ÀÎ¿ø¼öÀÇ 3ÀÚ¸® ´ÜÀ§·Î ÀÖ´Â ,¸¦ »èÁ¦
+data6$ÇÕ°è<-as.numeric(data6$ÇÕ°è) #ÀÎ¿ø¼ö¸¦ numeric·Î
+df6<-data.frame(ÀÏÀÚ=data6$¿äÀÏ,ÀÎ¿ø¼ö=data6$ÇÕ°è) # ¿äÀÏ->ÀÏÀÚ·Î, ÇÕ°è->ÀÎ¿ø¼ö·Î ÄÃ·³ ÀÌ¸§ º¯°æ
 
-#ì•„ì›ƒëŸ¬ë‹ ê°’ ëŒ€ìž…
-#2018ë…„ 1ì›” ì›”ìš”ì¼~ì¼ìš”ì¼
-out_learning_mon1<-getDataSet(df_mon1$ì›”ìš”ì¼,3,16,OUTPUT_NODES) #1ì›” ê°’ë“¤ ì¶œë ¥
-out_learning_tue1<-getDataSet(df_tue1$í™”ìš”ì¼,3,16,OUTPUT_NODES) #1ì›” ê°’ë“¤ ì¶œë ¥
-out_learning_wed1<-getDataSet(df_wed1$ìˆ˜ìš”ì¼,3,16,OUTPUT_NODES) #1ì›” ê°’ë“¤ ì¶œë ¥
-out_learning_thu1<-getDataSet(df_thu1$ëª©ìš”ì¼,3,16,OUTPUT_NODES) #1ì›” ê°’ë“¤ ì¶œë ¥
-out_learning_fri1<-getDataSet(df_fri1$ê¸ˆìš”ì¼,3,16,OUTPUT_NODES) #1ì›” ê°’ë“¤ ì¶œë ¥
-out_learning_sat1<-getDataSet(df_sat1$í† ìš”ì¼,3,16,OUTPUT_NODES) #1ì›” ê°’ë“¤ ì¶œë ¥
-out_learning_sun1<-getDataSet(df_sun1$ì¼ìš”ì¼,3,16,OUTPUT_NODES) #1ì›” ê°’ë“¤ ì¶œë ¥
-out_learning2<-getDataSet(df2$ì¸ì›ìˆ˜,3,16,OUTPUT_NODES) #2ì›” ê°’ë“¤ ì¶œë ¥
-out_learning3<-getDataSet(df3$ì¸ì›ìˆ˜,3,16,OUTPUT_NODES) #3ì›” ê°’ë“¤ ì¶œë ¥
-out_learning4<-getDataSet(df4$ì¸ì›ìˆ˜,3,17,OUTPUT_NODES) #4ì›” ê°’ë“¤ ì¶œë ¥
-out_learning5<-getDataSet(df5$ì¸ì›ìˆ˜,3,17,OUTPUT_NODES) #5ì›” ê°’ë“¤ ì¶œë ¥
-out_learning6<-getDataSet(df6$ì¸ì›ìˆ˜,3,17,OUTPUT_NODES) #6ì›” ê°’ë“¤ ì¶œë ¥
-out_learning7<-getDataSet(df7$ì¸ì›ìˆ˜,3,17,OUTPUT_NODES) #7ì›” ê°’ë“¤ ì¶œë ¥
-out_learning8<-getDataSet(df8$ì¸ì›ìˆ˜,3,17,OUTPUT_NODES) #8ì›” ê°’ë“¤ ì¶œë ¥
-out_learning9<-getDataSet(df9$ì¸ì›ìˆ˜,3,17,OUTPUT_NODES) #9ì›” ê°’ë“¤ ì¶œë ¥
-out_learning10<-getDataSet(df10$ì¸ì›ìˆ˜,3,17,OUTPUT_NODES) #10ì›” ê°’ë“¤ ì¶œë ¥
-out_learning11<-getDataSet(df11$ì¸ì›ìˆ˜,3,17,OUTPUT_NODES) #11ì›” ê°’ë“¤ ì¶œë ¥
-out_learning12<-getDataSet(df12$ì¸ì›ìˆ˜,3,17,OUTPUT_NODES) #12ì›” ê°’ë“¤ ì¶œë ¥
+# 2018³â 7¿ù ¿ù¿äÀÏ~ÀÏ¿äÀÏ »ç¿ëÀÚ ¼ö ¿¹Ãø
+data7$¿ù¿äÀÏ<-gsub(",","",data7$¿ù¿äÀÏ) #¿ù¿äÀÏÀÇ 3ÀÚ¸® ´ÜÀ§·Î ÀÖ´Â ,¸¦ »èÁ¦
+data7$¿ù¿äÀÏ<-as.numeric(data7$¿ù¿äÀÏ) #È­¿äÀÏ¸¦ numeric·Î
+df_mon7<-data.frame(ÀÏÀÚ=data7$¿äÀÏ,¿ù¿äÀÏ=data7$¿ù¿äÀÏ) # ¿äÀÏ->ÀÏÀÚ·Î, ¿ù¿äÀÏ->¿ù¿äÀÏ·Î ÄÃ·³ ÀÌ¸§ º¯°æ
 
-#ì‹ ê²½ë§ ëª¨ë¸ ì¤‘ í•˜ë‚˜ì¸ nnet íŒ¨í‚¤ì§€ í•¨ìˆ˜ë¥¼ ì´ìš©í•˜ì—¬ 1ì›”~12ì›” ì´ìš©ìž ìˆ˜ ì˜ˆì¸¡ê°’ ëª¨ë¸ë§ ì„¤ì •
-# 2018ë…„ 1ì›” ì›”ìš”ì¼~ì¼ìš”ì¼
+data7$È­¿äÀÏ<-gsub(",","",data7$È­¿äÀÏ) #¿ù¿äÀÏÀÇ 3ÀÚ¸® ´ÜÀ§·Î ÀÖ´Â ,¸¦ »èÁ¦
+data7$È­¿äÀÏ<-as.numeric(data7$È­¿äÀÏ) #È­¿äÀÏ¸¦ numeric·Î
+df_tue7<-data.frame(ÀÏÀÚ=data7$¿äÀÏ,È­¿äÀÏ=data7$È­¿äÀÏ) # ¿äÀÏ->ÀÏÀÚ·Î, ¿ù¿äÀÏ->¿ù¿äÀÏ·Î ÄÃ·³ ÀÌ¸§ º¯°æ
+
+data7$¼ö¿äÀÏ<-gsub(",","",data7$¼ö¿äÀÏ) #¿ù¿äÀÏÀÇ 3ÀÚ¸® ´ÜÀ§·Î ÀÖ´Â ,¸¦ »èÁ¦
+data7$¼ö¿äÀÏ<-as.numeric(data7$¼ö¿äÀÏ) #È­¿äÀÏ¸¦ numeric·Î
+df_wed7<-data.frame(ÀÏÀÚ=data7$¿äÀÏ,¼ö¿äÀÏ=data7$¼ö¿äÀÏ) # ¿äÀÏ->ÀÏÀÚ·Î, ¿ù¿äÀÏ->¿ù¿äÀÏ·Î ÄÃ·³ ÀÌ¸§ º¯°æ
+
+data7$¸ñ¿äÀÏ<-gsub(",","",data7$¸ñ¿äÀÏ) #¿ù¿äÀÏÀÇ 3ÀÚ¸® ´ÜÀ§·Î ÀÖ´Â ,¸¦ »èÁ¦
+data7$¸ñ¿äÀÏ<-as.numeric(data7$¸ñ¿äÀÏ) #È­¿äÀÏ¸¦ numeric·Î
+df_thu7<-data.frame(ÀÏÀÚ=data7$¿äÀÏ,¸ñ¿äÀÏ=data7$¸ñ¿äÀÏ) # ¿äÀÏ->ÀÏÀÚ·Î, ¿ù¿äÀÏ->¿ù¿äÀÏ·Î ÄÃ·³ ÀÌ¸§ º¯°æ
+
+data7$±Ý¿äÀÏ<-gsub(",","",data7$±Ý¿äÀÏ) #¿ù¿äÀÏÀÇ 3ÀÚ¸® ´ÜÀ§·Î ÀÖ´Â ,¸¦ »èÁ¦
+data7$±Ý¿äÀÏ<-as.numeric(data7$±Ý¿äÀÏ) #È­¿äÀÏ¸¦ numeric·Î
+df_fri7<-data.frame(ÀÏÀÚ=data7$¿äÀÏ,±Ý¿äÀÏ=data7$±Ý¿äÀÏ) # ¿äÀÏ->ÀÏÀÚ·Î, ¿ù¿äÀÏ->¿ù¿äÀÏ·Î ÄÃ·³ ÀÌ¸§ º¯°æ
+
+data7$Åä¿äÀÏ<-gsub(",","",data7$Åä¿äÀÏ) #¿ù¿äÀÏÀÇ 3ÀÚ¸® ´ÜÀ§·Î ÀÖ´Â ,¸¦ »èÁ¦
+data7$Åä¿äÀÏ<-as.numeric(data7$Åä¿äÀÏ) #È­¿äÀÏ¸¦ numeric·Î
+df_sat7<-data.frame(ÀÏÀÚ=data7$¿äÀÏ,Åä¿äÀÏ=data7$Åä¿äÀÏ) # ¿äÀÏ->ÀÏÀÚ·Î, ¿ù¿äÀÏ->¿ù¿äÀÏ·Î ÄÃ·³ ÀÌ¸§ º¯°æ
+
+data7$ÀÏ¿äÀÏ<-gsub(",","",data7$ÀÏ¿äÀÏ) #¿ù¿äÀÏÀÇ 3ÀÚ¸® ´ÜÀ§·Î ÀÖ´Â ,¸¦ »èÁ¦
+data7$ÀÏ¿äÀÏ<-as.numeric(data7$ÀÏ¿äÀÏ) #È­¿äÀÏ¸¦ numeric·Î
+df_sun7<-data.frame(ÀÏÀÚ=data7$¿äÀÏ,ÀÏ¿äÀÏ=data7$ÀÏ¿äÀÏ) # ¿äÀÏ->ÀÏÀÚ·Î, ¿ù¿äÀÏ->¿ù¿äÀÏ·Î ÄÃ·³ ÀÌ¸§ º¯°æ
+
+# 2018³â 8¿ù ¿ù¿äÀÏ~ÀÏ¿äÀÏ »ç¿ëÀÚ ¼ö ¿¹Ãø
+data8$¿ù¿äÀÏ<-gsub(",","",data8$¿ù¿äÀÏ) #¿ù¿äÀÏÀÇ 3ÀÚ¸® ´ÜÀ§·Î ÀÖ´Â ,¸¦ »èÁ¦
+data8$¿ù¿äÀÏ<-as.numeric(data8$¿ù¿äÀÏ) #È­¿äÀÏ¸¦ numeric·Î
+df_mon8<-data.frame(ÀÏÀÚ=data8$¿äÀÏ,¿ù¿äÀÏ=data8$¿ù¿äÀÏ) # ¿äÀÏ->ÀÏÀÚ·Î, ¿ù¿äÀÏ->¿ù¿äÀÏ·Î ÄÃ·³ ÀÌ¸§ º¯°æ
+
+data8$È­¿äÀÏ<-gsub(",","",data8$È­¿äÀÏ) #¿ù¿äÀÏÀÇ 3ÀÚ¸® ´ÜÀ§·Î ÀÖ´Â ,¸¦ »èÁ¦
+data8$È­¿äÀÏ<-as.numeric(data8$È­¿äÀÏ) #È­¿äÀÏ¸¦ numeric·Î
+df_tue8<-data.frame(ÀÏÀÚ=data8$¿äÀÏ,È­¿äÀÏ=data8$È­¿äÀÏ) # ¿äÀÏ->ÀÏÀÚ·Î, ¿ù¿äÀÏ->¿ù¿äÀÏ·Î ÄÃ·³ ÀÌ¸§ º¯°æ
+
+data8$¼ö¿äÀÏ<-gsub(",","",data8$¼ö¿äÀÏ) #¿ù¿äÀÏÀÇ 3ÀÚ¸® ´ÜÀ§·Î ÀÖ´Â ,¸¦ »èÁ¦
+data8$¼ö¿äÀÏ<-as.numeric(data8$¼ö¿äÀÏ) #È­¿äÀÏ¸¦ numeric·Î
+df_wed8<-data.frame(ÀÏÀÚ=data8$¿äÀÏ,¼ö¿äÀÏ=data8$¼ö¿äÀÏ) # ¿äÀÏ->ÀÏÀÚ·Î, ¿ù¿äÀÏ->¿ù¿äÀÏ·Î ÄÃ·³ ÀÌ¸§ º¯°æ
+
+data8$¸ñ¿äÀÏ<-gsub(",","",data8$¸ñ¿äÀÏ) #¿ù¿äÀÏÀÇ 3ÀÚ¸® ´ÜÀ§·Î ÀÖ´Â ,¸¦ »èÁ¦
+data8$¸ñ¿äÀÏ<-as.numeric(data8$¸ñ¿äÀÏ) #È­¿äÀÏ¸¦ numeric·Î
+df_thu8<-data.frame(ÀÏÀÚ=data8$¿äÀÏ,¸ñ¿äÀÏ=data8$¸ñ¿äÀÏ) # ¿äÀÏ->ÀÏÀÚ·Î, ¿ù¿äÀÏ->¿ù¿äÀÏ·Î ÄÃ·³ ÀÌ¸§ º¯°æ
+
+data8$±Ý¿äÀÏ<-gsub(",","",data8$±Ý¿äÀÏ) #¿ù¿äÀÏÀÇ 3ÀÚ¸® ´ÜÀ§·Î ÀÖ´Â ,¸¦ »èÁ¦
+data8$±Ý¿äÀÏ<-as.numeric(data8$±Ý¿äÀÏ) #È­¿äÀÏ¸¦ numeric·Î
+df_fri8<-data.frame(ÀÏÀÚ=data8$¿äÀÏ,±Ý¿äÀÏ=data8$±Ý¿äÀÏ) # ¿äÀÏ->ÀÏÀÚ·Î, ¿ù¿äÀÏ->¿ù¿äÀÏ·Î ÄÃ·³ ÀÌ¸§ º¯°æ
+
+data8$Åä¿äÀÏ<-gsub(",","",data8$Åä¿äÀÏ) #¿ù¿äÀÏÀÇ 3ÀÚ¸® ´ÜÀ§·Î ÀÖ´Â ,¸¦ »èÁ¦
+data8$Åä¿äÀÏ<-as.numeric(data8$Åä¿äÀÏ) #È­¿äÀÏ¸¦ numeric·Î
+df_sat8<-data.frame(ÀÏÀÚ=data8$¿äÀÏ,Åä¿äÀÏ=data8$Åä¿äÀÏ) # ¿äÀÏ->ÀÏÀÚ·Î, ¿ù¿äÀÏ->¿ù¿äÀÏ·Î ÄÃ·³ ÀÌ¸§ º¯°æ
+
+data8$ÀÏ¿äÀÏ<-gsub(",","",data8$ÀÏ¿äÀÏ) #¿ù¿äÀÏÀÇ 3ÀÚ¸® ´ÜÀ§·Î ÀÖ´Â ,¸¦ »èÁ¦
+data8$ÀÏ¿äÀÏ<-as.numeric(data8$ÀÏ¿äÀÏ) #È­¿äÀÏ¸¦ numeric·Î
+df_sun8<-data.frame(ÀÏÀÚ=data8$¿äÀÏ,ÀÏ¿äÀÏ=data8$ÀÏ¿äÀÏ) # ¿äÀÏ->ÀÏÀÚ·Î, ¿ù¿äÀÏ->¿ù¿äÀÏ·Î ÄÃ·³ ÀÌ¸§ º¯°æ
+
+# 2018³â 9¿ù ¿ù¿äÀÏ~ÀÏ¿äÀÏ »ç¿ëÀÚ ¼ö ¿¹Ãø
+data9$¿ù¿äÀÏ<-gsub(",","",data9$¿ù¿äÀÏ) #¿ù¿äÀÏÀÇ 3ÀÚ¸® ´ÜÀ§·Î ÀÖ´Â ,¸¦ »èÁ¦
+data9$¿ù¿äÀÏ<-as.numeric(data9$¿ù¿äÀÏ) #È­¿äÀÏ¸¦ numeric·Î
+df_mon9<-data.frame(ÀÏÀÚ=data9$¿äÀÏ,¿ù¿äÀÏ=data9$¿ù¿äÀÏ) # ¿äÀÏ->ÀÏÀÚ·Î, ¿ù¿äÀÏ->¿ù¿äÀÏ·Î ÄÃ·³ ÀÌ¸§ º¯°æ
+
+data9$È­¿äÀÏ<-gsub(",","",data9$È­¿äÀÏ) #¿ù¿äÀÏÀÇ 3ÀÚ¸® ´ÜÀ§·Î ÀÖ´Â ,¸¦ »èÁ¦
+data9$È­¿äÀÏ<-as.numeric(data9$È­¿äÀÏ) #È­¿äÀÏ¸¦ numeric·Î
+df_tue9<-data.frame(ÀÏÀÚ=data9$¿äÀÏ,È­¿äÀÏ=data9$È­¿äÀÏ) # ¿äÀÏ->ÀÏÀÚ·Î, ¿ù¿äÀÏ->¿ù¿äÀÏ·Î ÄÃ·³ ÀÌ¸§ º¯°æ
+
+data9$¼ö¿äÀÏ<-gsub(",","",data9$¼ö¿äÀÏ) #¿ù¿äÀÏÀÇ 3ÀÚ¸® ´ÜÀ§·Î ÀÖ´Â ,¸¦ »èÁ¦
+data9$¼ö¿äÀÏ<-as.numeric(data9$¼ö¿äÀÏ) #È­¿äÀÏ¸¦ numeric·Î
+df_wed9<-data.frame(ÀÏÀÚ=data9$¿äÀÏ,¼ö¿äÀÏ=data9$¼ö¿äÀÏ) # ¿äÀÏ->ÀÏÀÚ·Î, ¿ù¿äÀÏ->¿ù¿äÀÏ·Î ÄÃ·³ ÀÌ¸§ º¯°æ
+
+data9$¸ñ¿äÀÏ<-gsub(",","",data9$¸ñ¿äÀÏ) #¿ù¿äÀÏÀÇ 3ÀÚ¸® ´ÜÀ§·Î ÀÖ´Â ,¸¦ »èÁ¦
+data9$¸ñ¿äÀÏ<-as.numeric(data9$¸ñ¿äÀÏ) #È­¿äÀÏ¸¦ numeric·Î
+df_thu9<-data.frame(ÀÏÀÚ=data9$¿äÀÏ,¸ñ¿äÀÏ=data9$¸ñ¿äÀÏ) # ¿äÀÏ->ÀÏÀÚ·Î, ¿ù¿äÀÏ->¿ù¿äÀÏ·Î ÄÃ·³ ÀÌ¸§ º¯°æ
+
+data9$±Ý¿äÀÏ<-gsub(",","",data9$±Ý¿äÀÏ) #¿ù¿äÀÏÀÇ 3ÀÚ¸® ´ÜÀ§·Î ÀÖ´Â ,¸¦ »èÁ¦
+data9$±Ý¿äÀÏ<-as.numeric(data9$±Ý¿äÀÏ) #È­¿äÀÏ¸¦ numeric·Î
+df_fri9<-data.frame(ÀÏÀÚ=data9$¿äÀÏ,±Ý¿äÀÏ=data9$±Ý¿äÀÏ) # ¿äÀÏ->ÀÏÀÚ·Î, ¿ù¿äÀÏ->¿ù¿äÀÏ·Î ÄÃ·³ ÀÌ¸§ º¯°æ
+
+data9$Åä¿äÀÏ<-gsub(",","",data9$Åä¿äÀÏ) #¿ù¿äÀÏÀÇ 3ÀÚ¸® ´ÜÀ§·Î ÀÖ´Â ,¸¦ »èÁ¦
+data9$Åä¿äÀÏ<-as.numeric(data9$Åä¿äÀÏ) #È­¿äÀÏ¸¦ numeric·Î
+df_sat9<-data.frame(ÀÏÀÚ=data9$¿äÀÏ,Åä¿äÀÏ=data9$Åä¿äÀÏ) # ¿äÀÏ->ÀÏÀÚ·Î, ¿ù¿äÀÏ->¿ù¿äÀÏ·Î ÄÃ·³ ÀÌ¸§ º¯°æ
+
+data9$ÀÏ¿äÀÏ<-gsub(",","",data9$ÀÏ¿äÀÏ) #¿ù¿äÀÏÀÇ 3ÀÚ¸® ´ÜÀ§·Î ÀÖ´Â ,¸¦ »èÁ¦
+data9$ÀÏ¿äÀÏ<-as.numeric(data9$ÀÏ¿äÀÏ) #È­¿äÀÏ¸¦ numeric·Î
+df_sun9<-data.frame(ÀÏÀÚ=data9$¿äÀÏ,ÀÏ¿äÀÏ=data9$ÀÏ¿äÀÏ) # ¿äÀÏ->ÀÏÀÚ·Î, ¿ù¿äÀÏ->¿ù¿äÀÏ·Î ÄÃ·³ ÀÌ¸§ º¯°æ
+
+# 2018³â 10¿ù ¿ù¿äÀÏ~ÀÏ¿äÀÏ »ç¿ëÀÚ ¼ö ¿¹Ãø
+data10$¿ù¿äÀÏ<-gsub(",","",data10$¿ù¿äÀÏ) #¿ù¿äÀÏÀÇ 3ÀÚ¸® ´ÜÀ§·Î ÀÖ´Â ,¸¦ »èÁ¦
+data10$¿ù¿äÀÏ<-as.numeric(data10$¿ù¿äÀÏ) #È­¿äÀÏ¸¦ numeric·Î
+df_mon10<-data.frame(ÀÏÀÚ=data10$¿äÀÏ,¿ù¿äÀÏ=data10$¿ù¿äÀÏ) # ¿äÀÏ->ÀÏÀÚ·Î, ¿ù¿äÀÏ->¿ù¿äÀÏ·Î ÄÃ·³ ÀÌ¸§ º¯°æ
+
+data10$È­¿äÀÏ<-gsub(",","",data10$È­¿äÀÏ) #¿ù¿äÀÏÀÇ 3ÀÚ¸® ´ÜÀ§·Î ÀÖ´Â ,¸¦ »èÁ¦
+data10$È­¿äÀÏ<-as.numeric(data10$È­¿äÀÏ) #È­¿äÀÏ¸¦ numeric·Î
+df_tue10<-data.frame(ÀÏÀÚ=data10$¿äÀÏ,È­¿äÀÏ=data10$È­¿äÀÏ) # ¿äÀÏ->ÀÏÀÚ·Î, ¿ù¿äÀÏ->¿ù¿äÀÏ·Î ÄÃ·³ ÀÌ¸§ º¯°æ
+
+data10$¼ö¿äÀÏ<-gsub(",","",data10$¼ö¿äÀÏ) #¿ù¿äÀÏÀÇ 3ÀÚ¸® ´ÜÀ§·Î ÀÖ´Â ,¸¦ »èÁ¦
+data10$¼ö¿äÀÏ<-as.numeric(data10$¼ö¿äÀÏ) #È­¿äÀÏ¸¦ numeric·Î
+df_wed10<-data.frame(ÀÏÀÚ=data10$¿äÀÏ,¼ö¿äÀÏ=data10$¼ö¿äÀÏ) # ¿äÀÏ->ÀÏÀÚ·Î, ¿ù¿äÀÏ->¿ù¿äÀÏ·Î ÄÃ·³ ÀÌ¸§ º¯°æ
+
+data10$¸ñ¿äÀÏ<-gsub(",","",data10$¸ñ¿äÀÏ) #¿ù¿äÀÏÀÇ 3ÀÚ¸® ´ÜÀ§·Î ÀÖ´Â ,¸¦ »èÁ¦
+data10$¸ñ¿äÀÏ<-as.numeric(data10$¸ñ¿äÀÏ) #È­¿äÀÏ¸¦ numeric·Î
+df_thu10<-data.frame(ÀÏÀÚ=data10$¿äÀÏ,¸ñ¿äÀÏ=data10$¸ñ¿äÀÏ) # ¿äÀÏ->ÀÏÀÚ·Î, ¿ù¿äÀÏ->¿ù¿äÀÏ·Î ÄÃ·³ ÀÌ¸§ º¯°æ
+
+data10$±Ý¿äÀÏ<-gsub(",","",data10$±Ý¿äÀÏ) #¿ù¿äÀÏÀÇ 3ÀÚ¸® ´ÜÀ§·Î ÀÖ´Â ,¸¦ »èÁ¦
+data10$±Ý¿äÀÏ<-as.numeric(data10$±Ý¿äÀÏ) #È­¿äÀÏ¸¦ numeric·Î
+df_fri10<-data.frame(ÀÏÀÚ=data10$¿äÀÏ,±Ý¿äÀÏ=data10$±Ý¿äÀÏ) # ¿äÀÏ->ÀÏÀÚ·Î, ¿ù¿äÀÏ->¿ù¿äÀÏ·Î ÄÃ·³ ÀÌ¸§ º¯°æ
+
+data10$Åä¿äÀÏ<-gsub(",","",data10$Åä¿äÀÏ) #¿ù¿äÀÏÀÇ 3ÀÚ¸® ´ÜÀ§·Î ÀÖ´Â ,¸¦ »èÁ¦
+data10$Åä¿äÀÏ<-as.numeric(data10$Åä¿äÀÏ) #È­¿äÀÏ¸¦ numeric·Î
+df_sat10<-data.frame(ÀÏÀÚ=data10$¿äÀÏ,Åä¿äÀÏ=data10$Åä¿äÀÏ) # ¿äÀÏ->ÀÏÀÚ·Î, ¿ù¿äÀÏ->¿ù¿äÀÏ·Î ÄÃ·³ ÀÌ¸§ º¯°æ
+
+data10$ÀÏ¿äÀÏ<-gsub(",","",data10$ÀÏ¿äÀÏ) #¿ù¿äÀÏÀÇ 3ÀÚ¸® ´ÜÀ§·Î ÀÖ´Â ,¸¦ »èÁ¦
+data10$ÀÏ¿äÀÏ<-as.numeric(data10$ÀÏ¿äÀÏ) #È­¿äÀÏ¸¦ numeric·Î
+df_sun10<-data.frame(ÀÏÀÚ=data10$¿äÀÏ,ÀÏ¿äÀÏ=data10$ÀÏ¿äÀÏ) # ¿äÀÏ->ÀÏÀÚ·Î, ¿ù¿äÀÏ->¿ù¿äÀÏ·Î ÄÃ·³ ÀÌ¸§ º¯°æ
+
+# 2018³â 11¿ù ¿ù¿äÀÏ~ÀÏ¿äÀÏ »ç¿ëÀÚ ¼ö ¿¹Ãø
+data11$¿ù¿äÀÏ<-gsub(",","",data11$¿ù¿äÀÏ) #¿ù¿äÀÏÀÇ 3ÀÚ¸® ´ÜÀ§·Î ÀÖ´Â ,¸¦ »èÁ¦
+data11$¿ù¿äÀÏ<-as.numeric(data11$¿ù¿äÀÏ) #È­¿äÀÏ¸¦ numeric·Î
+df_mon11<-data.frame(ÀÏÀÚ=data11$¿äÀÏ,¿ù¿äÀÏ=data11$¿ù¿äÀÏ) # ¿äÀÏ->ÀÏÀÚ·Î, ¿ù¿äÀÏ->¿ù¿äÀÏ·Î ÄÃ·³ ÀÌ¸§ º¯°æ
+
+data11$È­¿äÀÏ<-gsub(",","",data11$È­¿äÀÏ) #¿ù¿äÀÏÀÇ 3ÀÚ¸® ´ÜÀ§·Î ÀÖ´Â ,¸¦ »èÁ¦
+data11$È­¿äÀÏ<-as.numeric(data11$È­¿äÀÏ) #È­¿äÀÏ¸¦ numeric·Î
+df_tue11<-data.frame(ÀÏÀÚ=data11$¿äÀÏ,È­¿äÀÏ=data11$È­¿äÀÏ) # ¿äÀÏ->ÀÏÀÚ·Î, ¿ù¿äÀÏ->¿ù¿äÀÏ·Î ÄÃ·³ ÀÌ¸§ º¯°æ
+
+data11$¼ö¿äÀÏ<-gsub(",","",data11$¼ö¿äÀÏ) #¿ù¿äÀÏÀÇ 3ÀÚ¸® ´ÜÀ§·Î ÀÖ´Â ,¸¦ »èÁ¦
+data11$¼ö¿äÀÏ<-as.numeric(data11$¼ö¿äÀÏ) #È­¿äÀÏ¸¦ numeric·Î
+df_wed11<-data.frame(ÀÏÀÚ=data11$¿äÀÏ,¼ö¿äÀÏ=data11$¼ö¿äÀÏ) # ¿äÀÏ->ÀÏÀÚ·Î, ¿ù¿äÀÏ->¿ù¿äÀÏ·Î ÄÃ·³ ÀÌ¸§ º¯°æ
+
+data11$¸ñ¿äÀÏ<-gsub(",","",data11$¸ñ¿äÀÏ) #¿ù¿äÀÏÀÇ 3ÀÚ¸® ´ÜÀ§·Î ÀÖ´Â ,¸¦ »èÁ¦
+data11$¸ñ¿äÀÏ<-as.numeric(data11$¸ñ¿äÀÏ) #È­¿äÀÏ¸¦ numeric·Î
+df_thu11<-data.frame(ÀÏÀÚ=data11$¿äÀÏ,¸ñ¿äÀÏ=data11$¸ñ¿äÀÏ) # ¿äÀÏ->ÀÏÀÚ·Î, ¿ù¿äÀÏ->¿ù¿äÀÏ·Î ÄÃ·³ ÀÌ¸§ º¯°æ
+
+data11$±Ý¿äÀÏ<-gsub(",","",data11$±Ý¿äÀÏ) #¿ù¿äÀÏÀÇ 3ÀÚ¸® ´ÜÀ§·Î ÀÖ´Â ,¸¦ »èÁ¦
+data11$±Ý¿äÀÏ<-as.numeric(data11$±Ý¿äÀÏ) #È­¿äÀÏ¸¦ numeric·Î
+df_fri11<-data.frame(ÀÏÀÚ=data11$¿äÀÏ,±Ý¿äÀÏ=data11$±Ý¿äÀÏ) # ¿äÀÏ->ÀÏÀÚ·Î, ¿ù¿äÀÏ->¿ù¿äÀÏ·Î ÄÃ·³ ÀÌ¸§ º¯°æ
+
+data11$Åä¿äÀÏ<-gsub(",","",data11$Åä¿äÀÏ) #¿ù¿äÀÏÀÇ 3ÀÚ¸® ´ÜÀ§·Î ÀÖ´Â ,¸¦ »èÁ¦
+data11$Åä¿äÀÏ<-as.numeric(data11$Åä¿äÀÏ) #È­¿äÀÏ¸¦ numeric·Î
+df_sat11<-data.frame(ÀÏÀÚ=data11$¿äÀÏ,Åä¿äÀÏ=data11$Åä¿äÀÏ) # ¿äÀÏ->ÀÏÀÚ·Î, ¿ù¿äÀÏ->¿ù¿äÀÏ·Î ÄÃ·³ ÀÌ¸§ º¯°æ
+
+data11$ÀÏ¿äÀÏ<-gsub(",","",data11$ÀÏ¿äÀÏ) #¿ù¿äÀÏÀÇ 3ÀÚ¸® ´ÜÀ§·Î ÀÖ´Â ,¸¦ »èÁ¦
+data11$ÀÏ¿äÀÏ<-as.numeric(data11$ÀÏ¿äÀÏ) #È­¿äÀÏ¸¦ numeric·Î
+df_sun11<-data.frame(ÀÏÀÚ=data11$¿äÀÏ,ÀÏ¿äÀÏ=data11$ÀÏ¿äÀÏ) # ¿äÀÏ->ÀÏÀÚ·Î, ¿ù¿äÀÏ->¿ù¿äÀÏ·Î ÄÃ·³ ÀÌ¸§ º¯°æ
+
+# 2018³â 12¿ù ¿ù¿äÀÏ~ÀÏ¿äÀÏ »ç¿ëÀÚ ¼ö ¿¹Ãø
+data12$¿ù¿äÀÏ<-gsub(",","",data12$¿ù¿äÀÏ) #¿ù¿äÀÏÀÇ 3ÀÚ¸® ´ÜÀ§·Î ÀÖ´Â ,¸¦ »èÁ¦
+data12$¿ù¿äÀÏ<-as.numeric(data12$¿ù¿äÀÏ) #È­¿äÀÏ¸¦ numeric·Î
+df_mon12<-data.frame(ÀÏÀÚ=data12$¿äÀÏ,¿ù¿äÀÏ=data12$¿ù¿äÀÏ) # ¿äÀÏ->ÀÏÀÚ·Î, ¿ù¿äÀÏ->¿ù¿äÀÏ·Î ÄÃ·³ ÀÌ¸§ º¯°æ
+
+data12$È­¿äÀÏ<-gsub(",","",data12$È­¿äÀÏ) #¿ù¿äÀÏÀÇ 3ÀÚ¸® ´ÜÀ§·Î ÀÖ´Â ,¸¦ »èÁ¦
+data12$È­¿äÀÏ<-as.numeric(data12$È­¿äÀÏ) #È­¿äÀÏ¸¦ numeric·Î
+df_tue12<-data.frame(ÀÏÀÚ=data12$¿äÀÏ,È­¿äÀÏ=data12$È­¿äÀÏ) # ¿äÀÏ->ÀÏÀÚ·Î, ¿ù¿äÀÏ->¿ù¿äÀÏ·Î ÄÃ·³ ÀÌ¸§ º¯°æ
+
+data12$¼ö¿äÀÏ<-gsub(",","",data12$¼ö¿äÀÏ) #¿ù¿äÀÏÀÇ 3ÀÚ¸® ´ÜÀ§·Î ÀÖ´Â ,¸¦ »èÁ¦
+data12$¼ö¿äÀÏ<-as.numeric(data12$¼ö¿äÀÏ) #È­¿äÀÏ¸¦ numeric·Î
+df_wed12<-data.frame(ÀÏÀÚ=data12$¿äÀÏ,¼ö¿äÀÏ=data12$¼ö¿äÀÏ) # ¿äÀÏ->ÀÏÀÚ·Î, ¿ù¿äÀÏ->¿ù¿äÀÏ·Î ÄÃ·³ ÀÌ¸§ º¯°æ
+
+data12$¸ñ¿äÀÏ<-gsub(",","",data12$¸ñ¿äÀÏ) #¿ù¿äÀÏÀÇ 3ÀÚ¸® ´ÜÀ§·Î ÀÖ´Â ,¸¦ »èÁ¦
+data12$¸ñ¿äÀÏ<-as.numeric(data12$¸ñ¿äÀÏ) #È­¿äÀÏ¸¦ numeric·Î
+df_thu12<-data.frame(ÀÏÀÚ=data12$¿äÀÏ,¸ñ¿äÀÏ=data12$¸ñ¿äÀÏ) # ¿äÀÏ->ÀÏÀÚ·Î, ¿ù¿äÀÏ->¿ù¿äÀÏ·Î ÄÃ·³ ÀÌ¸§ º¯°æ
+
+data12$±Ý¿äÀÏ<-gsub(",","",data12$±Ý¿äÀÏ) #¿ù¿äÀÏÀÇ 3ÀÚ¸® ´ÜÀ§·Î ÀÖ´Â ,¸¦ »èÁ¦
+data12$±Ý¿äÀÏ<-as.numeric(data12$±Ý¿äÀÏ) #È­¿äÀÏ¸¦ numeric·Î
+df_fri12<-data.frame(ÀÏÀÚ=data12$¿äÀÏ,±Ý¿äÀÏ=data12$±Ý¿äÀÏ) # ¿äÀÏ->ÀÏÀÚ·Î, ¿ù¿äÀÏ->¿ù¿äÀÏ·Î ÄÃ·³ ÀÌ¸§ º¯°æ
+
+data12$Åä¿äÀÏ<-gsub(",","",data12$Åä¿äÀÏ) #¿ù¿äÀÏÀÇ 3ÀÚ¸® ´ÜÀ§·Î ÀÖ´Â ,¸¦ »èÁ¦
+data12$Åä¿äÀÏ<-as.numeric(data12$Åä¿äÀÏ) #È­¿äÀÏ¸¦ numeric·Î
+df_sat12<-data.frame(ÀÏÀÚ=data12$¿äÀÏ,Åä¿äÀÏ=data12$Åä¿äÀÏ) # ¿äÀÏ->ÀÏÀÚ·Î, ¿ù¿äÀÏ->¿ù¿äÀÏ·Î ÄÃ·³ ÀÌ¸§ º¯°æ
+
+data12$ÀÏ¿äÀÏ<-gsub(",","",data12$ÀÏ¿äÀÏ) #¿ù¿äÀÏÀÇ 3ÀÚ¸® ´ÜÀ§·Î ÀÖ´Â ,¸¦ »èÁ¦
+data12$ÀÏ¿äÀÏ<-as.numeric(data12$ÀÏ¿äÀÏ) #È­¿äÀÏ¸¦ numeric·Î
+df_sun12<-data.frame(ÀÏÀÚ=data12$¿äÀÏ,ÀÏ¿äÀÏ=data12$ÀÏ¿äÀÏ) # ¿äÀÏ->ÀÏÀÚ·Î, ¿ù¿äÀÏ->¿ù¿äÀÏ·Î ÄÃ·³ ÀÌ¸§ º¯°æ
+
+#ÀÎ·¯´× °ª ´ëÀÔ
+#2018³â 1¿ù ¿ù¿äÀÏ~ÀÏ¿äÀÏ 
+in_learning_mon1<-getDataSet(df_mon1$¿ù¿äÀÏ,1,15,INPUT_NODES) #1¿ù °ªµé ÀÔ·Â
+in_learning_tue1<-getDataSet(df_tue1$È­¿äÀÏ,1,15,INPUT_NODES) #1¿ù °ªµé ÀÔ·Â
+in_learning_wed1<-getDataSet(df_wed1$¼ö¿äÀÏ,1,15,INPUT_NODES) #1¿ù °ªµé ÀÔ·Â
+in_learning_thu1<-getDataSet(df_thu1$¸ñ¿äÀÏ,1,15,INPUT_NODES) #1¿ù °ªµé ÀÔ·Â
+in_learning_fri1<-getDataSet(df_fri1$±Ý¿äÀÏ,1,15,INPUT_NODES) #1¿ù °ªµé ÀÔ·Â
+in_learning_sat1<-getDataSet(df_sat1$Åä¿äÀÏ,1,15,INPUT_NODES) #1¿ù °ªµé ÀÔ·Â
+in_learning_sun1<-getDataSet(df_sun1$ÀÏ¿äÀÏ,1,15,INPUT_NODES) #1¿ù °ªµé ÀÔ·Â
+in_learning2<-getDataSet(df2$ÀÎ¿ø¼ö,1,15,INPUT_NODES) #2¿ù °ªµé ÀÔ·Â
+in_learning3<-getDataSet(df3$ÀÎ¿ø¼ö,1,15,INPUT_NODES) #3¿ù °ªµé ÀÔ·Â
+in_learning4<-getDataSet(df4$ÀÎ¿ø¼ö,1,16,INPUT_NODES) #4¿ù °ªµé ÀÔ·Â
+in_learning5<-getDataSet(df5$ÀÎ¿ø¼ö,1,16,INPUT_NODES) #5¿ù °ªµé ÀÔ·Â
+in_learning6<-getDataSet(df6$ÀÎ¿ø¼ö,1,16,INPUT_NODES) #6¿ù °ªµé ÀÔ·Â
+
+#2018³â 7¿ù ¿ù¿äÀÏ~ÀÏ¿äÀÏ
+in_learning_mon7<-getDataSet(df_mon7$¿ù¿äÀÏ,1,15,INPUT_NODES) #7¿ù °ªµé ÀÔ·Â
+in_learning_tue7<-getDataSet(df_tue7$È­¿äÀÏ,1,15,INPUT_NODES) #7¿ù °ªµé ÀÔ·Â
+in_learning_wed7<-getDataSet(df_wed7$¼ö¿äÀÏ,1,15,INPUT_NODES) #7¿ù °ªµé ÀÔ·Â
+in_learning_thu7<-getDataSet(df_thu7$¸ñ¿äÀÏ,1,15,INPUT_NODES) #7¿ù °ªµé ÀÔ·Â
+in_learning_fri7<-getDataSet(df_fri7$±Ý¿äÀÏ,1,15,INPUT_NODES) #7¿ù °ªµé ÀÔ·Â
+in_learning_sat7<-getDataSet(df_sat7$Åä¿äÀÏ,1,15,INPUT_NODES) #7¿ù °ªµé ÀÔ·Â
+in_learning_sun7<-getDataSet(df_sun7$ÀÏ¿äÀÏ,1,15,INPUT_NODES) #7¿ù °ªµé ÀÔ·Â
+
+#2018³â 8¿ù ¿ù¿äÀÏ~ÀÏ¿äÀÏ
+in_learning_mon8<-getDataSet(df_mon8$¿ù¿äÀÏ,1,15,INPUT_NODES) #8¿ù °ªµé ÀÔ·Â
+in_learning_tue8<-getDataSet(df_tue8$È­¿äÀÏ,1,15,INPUT_NODES) #8¿ù °ªµé ÀÔ·Â
+in_learning_wed8<-getDataSet(df_wed8$¼ö¿äÀÏ,1,15,INPUT_NODES) #8¿ù °ªµé ÀÔ·Â
+in_learning_thu8<-getDataSet(df_thu8$¸ñ¿äÀÏ,1,15,INPUT_NODES) #8¿ù °ªµé ÀÔ·Â
+in_learning_fri8<-getDataSet(df_fri8$±Ý¿äÀÏ,1,15,INPUT_NODES) #8¿ù °ªµé ÀÔ·Â
+in_learning_sat8<-getDataSet(df_sat8$Åä¿äÀÏ,1,15,INPUT_NODES) #8¿ù °ªµé ÀÔ·Â
+in_learning_sun8<-getDataSet(df_sun8$ÀÏ¿äÀÏ,1,15,INPUT_NODES) #8¿ù °ªµé ÀÔ·Â
+
+#2018³â 9¿ù ¿ù¿äÀÏ~ÀÏ¿äÀÏ
+in_learning_mon9<-getDataSet(df_mon9$¿ù¿äÀÏ,1,15,INPUT_NODES) #9¿ù °ªµé ÀÔ·Â
+in_learning_tue9<-getDataSet(df_tue9$È­¿äÀÏ,1,15,INPUT_NODES) #9¿ù °ªµé ÀÔ·Â
+in_learning_wed9<-getDataSet(df_wed9$¼ö¿äÀÏ,1,15,INPUT_NODES) #9¿ù °ªµé ÀÔ·Â
+in_learning_thu9<-getDataSet(df_thu9$¸ñ¿äÀÏ,1,15,INPUT_NODES) #9¿ù °ªµé ÀÔ·Â
+in_learning_fri9<-getDataSet(df_fri9$±Ý¿äÀÏ,1,15,INPUT_NODES) #9¿ù °ªµé ÀÔ·Â
+in_learning_sat9<-getDataSet(df_sat9$Åä¿äÀÏ,1,15,INPUT_NODES) #9¿ù °ªµé ÀÔ·Â
+in_learning_sun9<-getDataSet(df_sun9$ÀÏ¿äÀÏ,1,15,INPUT_NODES) #9¿ù °ªµé ÀÔ·Â
+
+#2018³â 10¿ù ¿ù¿äÀÏ~ÀÏ¿äÀÏ
+in_learning_mon10<-getDataSet(df_mon10$¿ù¿äÀÏ,1,15,INPUT_NODES) #10¿ù °ªµé ÀÔ·Â
+in_learning_tue10<-getDataSet(df_tue10$È­¿äÀÏ,1,15,INPUT_NODES) #10¿ù °ªµé ÀÔ·Â
+in_learning_wed10<-getDataSet(df_wed10$¼ö¿äÀÏ,1,15,INPUT_NODES) #10¿ù °ªµé ÀÔ·Â
+in_learning_thu10<-getDataSet(df_thu10$¸ñ¿äÀÏ,1,15,INPUT_NODES) #10¿ù °ªµé ÀÔ·Â
+in_learning_fri10<-getDataSet(df_fri10$±Ý¿äÀÏ,1,15,INPUT_NODES) #10¿ù °ªµé ÀÔ·Â
+in_learning_sat10<-getDataSet(df_sat10$Åä¿äÀÏ,1,15,INPUT_NODES) #10¿ù °ªµé ÀÔ·Â
+in_learning_sun10<-getDataSet(df_sun10$ÀÏ¿äÀÏ,1,15,INPUT_NODES) #10¿ù °ªµé ÀÔ·Â
+
+#2018³â 11¿ù ¿ù¿äÀÏ~ÀÏ¿äÀÏ
+in_learning_mon11<-getDataSet(df_mon11$¿ù¿äÀÏ,1,15,INPUT_NODES) #11¿ù °ªµé ÀÔ·Â
+in_learning_tue11<-getDataSet(df_tue11$È­¿äÀÏ,1,15,INPUT_NODES) #11¿ù °ªµé ÀÔ·Â
+in_learning_wed11<-getDataSet(df_wed11$¼ö¿äÀÏ,1,15,INPUT_NODES) #11¿ù °ªµé ÀÔ·Â
+in_learning_thu11<-getDataSet(df_thu11$¸ñ¿äÀÏ,1,15,INPUT_NODES) #11¿ù °ªµé ÀÔ·Â
+in_learning_fri11<-getDataSet(df_fri11$±Ý¿äÀÏ,1,15,INPUT_NODES) #11¿ù °ªµé ÀÔ·Â
+in_learning_sat11<-getDataSet(df_sat11$Åä¿äÀÏ,1,15,INPUT_NODES) #11¿ù °ªµé ÀÔ·Â
+in_learning_sun11<-getDataSet(df_sun11$ÀÏ¿äÀÏ,1,15,INPUT_NODES) #11¿ù °ªµé ÀÔ·Â
+
+#2018³â 12¿ù ¿ù¿äÀÏ~ÀÏ¿äÀÏ
+in_learning_mon12<-getDataSet(df_mon12$¿ù¿äÀÏ,1,15,INPUT_NODES) #12¿ù °ªµé ÀÔ·Â
+in_learning_tue12<-getDataSet(df_tue12$È­¿äÀÏ,1,15,INPUT_NODES) #12¿ù °ªµé ÀÔ·Â
+in_learning_wed12<-getDataSet(df_wed12$¼ö¿äÀÏ,1,15,INPUT_NODES) #12¿ù °ªµé ÀÔ·Â
+in_learning_thu12<-getDataSet(df_thu12$¸ñ¿äÀÏ,1,15,INPUT_NODES) #12¿ù °ªµé ÀÔ·Â
+in_learning_fri12<-getDataSet(df_fri12$±Ý¿äÀÏ,1,15,INPUT_NODES) #12¿ù °ªµé ÀÔ·Â
+in_learning_sat12<-getDataSet(df_sat12$Åä¿äÀÏ,1,15,INPUT_NODES) #12¿ù °ªµé ÀÔ·Â
+in_learning_sun12<-getDataSet(df_sun12$ÀÏ¿äÀÏ,1,15,INPUT_NODES) #12¿ù °ªµé ÀÔ·Â
+
+
+#¾Æ¿ô·¯´× °ª ´ëÀÔ
+#2018³â 1¿ù ¿ù¿äÀÏ~ÀÏ¿äÀÏ
+out_learning_mon1<-getDataSet(df_mon1$¿ù¿äÀÏ,3,16,OUTPUT_NODES) #1¿ù °ªµé Ãâ·Â
+out_learning_tue1<-getDataSet(df_tue1$È­¿äÀÏ,3,16,OUTPUT_NODES) #1¿ù °ªµé Ãâ·Â
+out_learning_wed1<-getDataSet(df_wed1$¼ö¿äÀÏ,3,16,OUTPUT_NODES) #1¿ù °ªµé Ãâ·Â
+out_learning_thu1<-getDataSet(df_thu1$¸ñ¿äÀÏ,3,16,OUTPUT_NODES) #1¿ù °ªµé Ãâ·Â
+out_learning_fri1<-getDataSet(df_fri1$±Ý¿äÀÏ,3,16,OUTPUT_NODES) #1¿ù °ªµé Ãâ·Â
+out_learning_sat1<-getDataSet(df_sat1$Åä¿äÀÏ,3,16,OUTPUT_NODES) #1¿ù °ªµé Ãâ·Â
+out_learning_sun1<-getDataSet(df_sun1$ÀÏ¿äÀÏ,3,16,OUTPUT_NODES) #1¿ù °ªµé Ãâ·Â
+out_learning2<-getDataSet(df2$ÀÎ¿ø¼ö,3,16,OUTPUT_NODES) #2¿ù °ªµé Ãâ·Â
+out_learning3<-getDataSet(df3$ÀÎ¿ø¼ö,3,16,OUTPUT_NODES) #3¿ù °ªµé Ãâ·Â
+out_learning4<-getDataSet(df4$ÀÎ¿ø¼ö,3,17,OUTPUT_NODES) #4¿ù °ªµé Ãâ·Â
+out_learning5<-getDataSet(df5$ÀÎ¿ø¼ö,3,17,OUTPUT_NODES) #5¿ù °ªµé Ãâ·Â
+out_learning6<-getDataSet(df6$ÀÎ¿ø¼ö,3,17,OUTPUT_NODES) #6¿ù °ªµé Ãâ·Â
+
+#2018³â 7¿ù ¿ù¿äÀÏ~ÀÏ¿äÀÏ
+out_learning_mon7<-getDataSet(df_mon7$¿ù¿äÀÏ,3,16,OUTPUT_NODES) #7¿ù °ªµé Ãâ·Â
+out_learning_tue7<-getDataSet(df_tue7$È­¿äÀÏ,3,16,OUTPUT_NODES) #7¿ù °ªµé Ãâ·Â
+out_learning_wed7<-getDataSet(df_wed7$¼ö¿äÀÏ,3,16,OUTPUT_NODES) #7¿ù °ªµé Ãâ·Â
+out_learning_thu7<-getDataSet(df_thu7$¸ñ¿äÀÏ,3,16,OUTPUT_NODES) #7¿ù °ªµé Ãâ·Â
+out_learning_fri7<-getDataSet(df_fri7$±Ý¿äÀÏ,3,16,OUTPUT_NODES) #7¿ù °ªµé Ãâ·Â
+out_learning_sat7<-getDataSet(df_sat7$Åä¿äÀÏ,3,16,OUTPUT_NODES) #7¿ù °ªµé Ãâ·Â
+out_learning_sun7<-getDataSet(df_sun7$ÀÏ¿äÀÏ,3,16,OUTPUT_NODES) #7¿ù °ªµé Ãâ·Â
+
+#2018³â 8¿ù ¿ù¿äÀÏ~ÀÏ¿äÀÏ
+out_learning_mon8<-getDataSet(df_mon8$¿ù¿äÀÏ,3,16,OUTPUT_NODES) #8¿ù °ªµé Ãâ·Â
+out_learning_tue8<-getDataSet(df_tue8$È­¿äÀÏ,3,16,OUTPUT_NODES) #8¿ù °ªµé Ãâ·Â
+out_learning_wed8<-getDataSet(df_wed8$¼ö¿äÀÏ,3,16,OUTPUT_NODES) #8¿ù °ªµé Ãâ·Â
+out_learning_thu8<-getDataSet(df_thu8$¸ñ¿äÀÏ,3,16,OUTPUT_NODES) #8¿ù °ªµé Ãâ·Â
+out_learning_fri8<-getDataSet(df_fri8$±Ý¿äÀÏ,3,16,OUTPUT_NODES) #8¿ù °ªµé Ãâ·Â
+out_learning_sat8<-getDataSet(df_sat8$Åä¿äÀÏ,3,16,OUTPUT_NODES) #8¿ù °ªµé Ãâ·Â
+out_learning_sun8<-getDataSet(df_sun8$ÀÏ¿äÀÏ,3,16,OUTPUT_NODES) #8¿ù °ªµé Ãâ·Â
+
+#2018³â 9¿ù ¿ù¿äÀÏ~ÀÏ¿äÀÏ
+out_learning_mon9<-getDataSet(df_mon9$¿ù¿äÀÏ,3,16,OUTPUT_NODES) #9¿ù °ªµé Ãâ·Â
+out_learning_tue9<-getDataSet(df_tue9$È­¿äÀÏ,3,16,OUTPUT_NODES) #9¿ù °ªµé Ãâ·Â
+out_learning_wed9<-getDataSet(df_wed9$¼ö¿äÀÏ,3,16,OUTPUT_NODES) #9¿ù °ªµé Ãâ·Â
+out_learning_thu9<-getDataSet(df_thu9$¸ñ¿äÀÏ,3,16,OUTPUT_NODES) #9¿ù °ªµé Ãâ·Â
+out_learning_fri9<-getDataSet(df_fri9$±Ý¿äÀÏ,3,16,OUTPUT_NODES) #9¿ù °ªµé Ãâ·Â
+out_learning_sat9<-getDataSet(df_sat9$Åä¿äÀÏ,3,16,OUTPUT_NODES) #9¿ù °ªµé Ãâ·Â
+out_learning_sun9<-getDataSet(df_sun9$ÀÏ¿äÀÏ,3,16,OUTPUT_NODES) #9¿ù °ªµé Ãâ·Â
+
+#2018³â 10¿ù ¿ù¿äÀÏ~ÀÏ¿äÀÏ
+out_learning_mon10<-getDataSet(df_mon10$¿ù¿äÀÏ,3,16,OUTPUT_NODES) #10¿ù °ªµé Ãâ·Â
+out_learning_tue10<-getDataSet(df_tue10$È­¿äÀÏ,3,16,OUTPUT_NODES) #10¿ù °ªµé Ãâ·Â
+out_learning_wed10<-getDataSet(df_wed10$¼ö¿äÀÏ,3,16,OUTPUT_NODES) #10¿ù °ªµé Ãâ·Â
+out_learning_thu10<-getDataSet(df_thu10$¸ñ¿äÀÏ,3,16,OUTPUT_NODES) #10¿ù °ªµé Ãâ·Â
+out_learning_fri10<-getDataSet(df_fri10$±Ý¿äÀÏ,3,16,OUTPUT_NODES) #10¿ù °ªµé Ãâ·Â
+out_learning_sat10<-getDataSet(df_sat10$Åä¿äÀÏ,3,16,OUTPUT_NODES) #10¿ù °ªµé Ãâ·Â
+out_learning_sun10<-getDataSet(df_sun10$ÀÏ¿äÀÏ,3,16,OUTPUT_NODES) #10¿ù °ªµé Ãâ·Â
+
+#2018³â 11¿ù ¿ù¿äÀÏ~ÀÏ¿äÀÏ
+out_learning_mon11<-getDataSet(df_mon11$¿ù¿äÀÏ,3,16,OUTPUT_NODES) #11¿ù °ªµé Ãâ·Â
+out_learning_tue11<-getDataSet(df_tue11$È­¿äÀÏ,3,16,OUTPUT_NODES) #11¿ù °ªµé Ãâ·Â
+out_learning_wed11<-getDataSet(df_wed11$¼ö¿äÀÏ,3,16,OUTPUT_NODES) #11¿ù °ªµé Ãâ·Â
+out_learning_thu11<-getDataSet(df_thu11$¸ñ¿äÀÏ,3,16,OUTPUT_NODES) #11¿ù °ªµé Ãâ·Â
+out_learning_fri11<-getDataSet(df_fri11$±Ý¿äÀÏ,3,16,OUTPUT_NODES) #11¿ù °ªµé Ãâ·Â
+out_learning_sat11<-getDataSet(df_sat11$Åä¿äÀÏ,3,16,OUTPUT_NODES) #11¿ù °ªµé Ãâ·Â
+out_learning_sun11<-getDataSet(df_sun11$ÀÏ¿äÀÏ,3,16,OUTPUT_NODES) #11¿ù °ªµé Ãâ·Â
+
+#2018³â 12¿ù ¿ù¿äÀÏ~ÀÏ¿äÀÏ
+out_learning_mon12<-getDataSet(df_mon12$¿ù¿äÀÏ,3,16,OUTPUT_NODES) #12¿ù °ªµé Ãâ·Â
+out_learning_tue12<-getDataSet(df_tue12$È­¿äÀÏ,3,16,OUTPUT_NODES) #12¿ù °ªµé Ãâ·Â
+out_learning_wed12<-getDataSet(df_wed12$¼ö¿äÀÏ,3,16,OUTPUT_NODES) #12¿ù °ªµé Ãâ·Â
+out_learning_thu12<-getDataSet(df_thu12$¸ñ¿äÀÏ,3,16,OUTPUT_NODES) #12¿ù °ªµé Ãâ·Â
+out_learning_fri12<-getDataSet(df_fri12$±Ý¿äÀÏ,3,16,OUTPUT_NODES) #12¿ù °ªµé Ãâ·Â
+out_learning_sat12<-getDataSet(df_sat12$Åä¿äÀÏ,3,16,OUTPUT_NODES) #12¿ù °ªµé Ãâ·Â
+out_learning_sun12<-getDataSet(df_sun12$ÀÏ¿äÀÏ,3,16,OUTPUT_NODES) #12¿ù °ªµé Ãâ·Â
+
+#½Å°æ¸Á ¸ðµ¨ Áß ÇÏ³ªÀÎ nnet ÆÐÅ°Áö ÇÔ¼ö¸¦ ÀÌ¿ëÇÏ¿© 1¿ù~12¿ù ÀÌ¿ëÀÚ ¼ö ¿¹Ãø°ª ¸ðµ¨¸µ ¼³Á¤
+# 2018³â 1¿ù ¿ù¿äÀÏ~ÀÏ¿äÀÏ
 model_mon1<-nnet(in_learning_mon1,out_learning_mon1,size=HIDDEN_NODES,linout = TRUE,rang = 0.1,skip=TRUE,maxit = ITERATION)
 model_tue1<-nnet(in_learning_mon1,out_learning_mon1,size=HIDDEN_NODES,linout = TRUE,rang = 0.1,skip=TRUE,maxit = ITERATION)
 model_wed1<-nnet(in_learning_mon1,out_learning_mon1,size=HIDDEN_NODES,linout = TRUE,rang = 0.1,skip=TRUE,maxit = ITERATION)
@@ -372,36 +612,132 @@ model3<-nnet(in_learning3,out_learning3,size=HIDDEN_NODES,linout = TRUE,rang = 0
 model4<-nnet(in_learning4,out_learning4,size=HIDDEN_NODES,linout = TRUE,rang = 0.1,skip=TRUE,maxit = ITERATION)
 model5<-nnet(in_learning5,out_learning5,size=HIDDEN_NODES,linout = TRUE,rang = 0.1,skip=TRUE,maxit = ITERATION)
 model6<-nnet(in_learning6,out_learning6,size=HIDDEN_NODES,linout = TRUE,rang = 0.1,skip=TRUE,maxit = ITERATION)
-model7<-nnet(in_learning7,out_learning7,size=HIDDEN_NODES,linout = TRUE,rang = 0.1,skip=TRUE,maxit = ITERATION)
-model8<-nnet(in_learning8,out_learning8,size=HIDDEN_NODES,linout = TRUE,rang = 0.1,skip=TRUE,maxit = ITERATION)
-model9<-nnet(in_learning9,out_learning9,size=HIDDEN_NODES,linout = TRUE,rang = 0.1,skip=TRUE,maxit = ITERATION)
-model10<-nnet(in_learning10,out_learning10,size=HIDDEN_NODES,linout = TRUE,rang = 0.1,skip=TRUE,maxit = ITERATION)
-model11<-nnet(in_learning11,out_learning11,size=HIDDEN_NODES,linout = TRUE,rang = 0.1,skip=TRUE,maxit = ITERATION)
-model12<-nnet(in_learning12,out_learning12,size=HIDDEN_NODES,linout = TRUE,rang = 0.1,skip=TRUE,maxit = ITERATION)
 
-#in_forecasting ì— 1~12ì›” ì˜ˆì¸¡ê°’ ëŒ€ìž…
-#2018ë…„ 1ì›” ì›”ìš”ì¼~ì¼ìš”ì¼ ì˜ˆì¸¡ê°’ ëŒ€ìž…
-in_forecasting_mon1<-getDataSet(df_mon1$ì›”ìš”ì¼,15,16,INPUT_NODES)
-in_forecasting_tue1<-getDataSet(df_tue1$í™”ìš”ì¼,15,16,INPUT_NODES)
-in_forecasting_wed1<-getDataSet(df_wed1$ìˆ˜ìš”ì¼,15,16,INPUT_NODES)
-in_forecasting_thu1<-getDataSet(df_thu1$ëª©ìš”ì¼,15,16,INPUT_NODES)
-in_forecasting_fri1<-getDataSet(df_fri1$ê¸ˆìš”ì¼,15,16,INPUT_NODES)
-in_forecasting_sat1<-getDataSet(df_sat1$í† ìš”ì¼,15,16,INPUT_NODES)
-in_forecasting_sun1<-getDataSet(df_sun1$ì¼ìš”ì¼,15,16,INPUT_NODES)
-in_forecasting2<-getDataSet(df2$ì¸ì›ìˆ˜,15,16,INPUT_NODES)
-in_forecasting3<-getDataSet(df3$ì¸ì›ìˆ˜,15,16,INPUT_NODES)
-in_forecasting4<-getDataSet(df4$ì¸ì›ìˆ˜,16,17,INPUT_NODES)
-in_forecasting5<-getDataSet(df5$ì¸ì›ìˆ˜,16,17,INPUT_NODES)
-in_forecasting6<-getDataSet(df6$ì¸ì›ìˆ˜,16,17,INPUT_NODES)
-in_forecasting7<-getDataSet(df7$ì¸ì›ìˆ˜,16,17,INPUT_NODES)
-in_forecasting8<-getDataSet(df8$ì¸ì›ìˆ˜,16,17,INPUT_NODES)
-in_forecasting9<-getDataSet(df9$ì¸ì›ìˆ˜,16,17,INPUT_NODES)
-in_forecasting10<-getDataSet(df10$ì¸ì›ìˆ˜,16,17,INPUT_NODES)
-in_forecasting11<-getDataSet(df11$ì¸ì›ìˆ˜,16,17,INPUT_NODES)
-in_forecasting12<-getDataSet(df12$ì¸ì›ìˆ˜,16,17,INPUT_NODES)
+#2018³â 7¿ù ¿ù¿äÀÏ~ÀÏ¿äÀÏ
+model_mon7<-nnet(in_learning_mon7,out_learning_mon7,size=HIDDEN_NODES,linout = TRUE,rang = 0.1,skip=TRUE,maxit = ITERATION)
+model_tue7<-nnet(in_learning_tue7,out_learning_tue7,size=HIDDEN_NODES,linout = TRUE,rang = 0.1,skip=TRUE,maxit = ITERATION)
+model_wed7<-nnet(in_learning_wed7,out_learning_wed7,size=HIDDEN_NODES,linout = TRUE,rang = 0.1,skip=TRUE,maxit = ITERATION)
+model_thu7<-nnet(in_learning_thu7,out_learning_thu7,size=HIDDEN_NODES,linout = TRUE,rang = 0.1,skip=TRUE,maxit = ITERATION)
+model_fri7<-nnet(in_learning_fri7,out_learning_fri7,size=HIDDEN_NODES,linout = TRUE,rang = 0.1,skip=TRUE,maxit = ITERATION)
+model_sat7<-nnet(in_learning_sat7,out_learning_sat7,size=HIDDEN_NODES,linout = TRUE,rang = 0.1,skip=TRUE,maxit = ITERATION)
+model_sun7<-nnet(in_learning_sun7,out_learning_sun7,size=HIDDEN_NODES,linout = TRUE,rang = 0.1,skip=TRUE,maxit = ITERATION)
 
-#1~12ì›” ì´ìš©ìž ìˆ˜ ì˜ˆì¸¡ê°’ ì¶œë ¥
-#2018ë…„ 1ì›” ì›”ìš”ì¼~ì¼ìš”ì¼ ì˜ˆì¸¡ê°’ ì¶œë ¥
+#2018³â 8¿ù ¿ù¿äÀÏ~ÀÏ¿äÀÏ
+model_mon8<-nnet(in_learning_mon8,out_learning_mon8,size=HIDDEN_NODES,linout = TRUE,rang = 0.1,skip=TRUE,maxit = ITERATION)
+model_tue8<-nnet(in_learning_tue8,out_learning_tue8,size=HIDDEN_NODES,linout = TRUE,rang = 0.1,skip=TRUE,maxit = ITERATION)
+model_wed8<-nnet(in_learning_wed8,out_learning_wed8,size=HIDDEN_NODES,linout = TRUE,rang = 0.1,skip=TRUE,maxit = ITERATION)
+model_thu8<-nnet(in_learning_thu8,out_learning_thu8,size=HIDDEN_NODES,linout = TRUE,rang = 0.1,skip=TRUE,maxit = ITERATION)
+model_fri8<-nnet(in_learning_fri8,out_learning_fri8,size=HIDDEN_NODES,linout = TRUE,rang = 0.1,skip=TRUE,maxit = ITERATION)
+model_sat8<-nnet(in_learning_sat8,out_learning_sat8,size=HIDDEN_NODES,linout = TRUE,rang = 0.1,skip=TRUE,maxit = ITERATION)
+model_sun8<-nnet(in_learning_sun8,out_learning_sun8,size=HIDDEN_NODES,linout = TRUE,rang = 0.1,skip=TRUE,maxit = ITERATION)
+
+#2018³â 9¿ù ¿ù¿äÀÏ~ÀÏ¿äÀÏ
+model_mon9<-nnet(in_learning_mon9,out_learning_mon9,size=HIDDEN_NODES,linout = TRUE,rang = 0.1,skip=TRUE,maxit = ITERATION)
+model_tue9<-nnet(in_learning_tue9,out_learning_tue9,size=HIDDEN_NODES,linout = TRUE,rang = 0.1,skip=TRUE,maxit = ITERATION)
+model_wed9<-nnet(in_learning_wed9,out_learning_wed9,size=HIDDEN_NODES,linout = TRUE,rang = 0.1,skip=TRUE,maxit = ITERATION)
+model_thu9<-nnet(in_learning_thu9,out_learning_thu9,size=HIDDEN_NODES,linout = TRUE,rang = 0.1,skip=TRUE,maxit = ITERATION)
+model_fri9<-nnet(in_learning_fri9,out_learning_fri9,size=HIDDEN_NODES,linout = TRUE,rang = 0.1,skip=TRUE,maxit = ITERATION)
+model_sat9<-nnet(in_learning_sat9,out_learning_sat9,size=HIDDEN_NODES,linout = TRUE,rang = 0.1,skip=TRUE,maxit = ITERATION)
+model_sun9<-nnet(in_learning_sun9,out_learning_sun9,size=HIDDEN_NODES,linout = TRUE,rang = 0.1,skip=TRUE,maxit = ITERATION)
+
+#2018³â 10¿ù ¿ù¿äÀÏ~ÀÏ¿äÀÏ
+model_mon10<-nnet(in_learning_mon10,out_learning_mon10,size=HIDDEN_NODES,linout = TRUE,rang = 0.1,skip=TRUE,maxit = ITERATION)
+model_tue10<-nnet(in_learning_tue10,out_learning_tue10,size=HIDDEN_NODES,linout = TRUE,rang = 0.1,skip=TRUE,maxit = ITERATION)
+model_wed10<-nnet(in_learning_wed10,out_learning_wed10,size=HIDDEN_NODES,linout = TRUE,rang = 0.1,skip=TRUE,maxit = ITERATION)
+model_thu10<-nnet(in_learning_thu10,out_learning_thu10,size=HIDDEN_NODES,linout = TRUE,rang = 0.1,skip=TRUE,maxit = ITERATION)
+model_fri10<-nnet(in_learning_fri10,out_learning_fri10,size=HIDDEN_NODES,linout = TRUE,rang = 0.1,skip=TRUE,maxit = ITERATION)
+model_sat10<-nnet(in_learning_sat10,out_learning_sat10,size=HIDDEN_NODES,linout = TRUE,rang = 0.1,skip=TRUE,maxit = ITERATION)
+model_sun10<-nnet(in_learning_sun10,out_learning_sun10,size=HIDDEN_NODES,linout = TRUE,rang = 0.1,skip=TRUE,maxit = ITERATION)
+
+#2018³â 11¿ù ¿ù¿äÀÏ~ÀÏ¿äÀÏ
+model_mon11<-nnet(in_learning_mon11,out_learning_mon11,size=HIDDEN_NODES,linout = TRUE,rang = 0.1,skip=TRUE,maxit = ITERATION)
+model_tue11<-nnet(in_learning_tue11,out_learning_tue11,size=HIDDEN_NODES,linout = TRUE,rang = 0.1,skip=TRUE,maxit = ITERATION)
+model_wed11<-nnet(in_learning_wed11,out_learning_wed11,size=HIDDEN_NODES,linout = TRUE,rang = 0.1,skip=TRUE,maxit = ITERATION)
+model_thu11<-nnet(in_learning_thu11,out_learning_thu11,size=HIDDEN_NODES,linout = TRUE,rang = 0.1,skip=TRUE,maxit = ITERATION)
+model_fri11<-nnet(in_learning_fri11,out_learning_fri11,size=HIDDEN_NODES,linout = TRUE,rang = 0.1,skip=TRUE,maxit = ITERATION)
+model_sat11<-nnet(in_learning_sat11,out_learning_sat11,size=HIDDEN_NODES,linout = TRUE,rang = 0.1,skip=TRUE,maxit = ITERATION)
+model_sun11<-nnet(in_learning_sun11,out_learning_sun11,size=HIDDEN_NODES,linout = TRUE,rang = 0.1,skip=TRUE,maxit = ITERATION)
+
+#2018³â 12¿ù ¿ù¿äÀÏ~ÀÏ¿äÀÏ
+model_mon12<-nnet(in_learning_mon12,out_learning_mon12,size=HIDDEN_NODES,linout = TRUE,rang = 0.1,skip=TRUE,maxit = ITERATION)
+model_tue12<-nnet(in_learning_tue12,out_learning_tue12,size=HIDDEN_NODES,linout = TRUE,rang = 0.1,skip=TRUE,maxit = ITERATION)
+model_wed12<-nnet(in_learning_wed12,out_learning_wed12,size=HIDDEN_NODES,linout = TRUE,rang = 0.1,skip=TRUE,maxit = ITERATION)
+model_thu12<-nnet(in_learning_thu12,out_learning_thu12,size=HIDDEN_NODES,linout = TRUE,rang = 0.1,skip=TRUE,maxit = ITERATION)
+model_fri12<-nnet(in_learning_fri12,out_learning_fri12,size=HIDDEN_NODES,linout = TRUE,rang = 0.1,skip=TRUE,maxit = ITERATION)
+model_sat12<-nnet(in_learning_sat12,out_learning_sat12,size=HIDDEN_NODES,linout = TRUE,rang = 0.1,skip=TRUE,maxit = ITERATION)
+model_sun12<-nnet(in_learning_sun12,out_learning_sun12,size=HIDDEN_NODES,linout = TRUE,rang = 0.1,skip=TRUE,maxit = ITERATION)
+
+#in_forecasting ¿¡ 1~12¿ù ¿¹Ãø°ª ´ëÀÔ
+#2018³â 1¿ù ¿ù¿äÀÏ~ÀÏ¿äÀÏ ¿¹Ãø°ª ´ëÀÔ
+in_forecasting_mon1<-getDataSet(df_mon1$¿ù¿äÀÏ,15,16,INPUT_NODES)
+in_forecasting_tue1<-getDataSet(df_tue1$È­¿äÀÏ,15,16,INPUT_NODES)
+in_forecasting_wed1<-getDataSet(df_wed1$¼ö¿äÀÏ,15,16,INPUT_NODES)
+in_forecasting_thu1<-getDataSet(df_thu1$¸ñ¿äÀÏ,15,16,INPUT_NODES)
+in_forecasting_fri1<-getDataSet(df_fri1$±Ý¿äÀÏ,15,16,INPUT_NODES)
+in_forecasting_sat1<-getDataSet(df_sat1$Åä¿äÀÏ,15,16,INPUT_NODES)
+in_forecasting_sun1<-getDataSet(df_sun1$ÀÏ¿äÀÏ,15,16,INPUT_NODES)
+in_forecasting2<-getDataSet(df2$ÀÎ¿ø¼ö,15,16,INPUT_NODES)
+in_forecasting3<-getDataSet(df3$ÀÎ¿ø¼ö,15,16,INPUT_NODES)
+in_forecasting4<-getDataSet(df4$ÀÎ¿ø¼ö,16,17,INPUT_NODES)
+in_forecasting5<-getDataSet(df5$ÀÎ¿ø¼ö,16,17,INPUT_NODES)
+in_forecasting6<-getDataSet(df6$ÀÎ¿ø¼ö,16,17,INPUT_NODES)
+
+#2018³â 7¿ù ¿ù¿äÀÏ~ÀÏ¿äÀÏ ¿¹Ãø°ª ´ëÀÔ
+in_forecasting_mon7<-getDataSet(df_mon7$¿ù¿äÀÏ,15,16,INPUT_NODES)
+in_forecasting_tue7<-getDataSet(df_tue7$È­¿äÀÏ,15,16,INPUT_NODES)
+in_forecasting_wed7<-getDataSet(df_wed7$¼ö¿äÀÏ,15,16,INPUT_NODES)
+in_forecasting_thu7<-getDataSet(df_thu7$¸ñ¿äÀÏ,15,16,INPUT_NODES)
+in_forecasting_fri7<-getDataSet(df_fri7$±Ý¿äÀÏ,15,16,INPUT_NODES)
+in_forecasting_sat7<-getDataSet(df_sat7$Åä¿äÀÏ,15,16,INPUT_NODES)
+in_forecasting_sun7<-getDataSet(df_sun7$ÀÏ¿äÀÏ,15,16,INPUT_NODES)
+
+#2018³â 8¿ù ¿ù¿äÀÏ~ÀÏ¿äÀÏ ¿¹Ãø°ª ´ëÀÔ
+in_forecasting_mon8<-getDataSet(df_mon8$¿ù¿äÀÏ,15,16,INPUT_NODES)
+in_forecasting_tue8<-getDataSet(df_tue8$È­¿äÀÏ,15,16,INPUT_NODES)
+in_forecasting_wed8<-getDataSet(df_wed8$¼ö¿äÀÏ,15,16,INPUT_NODES)
+in_forecasting_thu8<-getDataSet(df_thu8$¸ñ¿äÀÏ,15,16,INPUT_NODES)
+in_forecasting_fri8<-getDataSet(df_fri8$±Ý¿äÀÏ,15,16,INPUT_NODES)
+in_forecasting_sat8<-getDataSet(df_sat8$Åä¿äÀÏ,15,16,INPUT_NODES)
+in_forecasting_sun8<-getDataSet(df_sun8$ÀÏ¿äÀÏ,15,16,INPUT_NODES)
+
+#2018³â 9¿ù ¿ù¿äÀÏ~ÀÏ¿äÀÏ ¿¹Ãø°ª ´ëÀÔ
+in_forecasting_mon9<-getDataSet(df_mon9$¿ù¿äÀÏ,15,16,INPUT_NODES)
+in_forecasting_tue9<-getDataSet(df_tue9$È­¿äÀÏ,15,16,INPUT_NODES)
+in_forecasting_wed9<-getDataSet(df_wed9$¼ö¿äÀÏ,15,16,INPUT_NODES)
+in_forecasting_thu9<-getDataSet(df_thu9$¸ñ¿äÀÏ,15,16,INPUT_NODES)
+in_forecasting_fri9<-getDataSet(df_fri9$±Ý¿äÀÏ,15,16,INPUT_NODES)
+in_forecasting_sat9<-getDataSet(df_sat9$Åä¿äÀÏ,15,16,INPUT_NODES)
+in_forecasting_sun9<-getDataSet(df_sun9$ÀÏ¿äÀÏ,15,16,INPUT_NODES)
+
+#2018³â 10¿ù ¿ù¿äÀÏ~ÀÏ¿äÀÏ ¿¹Ãø°ª ´ëÀÔ
+in_forecasting_mon10<-getDataSet(df_mon10$¿ù¿äÀÏ,15,16,INPUT_NODES)
+in_forecasting_tue10<-getDataSet(df_tue10$È­¿äÀÏ,15,16,INPUT_NODES)
+in_forecasting_wed10<-getDataSet(df_wed10$¼ö¿äÀÏ,15,16,INPUT_NODES)
+in_forecasting_thu10<-getDataSet(df_thu10$¸ñ¿äÀÏ,15,16,INPUT_NODES)
+in_forecasting_fri10<-getDataSet(df_fri10$±Ý¿äÀÏ,15,16,INPUT_NODES)
+in_forecasting_sat10<-getDataSet(df_sat10$Åä¿äÀÏ,15,16,INPUT_NODES)
+in_forecasting_sun10<-getDataSet(df_sun10$ÀÏ¿äÀÏ,15,16,INPUT_NODES)
+
+#2018³â 11¿ù ¿ù¿äÀÏ~ÀÏ¿äÀÏ ¿¹Ãø°ª ´ëÀÔ
+in_forecasting_mon11<-getDataSet(df_mon11$¿ù¿äÀÏ,15,16,INPUT_NODES)
+in_forecasting_tue11<-getDataSet(df_tue11$È­¿äÀÏ,15,16,INPUT_NODES)
+in_forecasting_wed11<-getDataSet(df_wed11$¼ö¿äÀÏ,15,16,INPUT_NODES)
+in_forecasting_thu11<-getDataSet(df_thu11$¸ñ¿äÀÏ,15,16,INPUT_NODES)
+in_forecasting_fri11<-getDataSet(df_fri11$±Ý¿äÀÏ,15,16,INPUT_NODES)
+in_forecasting_sat11<-getDataSet(df_sat11$Åä¿äÀÏ,15,16,INPUT_NODES)
+in_forecasting_sun11<-getDataSet(df_sun11$ÀÏ¿äÀÏ,15,16,INPUT_NODES)
+
+#2018³â 12¿ù ¿ù¿äÀÏ~ÀÏ¿äÀÏ ¿¹Ãø°ª ´ëÀÔ
+in_forecasting_mon12<-getDataSet(df_mon12$¿ù¿äÀÏ,15,16,INPUT_NODES)
+in_forecasting_tue12<-getDataSet(df_tue12$È­¿äÀÏ,15,16,INPUT_NODES)
+in_forecasting_wed12<-getDataSet(df_wed12$¼ö¿äÀÏ,15,16,INPUT_NODES)
+in_forecasting_thu12<-getDataSet(df_thu12$¸ñ¿äÀÏ,15,16,INPUT_NODES)
+in_forecasting_fri12<-getDataSet(df_fri12$±Ý¿äÀÏ,15,16,INPUT_NODES)
+in_forecasting_sat12<-getDataSet(df_sat12$Åä¿äÀÏ,15,16,INPUT_NODES)
+in_forecasting_sun12<-getDataSet(df_sun12$ÀÏ¿äÀÏ,15,16,INPUT_NODES)
+
+#1~12¿ù ÀÌ¿ëÀÚ ¼ö ¿¹Ãø°ª Ãâ·Â
+#2018³â 1¿ù ¿ù¿äÀÏ~ÀÏ¿äÀÏ ¿¹Ãø°ª Ãâ·Â
 predicted_values_mon1<-predict(model_mon1,in_forecasting_mon1,type="raw")
 predicted_values_tue1<-predict(model_tue1,in_forecasting_mon1,type="raw")
 predicted_values_wed1<-predict(model_wed1,in_forecasting_mon1,type="raw")
@@ -414,48 +750,139 @@ predicted_values3<-predict(model3,in_forecasting3,type="raw")
 predicted_values4<-predict(model4,in_forecasting4,type="raw")
 predicted_values5<-predict(model5,in_forecasting5,type="raw")
 predicted_values6<-predict(model6,in_forecasting6,type="raw")
-predicted_values7<-predict(model7,in_forecasting7,type="raw")
-predicted_values8<-predict(model8,in_forecasting8,type="raw")
-predicted_values9<-predict(model9,in_forecasting9,type="raw")
-predicted_values10<-predict(model10,in_forecasting10,type="raw")
-predicted_values11<-predict(model11,in_forecasting11,type="raw")
-predicted_values12<-predict(model12,in_forecasting12,type="raw")
+
+#2018³â 7¿ù ¿ù¿äÀÏ~ÀÏ¿äÀÏ ¿¹Ãø°ª Ãâ·Â
+predicted_values_mon7<-predict(model_mon7,in_forecasting_mon7,type="raw")
+predicted_values_tue7<-predict(model_tue7,in_forecasting_tue7,type="raw")
+predicted_values_wed7<-predict(model_wed7,in_forecasting_wed7,type="raw")
+predicted_values_thu7<-predict(model_thu7,in_forecasting_thu7,type="raw")
+predicted_values_fri7<-predict(model_fri7,in_forecasting_fri7,type="raw")
+predicted_values_sat7<-predict(model_sat7,in_forecasting_sat7,type="raw")
+predicted_values_sun7<-predict(model_sun7,in_forecasting_sun7,type="raw")
+
+#2018³â 8¿ù ¿ù¿äÀÏ~ÀÏ¿äÀÏ ¿¹Ãø°ª Ãâ·Â
+predicted_values_mon8<-predict(model_mon8,in_forecasting_mon8,type="raw")
+predicted_values_tue8<-predict(model_tue8,in_forecasting_tue8,type="raw")
+predicted_values_wed8<-predict(model_wed8,in_forecasting_wed8,type="raw")
+predicted_values_thu8<-predict(model_thu8,in_forecasting_thu8,type="raw")
+predicted_values_fri8<-predict(model_fri8,in_forecasting_fri8,type="raw")
+predicted_values_sat8<-predict(model_sat8,in_forecasting_sat8,type="raw")
+predicted_values_sun8<-predict(model_sun8,in_forecasting_sun8,type="raw")
+
+#2018³â 9¿ù ¿ù¿äÀÏ~ÀÏ¿äÀÏ ¿¹Ãø°ª Ãâ·Â
+predicted_values_mon9<-predict(model_mon9,in_forecasting_mon9,type="raw")
+predicted_values_tue9<-predict(model_tue9,in_forecasting_tue9,type="raw")
+predicted_values_wed9<-predict(model_wed9,in_forecasting_wed9,type="raw")
+predicted_values_thu9<-predict(model_thu9,in_forecasting_thu9,type="raw")
+predicted_values_fri9<-predict(model_fri9,in_forecasting_fri9,type="raw")
+predicted_values_sat9<-predict(model_sat9,in_forecasting_sat9,type="raw")
+predicted_values_sun9<-predict(model_sun9,in_forecasting_sun9,type="raw")
+
+#2018³â 10¿ù ¿ù¿äÀÏ~ÀÏ¿äÀÏ ¿¹Ãø°ª Ãâ·Â
+predicted_values_mon10<-predict(model_mon10,in_forecasting_mon10,type="raw")
+predicted_values_tue10<-predict(model_tue10,in_forecasting_tue10,type="raw")
+predicted_values_wed10<-predict(model_wed10,in_forecasting_wed10,type="raw")
+predicted_values_thu10<-predict(model_thu10,in_forecasting_thu10,type="raw")
+predicted_values_fri10<-predict(model_fri10,in_forecasting_fri10,type="raw")
+predicted_values_sat10<-predict(model_sat10,in_forecasting_sat10,type="raw")
+predicted_values_sun10<-predict(model_sun10,in_forecasting_sun10,type="raw")
+
+#2018³â 11¿ù ¿ù¿äÀÏ~ÀÏ¿äÀÏ ¿¹Ãø°ª Ãâ·Â
+predicted_values_mon11<-predict(model_mon11,in_forecasting_mon11,type="raw")
+predicted_values_tue11<-predict(model_tue11,in_forecasting_tue11,type="raw")
+predicted_values_wed11<-predict(model_wed11,in_forecasting_wed11,type="raw")
+predicted_values_thu11<-predict(model_thu11,in_forecasting_thu11,type="raw")
+predicted_values_fri11<-predict(model_fri11,in_forecasting_fri11,type="raw")
+predicted_values_sat11<-predict(model_sat11,in_forecasting_sat11,type="raw")
+predicted_values_sun11<-predict(model_sun11,in_forecasting_sun11,type="raw")
+
+#2018³â 12¿ù ¿ù¿äÀÏ~ÀÏ¿äÀÏ ¿¹Ãø°ª Ãâ·Â
+predicted_values_mon12<-predict(model_mon12,in_forecasting_mon12,type="raw")
+predicted_values_tue12<-predict(model_tue12,in_forecasting_tue12,type="raw")
+predicted_values_wed12<-predict(model_wed12,in_forecasting_wed12,type="raw")
+predicted_values_thu12<-predict(model_thu12,in_forecasting_thu12,type="raw")
+predicted_values_fri12<-predict(model_fri12,in_forecasting_fri12,type="raw")
+predicted_values_sat12<-predict(model_sat12,in_forecasting_sat12,type="raw")
+predicted_values_sun12<-predict(model_sun12,in_forecasting_sun12,type="raw")
+
 predicted_values_mon1
 predicted_values2
 predicted_values3
 predicted_values4
 predicted_values5
 predicted_values6
-predicted_values7
-predicted_values8
-predicted_values9
-predicted_values10
-predicted_values11
-predicted_values12
 
-#2018ë…„ 1~12ì›” ì˜ˆì¸¡ ê°’ë“¤ì„ predicted_2018ì— ëŒ€ìž…í•˜ì—¬ í…Œì´ë¸” ìƒì„±
+predicted_values_mon7
+predicted_values_tue7
+predicted_values_wed7
+predicted_values_thu7
+predicted_values_fri7
+predicted_values_sat7
+predicted_values_sun7
+
+predicted_values_mon8
+predicted_values_tue8
+predicted_values_wed8
+predicted_values_thu8
+predicted_values_fri8
+predicted_values_sat8
+predicted_values_sun8
+
+predicted_values_mon9
+predicted_values_tue9
+predicted_values_wed9
+predicted_values_thu9
+predicted_values_fri9
+predicted_values_sat9
+predicted_values_sun9
+
+predicted_values_mon10
+predicted_values_tue10
+predicted_values_wed10
+predicted_values_thu10
+predicted_values_fri10
+predicted_values_sat10
+predicted_values_sun10
+
+predicted_values_mon11
+predicted_values_tue11
+predicted_values_wed11
+predicted_values_thu11
+predicted_values_fri11
+predicted_values_sat11
+predicted_values_sun11
+
+predicted_values_mon12
+predicted_values_tue12
+predicted_values_wed12
+predicted_values_thu12
+predicted_values_fri12
+predicted_values_sat12
+predicted_values_sun12
+
+#2018³â 1~12¿ù ¿¹Ãø °ªµéÀ» predicted_2018¿¡ ´ëÀÔÇÏ¿© Å×ÀÌºí »ý¼º
 predicted_2018_1<-c(predicted_values_mon1,predicted_values_tue1,predicted_values_wed1,predicted_values_thu1,predicted_values_fri1,predicted_values_sat1,predicted_values_sun1)
-#ì›”ìš”ì¼~ì¼ìš”ì¼ ë²”ìœ„ ì„¤ì • ê°’ í…Œì´ë¸” ìƒì„±
-day_2018<-c("ì›”ìš”ì¼","í™”ìš”ì¼","ìˆ˜ìš”ì¼","ëª©ìš”ì¼","ê¸ˆìš”ì¼","í† ìš”ì¼","ì¼ìš”ì¼")
+#¿ù¿äÀÏ~ÀÏ¿äÀÏ ¹üÀ§ ¼³Á¤ °ª Å×ÀÌºí »ý¼º
+day_2018<-c("¿ù¿äÀÏ","È­¿äÀÏ","¼ö¿äÀÏ","¸ñ¿äÀÏ","±Ý¿äÀÏ","Åä¿äÀÏ","ÀÏ¿äÀÏ")
 
 View(predicted_2018_1)
-#Year2018ì— 2018ë…„ 1~12ì›” ê¹Œì§€ì˜ ì´ìš©ìž ìˆ˜ ë²”ìœ„ì™€ ì˜ˆì¸¡ê°’ ê°€ì§€ëŠ” í…Œì´ë¸” ìƒì„±
-#1ì›” ì›”ìš”ì¼~ì¼ìš”ì¼ ì˜ˆì¸¡ê°’
+#Year2018¿¡ 2018³â 1~12¿ù ±îÁöÀÇ ÀÌ¿ëÀÚ ¼ö ¹üÀ§¿Í ¿¹Ãø°ª °¡Áö´Â Å×ÀÌºí »ý¼º
+#1¿ù ¿ù¿äÀÏ~ÀÏ¿äÀÏ ¿¹Ãø°ª
 Year2018_1<-data.frame(day_2018,predicted_2018_1)
 
-#Year2018 í…Œì´ë¸” ì¶œë ¥
+#Year2018 Å×ÀÌºí Ãâ·Â
 View(Year2018_1)
 
-#ì˜ˆì¸¡ê°’ì„ ê¸°ì¤€ìœ¼ë¡œ ì˜ˆì¸¡ê°’ì´ ë‚®ì€ ìˆœ ë¶€í„° ë†’ì€ ìˆœìœ¼ë¡œ 1~12ì›” ì¶œë ¥(ì˜¤ë¦„ì°¨ìˆœ)
+#¿¹Ãø°ªÀ» ±âÁØÀ¸·Î ¿¹Ãø°ªÀÌ ³·Àº ¼ø ºÎÅÍ ³ôÀº ¼øÀ¸·Î 1~12¿ù Ãâ·Â(¿À¸§Â÷¼ø)
 aggregate(day_2018~predicted_2018_1, Year2018_1, max)
 
-#2018ë…„ 1ì›”~12ì›” ì˜ˆì¸¡ê°’ ì ,ì„  ê·¸ëž˜í”„ ì¶œë ¥
-plot(predicted_2018_1, xlab = "2018ë…„1ì›”", ylab = "ì¸ì›ìˆ˜", ylim=c(300000,600000),type = "o", col = "red", axes=FALSE)
+#2018³â 1¿ù~12¿ù ¿¹Ãø°ª Á¡,¼± ±×·¡ÇÁ Ãâ·Â
+plot(predicted_2018_1, xlab = "2018³â1¿ù", ylab = "ÀÎ¿ø¼ö", ylim=c(300000,600000),type = "o", col = "red", axes=FALSE)
 
 plot(predicted_2018_1)
-#xì¶•ì— ì›”ìš”ì¼~ì¼ìš”ì¼ ë²”ìœ„ ì¶œë ¥
-axis(1,at=1:7, lab=c("ì›”ìš”ì¼","í™”ìš”ì¼","ìˆ˜ìš”ì¼","ëª©ìš”ì¼","ê¸ˆìš”ì¼","í† ìš”ì¼","ì¼ìš”ì¼"))
+#xÃà¿¡ ¿ù¿äÀÏ~ÀÏ¿äÀÏ ¹üÀ§ Ãâ·Â
+axis(1,at=1:7, lab=c("¿ù¿äÀÏ","È­¿äÀÏ","¼ö¿äÀÏ","¸ñ¿äÀÏ","±Ý¿äÀÏ","Åä¿äÀÏ","ÀÏ¿äÀÏ"))
 
-#yì¶•ì— ìµœëŒ€ê°’ ìµœì†Ÿê°’ ì„¤ì •
+#yÃà¿¡ ÃÖ´ë°ª ÃÖ¼Ú°ª ¼³Á¤
 axis(2,ylim=c(300000,600000))
 grid()
