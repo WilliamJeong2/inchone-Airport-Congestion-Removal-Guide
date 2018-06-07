@@ -49,13 +49,21 @@ public class congestion extends AppCompatActivity {
         lineChart = (LineChart)findViewById(R.id.chart);
 
         List<Entry> entries = new ArrayList<>();
-        entries.add(new Entry(1, 1));
-        entries.add(new Entry(2, 2));
-        entries.add(new Entry(3, 0));
-        entries.add(new Entry(4, 4));
-        entries.add(new Entry(5, 3));
+        entries.add(new Entry(1, 3108702));
+        entries.add(new Entry(2, 2947987));
+        entries.add(new Entry(3, 2576238));
+        entries.add(new Entry(4, 2699330));
+        entries.add(new Entry(5, 2580591));
+        entries.add(new Entry(6, 2768551));
+        entries.add(new Entry(7, 3084710));
+        entries.add(new Entry(8, 3180091));
+        entries.add(new Entry(9, 2903792));
+        entries.add(new Entry(10, 2750012));
+        entries.add(new Entry(11, 2912331));
+        entries.add(new Entry(12, 3038459));
 
-        LineDataSet lineDataSet = new LineDataSet(entries, "속성명1");
+
+        LineDataSet lineDataSet = new LineDataSet(entries, "2018년 월별 이용객 수");
         lineDataSet.setLineWidth(2);
         lineDataSet.setCircleRadius(6);
         lineDataSet.setCircleColor(Color.parseColor("#FFA1B4DC"));
@@ -73,7 +81,7 @@ public class congestion extends AppCompatActivity {
         XAxis xAxis = lineChart.getXAxis();
         xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
         xAxis.setTextColor(Color.BLACK);
-        xAxis.enableGridDashedLine(8, 24, 0);
+        xAxis.enableGridDashedLine(12, 36, 0);
 
         YAxis yLAxis = lineChart.getAxisLeft();
         yLAxis.setTextColor(Color.BLACK);
@@ -91,6 +99,8 @@ public class congestion extends AppCompatActivity {
         lineChart.setDescription(description);
         lineChart.animateY(2000, Easing.EasingOption.EaseInCubic);
         lineChart.invalidate();
+
+
 
 
         final Spinner spin1 = (Spinner)findViewById(R.id.spinner1);
