@@ -251,7 +251,7 @@ public class delay extends AppCompatActivity {
                     entries.add(new Entry(2, 291461));
                     entries.add(new Entry(3, 297714));
                     entries.add(new Entry(4, 366281));
-                    entries.add(new Entry(5, 4417875));
+                    entries.add(new Entry(5, 417875));
                     entries.add(new Entry(6, 508545));
                     entries.add(new Entry(7, 328627));
 
