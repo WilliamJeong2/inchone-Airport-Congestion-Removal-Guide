@@ -259,7 +259,7 @@ public class congestion extends AppCompatActivity {
                     Toast.makeText(congestion.this, choice_year + choice_month, Toast.LENGTH_SHORT).show();
                 }
 
-                if((choice_year+choice_month).equals("2016년1월")){
+                else if((choice_year+choice_month).equals("2016년1월")){
                     imageview.setImageResource(R.drawable.w2016_01);
                     Toast.makeText(congestion.this, choice_year + choice_month, Toast.LENGTH_SHORT).show();
                 }

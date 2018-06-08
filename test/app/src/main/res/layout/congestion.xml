@@ -8,11 +8,20 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <TextView
+        android:id="@+id/spinnerText2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="과거 요일 별 이용객 수 입니다."
+        android:textSize="24sp"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    <TextView
         android:id="@+id/spinnerText1"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dip"
+        android:layout_marginTop="0dp"
         android:text="보고싶은 날짜를 선택해주십시오."
+        android:textSize="12sp"
         android:textAppearance="?android:attr/textAppearanceLarge" />
     <LinearLayout
         android:orientation="horizontal"

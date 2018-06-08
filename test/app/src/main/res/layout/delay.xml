@@ -1,11 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+    <TextView
+        android:id="@+id/spinnerText1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:text="2018년 요일 별 예상 이용객 수 입니다."
+        android:textSize="24sp"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    <TextView
+        android:id="@+id/spinnerText2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="보고싶은 월을 선택해주십시오."
+        android:textSize="12sp"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    <LinearLayout
+        android:layout_marginTop="60dp"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+
+        <Spinner
+            android:id="@+id/spinner3"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.21" />
+        <Spinner
+            android:id="@+id/spinner4"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.21" />
+
+        <Button
+            android:id="@+id/btn_refresh2"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.21"
+            android:text="검색"
+            android:onClick="onClick"/>
+
+    </LinearLayout>
 
     <com.github.mikephil.charting.charts.LineChart
-    android:id="@+id/chart"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent" />
+        android:id="@+id/chart"
+        android:layout_marginTop="105dp"
+        android:layout_width="match_parent"
+        android:layout_height="447dp"
+        android:layout_weight="0.21">
 
-</LinearLayout>
+    </com.github.mikephil.charting.charts.LineChart>
+
+</FrameLayout>

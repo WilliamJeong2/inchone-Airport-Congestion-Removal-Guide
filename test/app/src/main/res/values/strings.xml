@@ -9,6 +9,10 @@
         <item>2018년</item>
     </string-array>
 
+    <string-array name="year_list1">
+        <item>2018년</item>
+    </string-array>
+
     <string-array name="month_list">
         <item>1월</item>
         <item>2월</item>
