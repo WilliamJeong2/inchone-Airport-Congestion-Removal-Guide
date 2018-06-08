@@ -131,8 +131,8 @@ public class delay extends AppCompatActivity {
                     Description description = new Description();
                     description.setText("");
 
-                    lineChart1.setDoubleTapToZoomEnabled(false);
-                    lineChart1.setDrawGridBackground(false);
+                    lineChart1.setDoubleTapToZoomEnabled(true);
+                    lineChart1.setDrawGridBackground(true);
                     lineChart1.setDescription(description);
                     lineChart1.animateY(0, Easing.EasingOption.EaseInCubic);
                     lineChart1.invalidate();
@@ -183,8 +183,8 @@ public class delay extends AppCompatActivity {
                     Description description = new Description();
                     description.setText("");
 
-                    lineChart1.setDoubleTapToZoomEnabled(false);
-                    lineChart1.setDrawGridBackground(false);
+                    lineChart1.setDoubleTapToZoomEnabled(true);
+                    lineChart1.setDrawGridBackground(true);
                     lineChart1.setDescription(description);
                     lineChart1.animateY(0, Easing.EasingOption.EaseInCubic);
                     lineChart1.invalidate();
@@ -235,8 +235,8 @@ public class delay extends AppCompatActivity {
                     Description description = new Description();
                     description.setText("");
 
-                    lineChart1.setDoubleTapToZoomEnabled(false);
-                    lineChart1.setDrawGridBackground(false);
+                    lineChart1.setDoubleTapToZoomEnabled(true);
+                    lineChart1.setDrawGridBackground(true);
                     lineChart1.setDescription(description);
                     lineChart1.animateY(0, Easing.EasingOption.EaseInCubic);
                     lineChart1.invalidate();
@@ -287,8 +287,8 @@ public class delay extends AppCompatActivity {
                     Description description = new Description();
                     description.setText("");
 
-                    lineChart1.setDoubleTapToZoomEnabled(false);
-                    lineChart1.setDrawGridBackground(false);
+                    lineChart1.setDoubleTapToZoomEnabled(true);
+                    lineChart1.setDrawGridBackground(true);
                     lineChart1.setDescription(description);
                     lineChart1.animateY(0, Easing.EasingOption.EaseInCubic);
                     lineChart1.invalidate();
@@ -339,8 +339,8 @@ public class delay extends AppCompatActivity {
                     Description description = new Description();
                     description.setText("");
 
-                    lineChart1.setDoubleTapToZoomEnabled(false);
-                    lineChart1.setDrawGridBackground(false);
+                    lineChart1.setDoubleTapToZoomEnabled(true);
+                    lineChart1.setDrawGridBackground(true);
                     lineChart1.setDescription(description);
                     lineChart1.animateY(0, Easing.EasingOption.EaseInCubic);
                     lineChart1.invalidate();
@@ -391,8 +391,8 @@ public class delay extends AppCompatActivity {
                     Description description = new Description();
                     description.setText("");
 
-                    lineChart1.setDoubleTapToZoomEnabled(false);
-                    lineChart1.setDrawGridBackground(false);
+                    lineChart1.setDoubleTapToZoomEnabled(true);
+                    lineChart1.setDrawGridBackground(true);
                     lineChart1.setDescription(description);
                     lineChart1.animateY(0, Easing.EasingOption.EaseInCubic);
                     lineChart1.invalidate();
@@ -443,8 +443,8 @@ public class delay extends AppCompatActivity {
                     Description description = new Description();
                     description.setText("");
 
-                    lineChart1.setDoubleTapToZoomEnabled(false);
-                    lineChart1.setDrawGridBackground(false);
+                    lineChart1.setDoubleTapToZoomEnabled(true);
+                    lineChart1.setDrawGridBackground(true);
                     lineChart1.setDescription(description);
                     lineChart1.animateY(0, Easing.EasingOption.EaseInCubic);
                     lineChart1.invalidate();
@@ -495,8 +495,8 @@ public class delay extends AppCompatActivity {
                     Description description = new Description();
                     description.setText("");
 
-                    lineChart1.setDoubleTapToZoomEnabled(false);
-                    lineChart1.setDrawGridBackground(false);
+                    lineChart1.setDoubleTapToZoomEnabled(true);
+                    lineChart1.setDrawGridBackground(true);
                     lineChart1.setDescription(description);
                     lineChart1.animateY(0, Easing.EasingOption.EaseInCubic);
                     lineChart1.invalidate();
@@ -547,8 +547,8 @@ public class delay extends AppCompatActivity {
                     Description description = new Description();
                     description.setText("");
 
-                    lineChart1.setDoubleTapToZoomEnabled(false);
-                    lineChart1.setDrawGridBackground(false);
+                    lineChart1.setDoubleTapToZoomEnabled(true);
+                    lineChart1.setDrawGridBackground(true);
                     lineChart1.setDescription(description);
                     lineChart1.animateY(0, Easing.EasingOption.EaseInCubic);
                     lineChart1.invalidate();
@@ -599,8 +599,8 @@ public class delay extends AppCompatActivity {
                     Description description = new Description();
                     description.setText("");
 
-                    lineChart1.setDoubleTapToZoomEnabled(false);
-                    lineChart1.setDrawGridBackground(false);
+                    lineChart1.setDoubleTapToZoomEnabled(true);
+                    lineChart1.setDrawGridBackground(true);
                     lineChart1.setDescription(description);
                     lineChart1.animateY(0, Easing.EasingOption.EaseInCubic);
                     lineChart1.invalidate();
@@ -651,8 +651,8 @@ public class delay extends AppCompatActivity {
                     Description description = new Description();
                     description.setText("");
 
-                    lineChart1.setDoubleTapToZoomEnabled(false);
-                    lineChart1.setDrawGridBackground(false);
+                    lineChart1.setDoubleTapToZoomEnabled(true);
+                    lineChart1.setDrawGridBackground(true);
                     lineChart1.setDescription(description);
                     lineChart1.animateY(0, Easing.EasingOption.EaseInCubic);
                     lineChart1.invalidate();
@@ -703,8 +703,8 @@ public class delay extends AppCompatActivity {
                     Description description = new Description();
                     description.setText("");
 
-                    lineChart1.setDoubleTapToZoomEnabled(false);
-                    lineChart1.setDrawGridBackground(false);
+                    lineChart1.setDoubleTapToZoomEnabled(true);
+                    lineChart1.setDrawGridBackground(true);
                     lineChart1.setDescription(description);
                     lineChart1.animateY(0, Easing.EasingOption.EaseInCubic);
                     lineChart1.invalidate();
