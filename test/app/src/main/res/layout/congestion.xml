@@ -56,8 +56,10 @@
         android:layout_height="wrap_content"
         android:id="@+id/textview1"/>
 
+
+
     <ImageView
-        android:id="@+id/imageview1"
+        android:id="@+id/imageview0"
         android:layout_width="fill_parent"
         android:layout_height="441dp"
         android:layout_gravity="center_vertical"

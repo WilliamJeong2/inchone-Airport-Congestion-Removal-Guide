@@ -1,5 +1,7 @@
 package kr.ac.chosun.test;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
@@ -8,6 +10,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.github.mikephil.charting.animation.Easing;
@@ -18,6 +21,8 @@ import com.github.mikephil.charting.components.YAxis;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,6 +39,76 @@ public class delay extends AppCompatActivity {
     protected void onCreate(Bundle savedInstaceState) {
         super.onCreate(savedInstaceState);
         setContentView(R.layout.delay);
+
+
+        lineChart = (LineChart)findViewById(R.id.chart);
+
+        List<Entry> entries1 = new ArrayList<>();
+        entries1.add(new Entry(1, 3108702));
+        entries1.add(new Entry(2, 2947987));
+        entries1.add(new Entry(3, 2590096));
+        entries1.add(new Entry(4, 2723480));
+        entries1.add(new Entry(5, 2500159));
+        entries1.add(new Entry(6, 2751390));
+        entries1.add(new Entry(7, 3084710));
+        entries1.add(new Entry(8, 3170200));
+        entries1.add(new Entry(9, 2903792));
+        entries1.add(new Entry(10, 2750012));
+        entries1.add(new Entry(11, 2912331));
+        entries1.add(new Entry(12, 3159810));
+
+        LineDataSet lineDataSet = new LineDataSet(entries1, "2018년 월별 이용객 수 (왼쪽부터 1월~12월)");
+        lineDataSet.setLineWidth(2);
+        lineDataSet.setCircleRadius(6);
+        lineDataSet.setCircleColor(Color.parseColor("#FFA1B4DC"));
+        lineDataSet.setCircleColorHole(Color.BLUE);
+        lineDataSet.setColor(Color.parseColor("#FFA1B4DC"));
+        lineDataSet.setDrawCircleHole(true);
+        lineDataSet.setDrawCircles(true);
+        lineDataSet.setDrawHorizontalHighlightIndicator(false);
+        lineDataSet.setDrawHighlightIndicators(false);
+        lineDataSet.setDrawValues(false);
+
+        LineData lineData = new LineData(lineDataSet);
+        lineChart.setData(lineData);
+
+        XAxis xAxis = lineChart.getXAxis();
+        xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
+        xAxis.setTextColor(Color.BLACK);
+        xAxis.enableGridDashedLine(12, 36, 0);
+
+        YAxis yLAxis = lineChart.getAxisLeft();
+        yLAxis.setTextColor(Color.BLACK);
+
+        YAxis yRAxis = lineChart.getAxisRight();
+        yRAxis.setDrawLabels(false);
+        yRAxis.setDrawAxisLine(false);
+        yRAxis.setDrawGridLines(false);
+
+        Description description = new Description();
+        description.setText("");
+
+        lineChart.setDoubleTapToZoomEnabled(false);
+        lineChart.setDrawGridBackground(false);
+        lineChart.setDescription(description);
+        lineChart.animateY(0, Easing.EasingOption.EaseInCubic);
+        lineChart.invalidate();
+
+        TextView textView2 = (TextView) findViewById(R.id.textView2);
+        TextView textView3 = (TextView) findViewById(R.id.textView3);
+        TextView textView4 = (TextView) findViewById(R.id.textView4);
+        TextView textView5 = (TextView) findViewById(R.id.textView5);
+        TextView textView6 = (TextView) findViewById(R.id.textView6);
+        TextView textView7 = (TextView) findViewById(R.id.textView7);
+        TextView textView8 = (TextView) findViewById(R.id.textView8);
+
+        textView2.setVisibility(View.GONE);
+        textView3.setVisibility(View.GONE);
+        textView4.setVisibility(View.GONE);
+        textView5.setVisibility(View.GONE);
+        textView6.setVisibility(View.GONE);
+        textView7.setVisibility(View.GONE);
+        textView8.setVisibility(View.GONE);
 
         final Spinner spin3 = (Spinner) findViewById(R.id.spinner3);
         final Spinner spin4 = (Spinner) findViewById(R.id.spinner4);
@@ -83,6 +158,21 @@ public class delay extends AppCompatActivity {
                 String error = "준비되지 않은 자료입니다."; //준비되지 않은 자료 선택 시 띄울 메세지
                 //y_m = (TextView) findViewById(R.id.textview1);
 
+                TextView textView2 = (TextView) findViewById(R.id.textView2);
+                TextView textView3 = (TextView) findViewById(R.id.textView3);
+                TextView textView4 = (TextView) findViewById(R.id.textView4);
+                TextView textView5 = (TextView) findViewById(R.id.textView5);
+                TextView textView6 = (TextView) findViewById(R.id.textView6);
+                TextView textView7 = (TextView) findViewById(R.id.textView7);
+                TextView textView8 = (TextView) findViewById(R.id.textView8);
+
+                textView2.setVisibility(View.VISIBLE);
+                textView3.setVisibility(View.VISIBLE);
+                textView4.setVisibility(View.VISIBLE);
+                textView5.setVisibility(View.VISIBLE);
+                textView6.setVisibility(View.VISIBLE);
+                textView7.setVisibility(View.VISIBLE);
+                textView8.setVisibility(View.VISIBLE);
 
                 //y_m.setText(choice_year1 + choice_month1); //선택된 년도와 월을 y_m에 저장
 
@@ -136,7 +226,6 @@ public class delay extends AppCompatActivity {
                     lineChart1.setDescription(description);
                     lineChart1.animateY(0, Easing.EasingOption.EaseInCubic);
                     lineChart1.invalidate();
-                    Toast.makeText(delay.this, error, Toast.LENGTH_SHORT).show(); //준비되지 않은 자료를 선택하여 error Toast 메세지 출력
 
                 }
                 else if ((choice_year1 + choice_month1).equals("2018년2월")) {
@@ -188,7 +277,6 @@ public class delay extends AppCompatActivity {
                     lineChart1.setDescription(description);
                     lineChart1.animateY(0, Easing.EasingOption.EaseInCubic);
                     lineChart1.invalidate();
-                    Toast.makeText(delay.this, error, Toast.LENGTH_SHORT).show(); //준비되지 않은 자료를 선택하여 error Toast 메세지 출력
 
                 }
                 else if ((choice_year1 + choice_month1).equals("2018년3월")) {
@@ -240,7 +328,6 @@ public class delay extends AppCompatActivity {
                     lineChart1.setDescription(description);
                     lineChart1.animateY(0, Easing.EasingOption.EaseInCubic);
                     lineChart1.invalidate();
-                    Toast.makeText(delay.this, error, Toast.LENGTH_SHORT).show(); //준비되지 않은 자료를 선택하여 error Toast 메세지 출력
 
                 }
                 else if ((choice_year1 + choice_month1).equals("2018년4월")) {
@@ -292,7 +379,6 @@ public class delay extends AppCompatActivity {
                     lineChart1.setDescription(description);
                     lineChart1.animateY(0, Easing.EasingOption.EaseInCubic);
                     lineChart1.invalidate();
-                    Toast.makeText(delay.this, error, Toast.LENGTH_SHORT).show(); //준비되지 않은 자료를 선택하여 error Toast 메세지 출력
 
                 }
                 else if ((choice_year1 + choice_month1).equals("2018년5월")) {
@@ -344,7 +430,6 @@ public class delay extends AppCompatActivity {
                     lineChart1.setDescription(description);
                     lineChart1.animateY(0, Easing.EasingOption.EaseInCubic);
                     lineChart1.invalidate();
-                    Toast.makeText(delay.this, error, Toast.LENGTH_SHORT).show(); //준비되지 않은 자료를 선택하여 error Toast 메세지 출력
 
                 }
                 else if ((choice_year1 + choice_month1).equals("2018년6월")) {
@@ -396,7 +481,6 @@ public class delay extends AppCompatActivity {
                     lineChart1.setDescription(description);
                     lineChart1.animateY(0, Easing.EasingOption.EaseInCubic);
                     lineChart1.invalidate();
-                    Toast.makeText(delay.this, error, Toast.LENGTH_SHORT).show(); //준비되지 않은 자료를 선택하여 error Toast 메세지 출력
 
                 }
                 else if ((choice_year1 + choice_month1).equals("2018년7월")) {
@@ -448,7 +532,6 @@ public class delay extends AppCompatActivity {
                     lineChart1.setDescription(description);
                     lineChart1.animateY(0, Easing.EasingOption.EaseInCubic);
                     lineChart1.invalidate();
-                    Toast.makeText(delay.this, error, Toast.LENGTH_SHORT).show(); //준비되지 않은 자료를 선택하여 error Toast 메세지 출력
 
                 }
                 else if ((choice_year1 + choice_month1).equals("2018년8월")) {
@@ -500,7 +583,6 @@ public class delay extends AppCompatActivity {
                     lineChart1.setDescription(description);
                     lineChart1.animateY(0, Easing.EasingOption.EaseInCubic);
                     lineChart1.invalidate();
-                    Toast.makeText(delay.this, error, Toast.LENGTH_SHORT).show(); //준비되지 않은 자료를 선택하여 error Toast 메세지 출력
 
                 }
                 else if ((choice_year1 + choice_month1).equals("2018년9월")) {
@@ -552,7 +634,6 @@ public class delay extends AppCompatActivity {
                     lineChart1.setDescription(description);
                     lineChart1.animateY(0, Easing.EasingOption.EaseInCubic);
                     lineChart1.invalidate();
-                    Toast.makeText(delay.this, error, Toast.LENGTH_SHORT).show(); //준비되지 않은 자료를 선택하여 error Toast 메세지 출력
 
                 }
                 else if ((choice_year1 + choice_month1).equals("2018년10월")) {
@@ -604,7 +685,6 @@ public class delay extends AppCompatActivity {
                     lineChart1.setDescription(description);
                     lineChart1.animateY(0, Easing.EasingOption.EaseInCubic);
                     lineChart1.invalidate();
-                    Toast.makeText(delay.this, error, Toast.LENGTH_SHORT).show(); //준비되지 않은 자료를 선택하여 error Toast 메세지 출력
 
                 }
                 else if ((choice_year1 + choice_month1).equals("2018년11월")) {
@@ -656,7 +736,6 @@ public class delay extends AppCompatActivity {
                     lineChart1.setDescription(description);
                     lineChart1.animateY(0, Easing.EasingOption.EaseInCubic);
                     lineChart1.invalidate();
-                    Toast.makeText(delay.this, error, Toast.LENGTH_SHORT).show(); //준비되지 않은 자료를 선택하여 error Toast 메세지 출력
 
                 }
                 else if ((choice_year1 + choice_month1).equals("2018년12월")) {
@@ -708,201 +787,9 @@ public class delay extends AppCompatActivity {
                     lineChart1.setDescription(description);
                     lineChart1.animateY(0, Easing.EasingOption.EaseInCubic);
                     lineChart1.invalidate();
-                    Toast.makeText(delay.this, error, Toast.LENGTH_SHORT).show(); //준비되지 않은 자료를 선택하여 error Toast 메세지 출력
                 }
             }
         });
 
-            lineChart = (LineChart)findViewById(R.id.chart);
-
-            List<Entry> entries = new ArrayList<>();
-            entries.add(new Entry(1, 3108702));
-            entries.add(new Entry(2, 2947987));
-            entries.add(new Entry(3, 2576238));
-            entries.add(new Entry(4, 2699330));
-            entries.add(new Entry(5, 2580591));
-            entries.add(new Entry(6, 2768551));
-            entries.add(new Entry(7, 3084710));
-
-
-            LineDataSet lineDataSet = new LineDataSet(entries, "2018년 월별 이용객 수");
-            lineDataSet.setLineWidth(2);
-            lineDataSet.setCircleRadius(6);
-            lineDataSet.setCircleColor(Color.parseColor("#FFA1B4DC"));
-            lineDataSet.setCircleColorHole(Color.BLUE);
-            lineDataSet.setColor(Color.parseColor("#FFA1B4DC"));
-            lineDataSet.setDrawCircleHole(true);
-            lineDataSet.setDrawCircles(true);
-            lineDataSet.setDrawHorizontalHighlightIndicator(false);
-            lineDataSet.setDrawHighlightIndicators(false);
-            lineDataSet.setDrawValues(false);
-
-            LineData lineData = new LineData(lineDataSet);
-            lineChart.setData(lineData);
-
-            XAxis xAxis = lineChart.getXAxis();
-            xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
-            xAxis.setTextColor(Color.BLACK);
-            xAxis.enableGridDashedLine(12, 36, 0);
-
-            YAxis yLAxis = lineChart.getAxisLeft();
-            yLAxis.setTextColor(Color.BLACK);
-
-            YAxis yRAxis = lineChart.getAxisRight();
-            yRAxis.setDrawLabels(false);
-            yRAxis.setDrawAxisLine(false);
-            yRAxis.setDrawGridLines(false);
-
-            Description description = new Description();
-            description.setText("");
-
-            lineChart.setDoubleTapToZoomEnabled(false);
-            lineChart.setDrawGridBackground(false);
-            lineChart.setDescription(description);
-            lineChart.animateY(0, Easing.EasingOption.EaseInCubic);
-            lineChart.invalidate();
     }
 }
-
-//}
-//
-//            @Override
-//            public void onNothingSelected(AdapterView<?> parent) {
-//
-//            }
-//        });
-//
-//        btn_refresh2.setOnClickListener(new View.OnClickListener() {
-//
-////            @Override
-////            public void onClick(View view){
-////
-////                TextView y_m;
-////                String error = "준비되지 않은 자료입니다."; //준비되지 않은 자료 선택 시 띄울 메세지
-////                y_m = (TextView)findViewById(R.id.textview1);
-////                y_m.setText(choice_month12); //선택된 년도와 월을 y_m에 저장
-////
-////                //아래는 선택된 년도와 월이 다음과 같을 경우 해당하는 기간의 요일별 혼잡도를 불러오는 함수
-////                if((choice_month12).equals("1월")){
-////
-////                    lineChart1 = (LineChart)findViewById(R.id.chart);
-////
-////        List<Entry> entries = new ArrayList<>();
-////        entries.add(new Entry(1, 3108702));
-////        entries.add(new Entry(2, 2947987));
-////        entries.add(new Entry(3, 2576238));
-////        entries.add(new Entry(4, 2699330));
-////        entries.add(new Entry(5, 2580591));
-////        entries.add(new Entry(6, 2768551));
-////        entries.add(new Entry(7, 3084710));
-////
-////
-////        LineDataSet lineDataSet = new LineDataSet(entries, "2018년 월별 이용객 수");
-////        lineDataSet.setLineWidth(2);
-////        lineDataSet.setCircleRadius(6);
-////        lineDataSet.setCircleColor(Color.parseColor("#FFA1B4DC"));
-////        lineDataSet.setCircleColorHole(Color.BLUE);
-////        lineDataSet.setColor(Color.parseColor("#FFA1B4DC"));
-////        lineDataSet.setDrawCircleHole(true);
-////        lineDataSet.setDrawCircles(true);
-////        lineDataSet.setDrawHorizontalHighlightIndicator(false);
-////        lineDataSet.setDrawHighlightIndicators(false);
-////        lineDataSet.setDrawValues(false);
-////
-////        LineData lineData = new LineData(lineDataSet);
-////        lineChart.setData(lineData);
-////
-////        XAxis xAxis = lineChart.getXAxis();
-////        xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
-////        xAxis.setTextColor(Color.BLACK);
-////        xAxis.enableGridDashedLine(12, 36, 0);
-////
-////        YAxis yLAxis = lineChart.getAxisLeft();
-////        yLAxis.setTextColor(Color.BLACK);
-////
-////        YAxis yRAxis = lineChart.getAxisRight();
-////        yRAxis.setDrawLabels(false);
-////        yRAxis.setDrawAxisLine(false);
-////        yRAxis.setDrawGridLines(false);
-////
-////        Description description = new Description();
-////        description.setText("");
-////
-////        lineChart.setDoubleTapToZoomEnabled(false);
-////        lineChart.setDrawGridBackground(false);
-////        lineChart.setDescription(description);
-////        lineChart.animateY(0, Easing.EasingOption.EaseInCubic);
-////        lineChart.invalidate();
-////
-////                }
-////
-////
-////
-////            }
-////
-////        });
-//
-//
-//            public void onClick(View view) {
-//                TextView y_m;
-//                String error = "준비되지 않은 자료입니다."; //준비되지 않은 자료 선택 시 띄울 메세지
-//                y_m = (TextView) findViewById(R.id.textview1);
-//                y_m.setText(choice_month12); //선택된 년도와 월을 y_m에 저장
-//
-//                //아래는 선택된 년도와 월이 다음과 같을 경우 해당하는 기간의 요일별 혼잡도를 불러오는 함수
-//                if ((choice_month12).equals("1월")) {
-//
-//                    lineChart1 = (LineChart) findViewById(R.id.chart);
-//
-//                    List<Entry> entries = new ArrayList<>();
-//                    entries.add(new Entry(1, 3108702));
-//                    entries.add(new Entry(2, 2947987));
-//                    entries.add(new Entry(3, 2576238));
-//                    entries.add(new Entry(4, 2699330));
-//                    entries.add(new Entry(5, 2580591));
-//                    entries.add(new Entry(6, 2768551));
-//                    entries.add(new Entry(7, 3084710));
-//
-//
-//                    LineDataSet lineDataSet = new LineDataSet(entries, "2018년 월별 이용객 수");
-//                    lineDataSet.setLineWidth(2);
-//                    lineDataSet.setCircleRadius(6);
-//                    lineDataSet.setCircleColor(Color.parseColor("#FFA1B4DC"));
-//                    lineDataSet.setCircleColorHole(Color.BLUE);
-//                    lineDataSet.setColor(Color.parseColor("#FFA1B4DC"));
-//                    lineDataSet.setDrawCircleHole(true);
-//                    lineDataSet.setDrawCircles(true);
-//                    lineDataSet.setDrawHorizontalHighlightIndicator(false);
-//                    lineDataSet.setDrawHighlightIndicators(false);
-//                    lineDataSet.setDrawValues(false);
-//
-//                    LineData lineData = new LineData(lineDataSet);
-//                    lineChart.setData(lineData);
-//
-//                    XAxis xAxis = lineChart.getXAxis();
-//                    xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
-//                    xAxis.setTextColor(Color.BLACK);
-//                    xAxis.enableGridDashedLine(12, 36, 0);
-//
-//                    YAxis yLAxis = lineChart.getAxisLeft();
-//                    yLAxis.setTextColor(Color.BLACK);
-//
-//                    YAxis yRAxis = lineChart.getAxisRight();
-//                    yRAxis.setDrawLabels(false);
-//                    yRAxis.setDrawAxisLine(false);
-//                    yRAxis.setDrawGridLines(false);
-//
-//                    Description description = new Description();
-//                    description.setText("");
-//
-//                    lineChart.setDoubleTapToZoomEnabled(false);
-//                    lineChart.setDrawGridBackground(false);
-//                    lineChart.setDescription(description);
-//                    lineChart.animateY(0, Easing.EasingOption.EaseInCubic);
-//                    lineChart.invalidate();
-//
-//                }
-//            }
-//        });
-//    }
-//}

@@ -12,9 +12,9 @@ public class parking extends MainActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.parkinginfo); //해당 아이디에 자신이 만든 레이아웃의 이름을 쓴다
 
-        final ImageView imageview2 = (ImageView)findViewById(R.id.imageview2);
-        mAttacher = new PhotoViewAttacher(imageview2);
-        imageview2.setImageResource(R.drawable.map_parking_info);
+        final ImageView imageview9 = (ImageView)findViewById(R.id.imageview9);
+        mAttacher = new PhotoViewAttacher(imageview9);
+        imageview9.setImageResource(R.drawable.map_parking_info);
     }
 }
 

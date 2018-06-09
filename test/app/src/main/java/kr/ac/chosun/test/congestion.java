@@ -1,5 +1,6 @@
 package kr.ac.chosun.test;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -10,6 +11,19 @@ import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.github.mikephil.charting.animation.Easing;
+import com.github.mikephil.charting.charts.LineChart;
+import com.github.mikephil.charting.components.Description;
+import com.github.mikephil.charting.components.XAxis;
+import com.github.mikephil.charting.components.YAxis;
+import com.github.mikephil.charting.data.Entry;
+import com.github.mikephil.charting.data.LineData;
+import com.github.mikephil.charting.data.LineDataSet;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import uk.co.senab.photoview.PhotoViewAttacher;
 
 public class congestion extends AppCompatActivity {
@@ -27,7 +41,7 @@ public class congestion extends AppCompatActivity {
         final Spinner spin1 = (Spinner)findViewById(R.id.spinner1);
         final Spinner spin2 = (Spinner)findViewById(R.id.spinner2);
         Button btn_refresh = (Button)findViewById(R.id.btn_refresh);
-        final ImageView imageview = (ImageView)findViewById(R.id.imageview1);
+        final ImageView imageview = (ImageView)findViewById(R.id.imageview0);
         mAttacher = new PhotoViewAttacher(imageview);
 
         adspin1 = ArrayAdapter.createFromResource(congestion.this, R.array.year_list,android.R.layout.simple_spinner_dropdown_item);

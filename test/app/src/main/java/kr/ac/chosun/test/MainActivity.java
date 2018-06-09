@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.Uri;
 import android.net.UrlQuerySanitizer;
 import android.os.Bundle;
@@ -46,7 +47,6 @@ public class MainActivity extends Activity {
                 show();
             }
         });
-
 
         //버튼->새로운 화면으로 이동하는 함수
         ImageButton congestion = (ImageButton) findViewById(R.id.congestion_button); //혼잡도 버튼을 지정합니다.
@@ -217,6 +217,77 @@ public class MainActivity extends Activity {
                                 status4.setText(("종료"));
                             }
                             else status4.setText(status4.getText()+gateinfo4 + "명");
+
+                            int intgateinfo1 = Integer.parseInt(gateinfo1);
+                            int intgateinfo2 = Integer.parseInt(gateinfo2);
+                            int intgateinfo3 = Integer.parseInt(gateinfo3);
+                            int intgateinfo4 = Integer.parseInt(gateinfo4);
+                            int intgateinfo[]={intgateinfo1, intgateinfo2, intgateinfo3, intgateinfo4};
+                            int max = intgateinfo[0];
+                            int min = intgateinfo[0];
+
+
+
+                            for(int i =1 ; i<intgateinfo.length; i++){
+                                if(intgateinfo[i] > max){
+                                    max = intgateinfo[i];
+                                }
+                                if(intgateinfo[i] < min) {
+                                    min = intgateinfo[i];
+                                }
+
+                            }
+
+
+                            ImageView imageview1 = (ImageView)findViewById(R.id.imageView1);
+                            ImageView imageview2 = (ImageView)findViewById(R.id.imageView2);
+                            ImageView imageview3 = (ImageView)findViewById(R.id.imageView3);
+                            ImageView imageview4 = (ImageView)findViewById(R.id.imageView4);
+
+
+                            if(intgateinfo[0] == max){
+                                imageview1.setImageResource(R.drawable.bubble9);
+                            }else {
+                                imageview1.setImageResource(R.drawable.bubble1);
+                            }
+                            if(intgateinfo[1] == max){
+                                imageview2.setImageResource(R.drawable.bubble10);
+                            }else {
+                                imageview2.setImageResource(R.drawable.bubble2);
+                            }
+                            if(intgateinfo[2] == max){
+                                imageview3.setImageResource(R.drawable.bubble11);
+                            }else {
+                                imageview3.setImageResource(R.drawable.bubble3);
+                            }
+                            if(intgateinfo[3] == max){
+                                imageview4.setImageResource(R.drawable.bubble12);
+                            }else {
+                                imageview4.setImageResource(R.drawable.bubble4);
+                            }
+
+                            if(intgateinfo[0] == min){
+                                imageview1.setImageResource(R.drawable.bubble5);
+                            }else {
+                                imageview1.setImageResource(R.drawable.bubble1);
+                            }
+                            if(intgateinfo[1] == min){
+                                imageview2.setImageResource(R.drawable.bubble6);
+                            }else {
+                                imageview2.setImageResource(R.drawable.bubble2);
+                            }
+                            if(intgateinfo[2] == min){
+                                imageview3.setImageResource(R.drawable.bubble7);
+                            }else {
+                                imageview3.setImageResource(R.drawable.bubble3);
+                            }
+                            if(intgateinfo[3] == min){
+                                imageview4.setImageResource(R.drawable.bubble8);
+                            }else {
+                                imageview4.setImageResource(R.drawable.bubble4);
+                            }
+
+
 
                         }
                         break;
