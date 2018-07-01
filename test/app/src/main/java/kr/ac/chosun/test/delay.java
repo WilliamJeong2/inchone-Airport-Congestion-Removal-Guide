@@ -40,7 +40,7 @@ public class delay extends AppCompatActivity {
         super.onCreate(savedInstaceState);
         setContentView(R.layout.delay);
 
-
+        //검색을 하지 않은 상태에서 표시되는 2018년 월 별 예상 이용객 수
         lineChart = (LineChart)findViewById(R.id.chart);
 
         List<Entry> entries1 = new ArrayList<>();
@@ -148,7 +148,7 @@ public class delay extends AppCompatActivity {
             }
         });
 
-
+        //검색 버튼 클릭 시 실행되는 이벤트 (해당 월의 예상 이용객 수를 차트로 표시하는 함수)
         btn_refresh2.setOnClickListener(new View.OnClickListener() {
 
             @Override
